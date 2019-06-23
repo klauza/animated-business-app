@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
+import './style.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Home from './components/layout/Home';
+import About from './components/layout/About';
+import Portfolio from './components/layout/Portfolio';
+import Skills from './components/layout/Skills';
+import Github from './components/layout/Github';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    user: {}
+  }
+
+  funkcjatest = () => {
+    var a = 5;
+    console.log(a);
+  }
+
+
+
+  render(){
+    return (
+      
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About}/>
+            <Route path='/portfolio' component={Portfolio} />
+            <Route path='/skills' component={Skills} />
+            <Route path='/github' component={Github} />
+
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
