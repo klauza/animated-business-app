@@ -12,9 +12,7 @@ import Github from './components/layout/Github';
 
 class App extends Component {
 
-  state = {
-    user: {}
-  }
+ 
 
   funkcjatest = () => {
     var a = 5;
