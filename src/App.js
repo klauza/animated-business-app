@@ -14,10 +14,7 @@ class App extends Component {
 
  
 
-  funkcjatest = () => {
-    var a = 5;
-    console.log(a);
-  }
+
 
 
 
