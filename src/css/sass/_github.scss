@@ -18,23 +18,24 @@
       &--desc{
         display: block;
         width: 155px;
-        padding: 5px;
         margin: 15px auto;
         justify-self: center;
         text-align: center;
-        border: 1px solid black;
         background: white;
+        border: 1px solid black;
         a{
+          padding: 5px;
           display: block;
           color: black;
           font-size: 1.15rem;
           font-weight: 900;
           text-decoration: none;
           width: 100%;
-        }
-        &:hover{
-          a{
-            background-color: grey;
+          border: 1px solid black;
+          &:hover{
+              background-color: #3b5998;
+              color: white;
+              border: 1px solid white;
           }
         }
       }
@@ -46,18 +47,6 @@
       text-align: left;
       width: 90%;
       margin: 0 auto;
-
-      &--about{
-        text-align: center;
-        &::before{
-          content: '';
-          width: 80%;
-          margin: 50px auto 15px;
-          height: 1px;
-          background: rgb(139,157,195);
-          display: block;
-        }
-      }
 
       ul {
         display: flex;
@@ -75,6 +64,43 @@
             color: grey;
             font-weight: 300;
           }
+
+        }
+        li:nth-of-type(1){
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          form{
+            margin-left: 5px;
+            display: inline-block;
+            input{
+              width: 100px;
+              height: 20px;
+            }
+            button{
+              border: 0;
+              background: rgba(139, 157, 195, 0.466);
+              width: 30px;
+              height: 20px;
+              &:hover{
+                cursor: pointer;
+                background: rgb(139,157,195);
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      
+      &--about{
+        text-align: center;
+        &::before{
+          content: '';
+          width: 80%;
+          margin: 50px auto 15px;
+          height: 1px;
+          background: rgb(139,157,195);
+          display: block;
         }
       }
     }

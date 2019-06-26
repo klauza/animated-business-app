@@ -215,35 +215,29 @@ body {
     #github-page .user-container__image--desc {
       display: block;
       width: 155px;
-      padding: 5px;
       margin: 15px auto;
       justify-self: center;
       text-align: center;
-      border: 1px solid black;
-      background: white; }
+      background: white;
+      border: 1px solid black; }
       #github-page .user-container__image--desc a {
+        padding: 5px;
         display: block;
         color: black;
         font-size: 1.15rem;
         font-weight: 900;
         text-decoration: none;
-        width: 100%; }
-      #github-page .user-container__image--desc:hover a {
-        background-color: grey; }
+        width: 100%;
+        border: 1px solid black; }
+        #github-page .user-container__image--desc a:hover {
+          background-color: #3b5998;
+          color: white;
+          border: 1px solid white; }
     #github-page .user-container__bio {
       align-self: start;
       text-align: left;
       width: 90%;
       margin: 0 auto; }
-      #github-page .user-container__bio--about {
-        text-align: center; }
-        #github-page .user-container__bio--about::before {
-          content: '';
-          width: 80%;
-          margin: 50px auto 15px;
-          height: 1px;
-          background: #8b9dc3;
-          display: block; }
       #github-page .user-container__bio ul {
         display: -webkit-box;
         display: flex;
@@ -260,6 +254,38 @@ body {
           #github-page .user-container__bio ul li span {
             color: grey;
             font-weight: 300; }
+        #github-page .user-container__bio ul li:nth-of-type(1) {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+                  flex-direction: row; }
+          #github-page .user-container__bio ul li:nth-of-type(1) form {
+            margin-left: 5px;
+            display: inline-block; }
+            #github-page .user-container__bio ul li:nth-of-type(1) form input {
+              width: 100px;
+              height: 20px; }
+            #github-page .user-container__bio ul li:nth-of-type(1) form button {
+              border: 0;
+              background: rgba(139, 157, 195, 0.466);
+              width: 30px;
+              height: 20px; }
+              #github-page .user-container__bio ul li:nth-of-type(1) form button:hover {
+                cursor: pointer;
+                background: #8b9dc3;
+                color: white; }
+      #github-page .user-container__bio--about {
+        text-align: center; }
+        #github-page .user-container__bio--about::before {
+          content: '';
+          width: 80%;
+          margin: 50px auto 15px;
+          height: 1px;
+          background: #8b9dc3;
+          display: block; }
   #github-page .repo-container {
     text-align: center;
     width: 60%;

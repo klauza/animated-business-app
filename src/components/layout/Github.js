@@ -6,29 +6,43 @@ class Github extends Component {
 
   componentDidMount(){
    
-    this.getUser();
+    this.getUser('klauza');
     //console.log(this.props.user);
   }
 
   state = {
     data: [],
     repos: [],
+    search: '',
     loading: false
   }
   
   // Get from external API
-  getUser = async () => {
-
+  getUser = async (user) => {
+    
     this.setState({ loading: true });
-    const res = await axios.get(`https://api.github.com/users/klauza?&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`); // axios deal with promises
+    const res = await axios.get(`https://api.github.com/users/${user}?&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`); // axios deal with promises
 
-    const repoResponse = await axios.get(`https://api.github.com/users/klauza/repos?per_page=4&sort='created: desc'&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+    const repoResponse = await axios.get(`https://api.github.com/users/${user}/repos?per_page=4&sort='created: desc'&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
     
     this.setState({ data: res.data, repos: repoResponse.data, loading: false}); // passing data to state
   }
 
  
-
+  handleSearch = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+    
+  }
+  handleSubmit = (e) => {
+    let user = this.state.search
+    if (user === ''){
+      user = 'klauza';
+    }
+    this.getUser(user);   // pass state to function
+    
+    
+    e.preventDefault();
+  }
 
     
   render(){
@@ -36,17 +50,17 @@ class Github extends Component {
     const { bio, login, hireable, location,  } = this.state.data;
     const { avatar_url } = this.state.data;
     const { html_url, public_repos, blog } = this.state.data;
-    console.log(this.state.repos);
+    //console.log(this.state.repos);
 
     
     
-    if (loading) return (<img src={spinner} style={{ width: '200px', margin: '100px auto auto', display: 'block' }} /> );
+    if (loading) return (<img src={spinner} alt="spinner" style={{ width: '200px', margin: '100px auto auto', display: 'block' }} /> );
    
     const eachRepo = this.state.repos;
   
     const repoList = eachRepo.map((repo)=>{
       var repoRegex = repo.pushed_at;
-      var lastModified = repoRegex.replace(/T[0-9][0-9]\:[0-9][0-9]\:[0-9][0-9]Z/i,'');
+      var lastModified = repoRegex.replace(/T[0-9][0-9]:[0-9][0-9]:[0-9][0-9]Z/i,'');
       
       return(
           <div className="repo" key={repo.id}>
@@ -64,15 +78,24 @@ class Github extends Component {
     return (
    
       <div className="container" id="github-page">
+        
+     
         <div className="user-container">
 
           <div className="user-container__image">
-            <img className="user-container__image--image" src={avatar_url} alt="image"/>
+            <img className="user-container__image--image" src={avatar_url} alt=""/>
             <button className="user-container__image--desc"><a href={html_url} target="_blank">Github link</a></button>
           </div>
           <div className="user-container__bio">
             <ul>
-              <li><span>name: </span> {login}</li>
+              <li>
+                <div><span>name: </span> {login}</div>
+                <form onSubmit={this.handleSubmit}>
+                  
+                  <input className="search-user" placeholder="Change name?" name="search" onChange={this.handleSearch} type="text"/>
+                  <button>Ok</button>
+                </form>
+              </li>
               <li><span>hireable: </span> {hireable? ('yes'):('no')}</li>
               <li><span>currently living in: </span> {location}</li>
               <li><span>official page: </span><a style={{textDecoration: 'none', color: 'black'}}href={blog}> {blog}</a></li>
