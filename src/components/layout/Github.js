@@ -12,6 +12,7 @@ class Github extends Component {
 
   state = {
     data: [],
+    repos: [],
     loading: false
   }
   
@@ -21,26 +22,78 @@ class Github extends Component {
     this.setState({ loading: true });
     const res = await axios.get(`https://api.github.com/users/klauza?&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`); // axios deal with promises
 
-    this.setState({ data: res.data, loading: false}); // passing data to state
+    const repoResponse = await axios.get(`https://api.github.com/users/klauza/repos?per_page=4&sort='created: asc'&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+    
+    this.setState({ data: res.data, repos: repoResponse.data, loading: false}); // passing data to state
   }
 
-  handleClick = () => {
-    this.setState({loading: true});
-  }
+ 
+
 
     
   render(){
     const { loading } = this.state;
-    const { login } = this.state.data;
+    const { bio, login, hireable, location,  } = this.state.data;
+    const { avatar_url } = this.state.data;
+    const { html_url, public_repos, blog } = this.state.data;
+    console.log(this.state.repos);
 
-    console.log(this.state);
+    
+    
+    if (loading) return (<img src={spinner} style={{ width: '200px', margin: '100px auto auto', display: 'block' }} /> );
+   
+    const eachRepo = this.state.repos;
+  
+    const repoList = eachRepo.map((repo)=>{
+      var repoRegex = repo.updated_at;
+      var lastModified = repoRegex.replace(/T[0-9][0-9]\:[0-9][0-9]\:[0-9][0-9]Z/i,'');
+      
+      return(
+          <div className="repo" key={repo.id}>
+            <ul className="repo-ul">
+              <li className="repo-item">{repo.language}</li>
+              <li className="repo-item">{repo.name}</li>
+              <li className="repo-item">{repo.description}</li>
+              <li className="repo-item">{lastModified}</li>
+            </ul>
+          </div>
+      )
+    });
 
-    if (loading) return (<img src={spinner} style={{ width: '200px', margin: '100px auto auto', display: 'block' }} /> )
     
     return (
-      <div className="container">
-        <p>name {login}</p>
-        <button onClick={this.handleClick}>Let's break this page</button>
+   
+      <div className="container" id="github-page">
+        <div className="user-container">
+
+          <div className="user-container__image">
+            <img className="user-container__image--image" src={avatar_url} alt="image"/>
+            <button className="user-container__image--desc"><a href={html_url} target="_blank">Github link</a></button>
+          </div>
+          <div className="user-container__bio">
+            <div className="user-container__bio--about">{bio}</div>
+            <ul>
+              <li><span>name: </span> {login}</li>
+              <li><span>looking for job: </span> {hireable? ('yes'):('no')}</li>
+              <li><span>currently living in: </span> {location}</li>
+              <li><span>official page: </span><a style={{textDecoration: 'none', color: 'black'}}href={blog}> {blog}</a></li>
+              <li><span>number of public projects:</span> {public_repos}</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="repo-container">
+          <span className="repo-container__title">Latest repos</span>
+          <div className="repo-list">
+            {repoList}
+          </div>
+        </div>
+
+      
+
+
+
       </div>
     )
 

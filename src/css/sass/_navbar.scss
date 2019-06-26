@@ -3,9 +3,9 @@
   width: 100%;
   background: linear-gradient(
     to right,
-    white,
-    lightgrey,
-    white
+    rgb(139,157,195),
+    rgb(59,89,152),
+    rgb(139,157,195)
   )
 }
 .nav-bar > .container{
@@ -15,11 +15,12 @@
 }
 .nav-bar > .container .nav-link{
   width: 70px;
-  color: black;
+  color: white;
   display: inline-block;
   line-height: 60px;
   text-decoration: none;
 }
-.nav-link:hover{
-  background: grey;
+.nav-bar .nav-link:hover{
+ 
+  color: rgb(139,157,195);
 }
