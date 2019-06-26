@@ -54,7 +54,7 @@
           width: 80%;
           margin: 50px auto 15px;
           height: 1px;
-          background: rgba(0, 0, 0, 0.308);
+          background: rgb(139,157,195);
           display: block;
         }
       }
@@ -68,7 +68,7 @@
           display: block;
           padding: 15px 20px;
           background-color: #fff;
-          border: 1px solid rgba(0,0,0,0.125);
+          border: 1px solid rgb(139,157,195);
           font-weight: bold;
 
           span{
@@ -90,31 +90,43 @@
       font-size: 1.25em;
       font-weight: bold;
     }
-    .repo-list{
-      margin-top: 35px;
+
+    .repo-headers{
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid black;
+      .repo-item-header{
+        color: grey;
+        list-style: none;
+        align-self: center;
+      }
     }
 
-    .repo{
-      display: block;
-      padding: 15px 0;
-      &:nth-of-type(even){
-        background: rgba(0, 0, 0, 0.144);
-      }
-      &-ul{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        
-        .repo-item{
-          list-style: none;
-          align-self: center;
+    .repo-list{
+      margin-top: 5px;
+    
+      .repo{
+        display: block;
+        padding: 15px 0;
+        &:nth-of-type(odd){
+          background: rgb(223,227,238);
+        }
+        &-ul{
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          
+          .repo-item{
+            list-style: none;
+            align-self: center;
+          }
         }
       }
     }
   }
 
 
-
-
+  
   @media(max-width: 65em){
     .user-container{
       width: 85%;
@@ -125,6 +137,10 @@
         }
       }
 
+    }
+    .repo-container{
+      width: 85%;
+      margin: 125px auto 40px;
     }
   }
   @media(max-width: 35em){
@@ -144,6 +160,12 @@
           margin-top: 30px;
         }
       }
+    }
+    .repo-container{
+      width: 100%;
+      padding: 0 2px;
+      font-size: 0.9em;
+      margin: 100px auto 30px;
     }
   }
 }

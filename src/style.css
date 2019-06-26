@@ -115,8 +115,8 @@ body {
     .about__mid-right span#me-text {
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(200%);
-              transform: translateX(200%);
+      -webkit-transform: translateX(120%);
+              transform: translateX(120%);
       top: 0;
       z-index: 10;
       line-height: 100px;
@@ -242,7 +242,7 @@ body {
           width: 80%;
           margin: 50px auto 15px;
           height: 1px;
-          background: rgba(0, 0, 0, 0.308);
+          background: #8b9dc3;
           display: block; }
       #github-page .user-container__bio ul {
         display: -webkit-box;
@@ -255,7 +255,7 @@ body {
           display: block;
           padding: 15px 20px;
           background-color: #fff;
-          border: 1px solid rgba(0, 0, 0, 0.125);
+          border: 1px solid #8b9dc3;
           font-weight: bold; }
           #github-page .user-container__bio ul li span {
             color: grey;
@@ -267,24 +267,36 @@ body {
     #github-page .repo-container__title {
       font-size: 1.25em;
       font-weight: bold; }
+    #github-page .repo-container .repo-headers {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid black; }
+      #github-page .repo-container .repo-headers .repo-item-header {
+        color: grey;
+        list-style: none;
+        align-self: center; }
     #github-page .repo-container .repo-list {
-      margin-top: 35px; }
-    #github-page .repo-container .repo {
-      display: block;
-      padding: 15px 0; }
-      #github-page .repo-container .repo:nth-of-type(even) {
-        background: rgba(0, 0, 0, 0.144); }
-      #github-page .repo-container .repo-ul {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); }
-        #github-page .repo-container .repo-ul .repo-item {
-          list-style: none;
-          align-self: center; }
+      margin-top: 5px; }
+      #github-page .repo-container .repo-list .repo {
+        display: block;
+        padding: 15px 0; }
+        #github-page .repo-container .repo-list .repo:nth-of-type(odd) {
+          background: #dfe3ee; }
+        #github-page .repo-container .repo-list .repo-ul {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr); }
+          #github-page .repo-container .repo-list .repo-ul .repo-item {
+            list-style: none;
+            align-self: center; }
   @media (max-width: 65em) {
     #github-page .user-container {
       width: 85%; }
       #github-page .user-container__image--image {
-        width: 70%; } }
+        width: 70%; }
+    #github-page .repo-container {
+      width: 85%;
+      margin: 125px auto 40px; } }
   @media (max-width: 35em) {
     #github-page .user-container {
       width: 95%;
@@ -292,4 +304,9 @@ body {
       #github-page .user-container__image--image {
         width: 80%; }
       #github-page .user-container__bio--about {
-        margin-top: 30px; } }
+        margin-top: 30px; }
+    #github-page .repo-container {
+      width: 100%;
+      padding: 0 2px;
+      font-size: 0.9em;
+      margin: 100px auto 30px; } }

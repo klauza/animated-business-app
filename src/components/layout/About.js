@@ -36,10 +36,10 @@ export default class About extends Component {
     console.log('load');
   setTimeout(() => {
       document.querySelector('#about-text').style.transform = "translateX(-50%)"
-  }, 100)
+  }, 125)
   setTimeout(() => {
-    document.querySelector('#me-text').style.transform = "translateX(-50%)"
-}, 175)
+      document.querySelector('#me-text').style.transform = "translateX(-50%)"
+  }, 125)
   }
 
 

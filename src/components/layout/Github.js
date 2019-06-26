@@ -22,7 +22,7 @@ class Github extends Component {
     this.setState({ loading: true });
     const res = await axios.get(`https://api.github.com/users/klauza?&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`); // axios deal with promises
 
-    const repoResponse = await axios.get(`https://api.github.com/users/klauza/repos?per_page=4&sort='created: asc'&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+    const repoResponse = await axios.get(`https://api.github.com/users/klauza/repos?per_page=4&sort='created: desc'&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
     
     this.setState({ data: res.data, repos: repoResponse.data, loading: false}); // passing data to state
   }
@@ -45,7 +45,7 @@ class Github extends Component {
     const eachRepo = this.state.repos;
   
     const repoList = eachRepo.map((repo)=>{
-      var repoRegex = repo.updated_at;
+      var repoRegex = repo.pushed_at;
       var lastModified = repoRegex.replace(/T[0-9][0-9]\:[0-9][0-9]\:[0-9][0-9]Z/i,'');
       
       return(
@@ -84,7 +84,13 @@ class Github extends Component {
         </div>
 
         <div className="repo-container">
-          <span className="repo-container__title">Latest repos</span>
+          <span className="repo-container__title">Latest created repos</span>
+          <div className="repo-headers">
+            <li className="repo-item-header">Language</li>
+            <li className="repo-item-header">Name</li>
+            <li className="repo-item-header">Description</li>
+            <li className="repo-item-header">Last modified</li>
+          </div>
           <div className="repo-list">
             {repoList}
           </div>
