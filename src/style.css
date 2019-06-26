@@ -1,3 +1,6 @@
+body {
+  overflow-y: scroll; }
+
 .nav-bar {
   height: 60px;
   width: 100%;
@@ -62,7 +65,8 @@
     text-align: center;
     position: relative;
     height: 100px;
-    color: white; }
+    color: white;
+    overflow: hidden; }
     .about__mid::after {
       content: '';
       display: block;
@@ -76,14 +80,16 @@
       background: #016cc4;
       border-radius: 3px;
       border: 1px solid #016cc4; }
-    .about__mid span {
+    .about__mid span#about-text {
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      -webkit-transform: translateX(-200%);
+              transform: translateX(-200%);
       top: 0;
       z-index: 10;
-      line-height: 100px; }
+      line-height: 100px;
+      -webkit-transition: all ease-out 1s;
+      transition: all ease-out 1s; }
   .about__mid-right {
     grid-column: 5 / 7;
     grid-row: 2 / 3;
@@ -106,15 +112,17 @@
       background: #016cc4;
       border-radius: 3px;
       border: 1px solid #016cc4; }
-    .about__mid-right span {
+    .about__mid-right span#me-text {
       position: absolute;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      -webkit-transform: translateX(200%);
+              transform: translateX(200%);
       top: 0;
       z-index: 10;
       line-height: 100px;
-      text-indent: -1vw; }
+      text-indent: -1vw;
+      -webkit-transition: all ease-out 1s;
+      transition: all ease-out 1s; }
   .about__bottom {
     font-family: Verdana;
     grid-column: 1 / 3;
@@ -223,17 +231,19 @@
       #github-page .user-container__image--desc:hover a {
         background-color: grey; }
     #github-page .user-container__bio {
-      align-self: center;
+      align-self: start;
       text-align: left;
       width: 90%;
       margin: 0 auto; }
-      #github-page .user-container__bio--about::after {
-        content: '';
-        width: 80%;
-        margin: 15px auto;
-        height: 1px;
-        background: rgba(0, 0, 0, 0.308);
-        display: block; }
+      #github-page .user-container__bio--about {
+        text-align: center; }
+        #github-page .user-container__bio--about::before {
+          content: '';
+          width: 80%;
+          margin: 50px auto 15px;
+          height: 1px;
+          background: rgba(0, 0, 0, 0.308);
+          display: block; }
       #github-page .user-container__bio ul {
         display: -webkit-box;
         display: flex;

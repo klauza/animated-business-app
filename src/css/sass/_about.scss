@@ -55,7 +55,7 @@
       position: relative;
       height: 100px;
       color: white;
-
+      overflow: hidden;
 
       &::after{
           content:'';
@@ -69,14 +69,16 @@
           background: rgb(1, 108, 196);
           border-radius: 3px;
           border: 1px solid #016cc4;
+          
       }
-      span{
+      span#about-text{
           position: absolute;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translateX(-200%); // default -50%
           top: 0;
           z-index: 10;
           line-height: 100px;
+          transition: all ease-out 1s;
       }
   }
   // MID 2
@@ -104,14 +106,15 @@
           border-radius: 3px;
           border: 1px solid #016cc4;
       }
-      span{
+      span#me-text{
           position: absolute;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translateX(200%); // default -50% 
           top: 0;
           z-index: 10;
           line-height: 100px;
           text-indent: -1vw;
+          transition: all ease-out 1s;
       }
   }
   // MID 2 END

@@ -42,16 +42,17 @@
     }
 
     &__bio{
-      align-self: center;
+      align-self: start;
       text-align: left;
       width: 90%;
       margin: 0 auto;
 
       &--about{
-        &::after{
+        text-align: center;
+        &::before{
           content: '';
           width: 80%;
-          margin: 15px auto;
+          margin: 50px auto 15px;
           height: 1px;
           background: rgba(0, 0, 0, 0.308);
           display: block;

@@ -71,14 +71,14 @@ class Github extends Component {
             <button className="user-container__image--desc"><a href={html_url} target="_blank">Github link</a></button>
           </div>
           <div className="user-container__bio">
-            <div className="user-container__bio--about">{bio}</div>
             <ul>
               <li><span>name: </span> {login}</li>
-              <li><span>looking for job: </span> {hireable? ('yes'):('no')}</li>
+              <li><span>hireable: </span> {hireable? ('yes'):('no')}</li>
               <li><span>currently living in: </span> {location}</li>
               <li><span>official page: </span><a style={{textDecoration: 'none', color: 'black'}}href={blog}> {blog}</a></li>
               <li><span>number of public projects:</span> {public_repos}</li>
             </ul>
+            <div className="user-container__bio--about">{bio}</div>
           </div>
 
         </div>
