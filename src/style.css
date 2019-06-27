@@ -4,6 +4,7 @@ body {
 .nav-bar {
   height: 60px;
   width: 100%;
+  box-shadow: 0px 7px 14px -5px rgba(0, 0, 0, 0.75);
   background: -webkit-gradient(linear, left top, right top, from(#8b9dc3), color-stop(#3b5998), to(#8b9dc3));
   background: linear-gradient(to right, #8b9dc3, #3b5998, #8b9dc3); }
 
@@ -26,7 +27,6 @@ body {
   color: red; }
 
 .about {
-  border-top: 1px solid rgba(0, 0, 0, 0.329);
   min-height: 90vh;
   width: 90%;
   margin: 0 auto;
@@ -200,6 +200,104 @@ body {
       -webkit-filter: brightness(60%);
               filter: brightness(60%); } }
 
+#portfolio-page {
+  background: #3f3f3f;
+  padding-top: 50px; }
+  #portfolio-page .portfolio-grid {
+    overflow: hidden;
+    width: 80%;
+    margin: 25px auto 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
+    grid-auto-rows: minmax(500px, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 100px;
+    -webkit-box-pack: center;
+            justify-content: center; }
+    #portfolio-page .portfolio-grid .card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: 350ms;
+      transition: 350ms;
+      overflow: hidden;
+      box-shadow: 0px 27px 40px -20px rgba(0, 0, 0, 0.75);
+      text-transform: uppercase;
+      font-family: verdana; }
+      #portfolio-page .portfolio-grid .card .card-background {
+        height: 100%;
+        -webkit-filter: brightness(2);
+                filter: brightness(2); }
+        #portfolio-page .portfolio-grid .card .card-background img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      #portfolio-page .portfolio-grid .card .top-touch {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: orange;
+        width: 100%;
+        height: 250px;
+        -webkit-clip-path: polygon(72% 0, 86% 0, 100% 14%, 100% 29%);
+                clip-path: polygon(72% 0, 86% 0, 100% 14%, 100% 29%); }
+      #portfolio-page .portfolio-grid .card .card-description {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 0; }
+        #portfolio-page .portfolio-grid .card .card-description__title {
+          text-align: center;
+          color: white;
+          font-size: 1.6em; }
+        #portfolio-page .portfolio-grid .card .card-description__language {
+          text-align: center;
+          color: white; }
+          #portfolio-page .portfolio-grid .card .card-description__language::after {
+            content: '';
+            display: block;
+            width: 10%;
+            height: 2px;
+            background: white;
+            margin: 10px auto; }
+        #portfolio-page .portfolio-grid .card .card-description__icon {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          border: 1px white solid;
+          margin: 0 auto;
+          overflow: hidden; }
+          #portfolio-page .portfolio-grid .card .card-description__icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        #portfolio-page .portfolio-grid .card .card-description__link {
+          text-align: center;
+          margin-top: 20px; }
+          #portfolio-page .portfolio-grid .card .card-description__link a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            letter-spacing: 4px; }
+            #portfolio-page .portfolio-grid .card .card-description__link a:nth-child(1) {
+              background-color: brown; }
+            #portfolio-page .portfolio-grid .card .card-description__link a:nth-child(2) {
+              background-color: black; }
+            #portfolio-page .portfolio-grid .card .card-description__link a:hover {
+              cursor: pointer;
+              background: #b97900;
+              color: white; }
+  #portfolio-page .separator {
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+    background: lightblue;
+    text-align: center;
+    line-height: 300px; }
+
 #github-page {
   margin-top: 50px; }
   #github-page .user-container {
@@ -210,6 +308,7 @@ body {
     #github-page .user-container__image--image {
       margin: 0 auto;
       display: block;
+      min-width: 240px;
       width: 50%;
       object-fit: cover; }
     #github-page .user-container__image--desc {
