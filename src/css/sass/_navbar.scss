@@ -7,21 +7,50 @@
     rgb(139,157,195),
     rgb(59,89,152),
     rgb(139,157,195)
-  )
-}
-.nav-bar > .container{
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-.nav-bar > .container .nav-link{
-  width: 70px;
-  color: white;
-  display: inline-block;
-  line-height: 60px;
-  text-decoration: none;
-}
-.nav-bar .nav-link:hover{
- 
-  color: rgb(139,157,195);
+  );
+
+  .container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    margin: 0 auto;
+  
+    .nav-links-container{
+      grid-column: 2 / span 1;
+      text-align: center;
+    
+      .nav-link{
+        width: 70px;
+        color: white;
+        display: inline-block;
+        line-height: 60px;
+        text-decoration: none;
+        &:hover{
+    
+          color: rgb(139,157,195);
+        }
+      }
+    }
+
+    .nav-icons{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      a{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        &:hover{
+          background: black;
+          color: white;
+        }
+      }
+      i{
+        font-size: 24px;
+        line-height: 60px;
+      }
+    }
+  }
+
+  
 }

@@ -13,9 +13,9 @@
     grid-auto-rows: minmax(500px, 1fr);
     
     grid-column-gap: 15px;
-    grid-row-gap: 100px;
+    grid-row-gap: 50px;
     justify-content: center;
-
+   
     
     .card{
       position: relative;
@@ -27,7 +27,9 @@
       box-shadow: 0px 27px 40px -20px rgba(0,0,0,0.75);
       text-transform: uppercase;
       font-family: verdana;
-  
+      border: 0px solid black;
+      border-radius: 5px;
+
       &:hover{
        
       }
@@ -112,14 +114,17 @@
             }
             &:hover{
               cursor: pointer;
-              background: rgb(185, 121, 0);
-              color: white;
+              background: white;
+              color: black;
             }
           }
 
           i{    // github icon
             margin-left: 10px;
             font-size: 20px;
+          }
+          a:nth-child(1) i{
+            font-size: 18px;
           }
         }
       }   // card-description end
@@ -128,24 +133,25 @@
         padding-top: 20px;
         text-align: center;
         width: 100%;
-        height: 100px;
+        height: 130px;
         background: rgba(255, 255, 255, 0.075);
         position: absolute;
         bottom: 0; left: 0;
-        transform: translateY(120px);
+        transform: translateY(140px);
         transition: 450ms all ease;
         color: white;
       }
         // card hover
       &:hover .card-description__hover--text{
        
-        transform: translateY(0px);
+        transform: translateY(5px);
         transition: 450ms all ease;
       }
     } // card end
 
 
   }
+
 
   .separator{
     margin: 0 auto;
@@ -155,6 +161,17 @@
     text-align: center;
     line-height: 300px;
 
+  }
+
+  @media(max-width: 65em){
+    .portfolio-grid{
+      width: 90%;
+    }
+  }
   
+  @media(max-width: 35em){
+    .portfolio-grid{
+      width: 95%;
+    }
   }
 }

@@ -7,21 +7,36 @@ body {
   box-shadow: 0px 7px 14px -5px rgba(0, 0, 0, 0.75);
   background: -webkit-gradient(linear, left top, right top, from(#8b9dc3), color-stop(#3b5998), to(#8b9dc3));
   background: linear-gradient(to right, #8b9dc3, #3b5998, #8b9dc3); }
-
-.nav-bar > .container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center; }
-
-.nav-bar > .container .nav-link {
-  width: 70px;
-  color: white;
-  display: inline-block;
-  line-height: 60px;
-  text-decoration: none; }
-
-.nav-bar .nav-link:hover {
-  color: #8b9dc3; }
+  .nav-bar .container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    margin: 0 auto; }
+    .nav-bar .container .nav-links-container {
+      grid-column: 2 / span 1;
+      text-align: center; }
+      .nav-bar .container .nav-links-container .nav-link {
+        width: 70px;
+        color: white;
+        display: inline-block;
+        line-height: 60px;
+        text-decoration: none; }
+        .nav-bar .container .nav-links-container .nav-link:hover {
+          color: #8b9dc3; }
+    .nav-bar .container .nav-icons {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .nav-bar .container .nav-icons a {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: black; }
+        .nav-bar .container .nav-icons a:hover {
+          background: black;
+          color: white; }
+      .nav-bar .container .nav-icons i {
+        font-size: 24px;
+        line-height: 60px; }
 
 .container-home h1 {
   color: red; }
@@ -212,7 +227,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
     grid-auto-rows: minmax(500px, 1fr);
     grid-column-gap: 15px;
-    grid-row-gap: 100px;
+    grid-row-gap: 50px;
     -webkit-box-pack: center;
             justify-content: center; }
     #portfolio-page .portfolio-grid .card {
@@ -224,7 +239,9 @@ body {
       overflow: hidden;
       box-shadow: 0px 27px 40px -20px rgba(0, 0, 0, 0.75);
       text-transform: uppercase;
-      font-family: verdana; }
+      font-family: verdana;
+      border: 0px solid black;
+      border-radius: 5px; }
       #portfolio-page .portfolio-grid .card .card-background {
         height: 100%;
         -webkit-filter: brightness(0.9);
@@ -292,28 +309,30 @@ body {
               background-color: black; }
             #portfolio-page .portfolio-grid .card .card-description__link a:hover {
               cursor: pointer;
-              background: #b97900;
-              color: white; }
+              background: white;
+              color: black; }
           #portfolio-page .portfolio-grid .card .card-description__link i {
             margin-left: 10px;
             font-size: 20px; }
+          #portfolio-page .portfolio-grid .card .card-description__link a:nth-child(1) i {
+            font-size: 18px; }
       #portfolio-page .portfolio-grid .card-description__hover--text {
         padding-top: 20px;
         text-align: center;
         width: 100%;
-        height: 100px;
+        height: 130px;
         background: rgba(255, 255, 255, 0.075);
         position: absolute;
         bottom: 0;
         left: 0;
-        -webkit-transform: translateY(120px);
-                transform: translateY(120px);
+        -webkit-transform: translateY(140px);
+                transform: translateY(140px);
         -webkit-transition: 450ms all ease;
         transition: 450ms all ease;
         color: white; }
       #portfolio-page .portfolio-grid .card:hover .card-description__hover--text {
-        -webkit-transform: translateY(0px);
-                transform: translateY(0px);
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
         -webkit-transition: 450ms all ease;
         transition: 450ms all ease; }
   #portfolio-page .separator {
@@ -323,6 +342,12 @@ body {
     background: lightblue;
     text-align: center;
     line-height: 300px; }
+  @media (max-width: 65em) {
+    #portfolio-page .portfolio-grid {
+      width: 90%; } }
+  @media (max-width: 35em) {
+    #portfolio-page .portfolio-grid {
+      width: 95%; } }
 
 #github-page {
   margin-top: 50px; }

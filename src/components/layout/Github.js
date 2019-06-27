@@ -107,7 +107,7 @@ class Github extends Component {
         </div>
 
         <div className="repo-container">
-          <span className="repo-container__title">Latest created repos</span>
+          <span className="repo-container__title">Last created repos</span>
           <div className="repo-headers">
             <li className="repo-item-header">Language</li>
             <li className="repo-item-header">Name</li>
