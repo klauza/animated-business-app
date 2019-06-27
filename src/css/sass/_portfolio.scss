@@ -30,9 +30,9 @@
       border: 0px solid black;
       border-radius: 5px;
 
-      &:hover{
+      // &:hover{
        
-      }
+      // }
 
       .card-background{
         height: 100%;
@@ -66,7 +66,9 @@
         }
         &__language{
           text-align: center;
-          color: white;
+          color: rgb(216, 216, 216);
+          font-size: 0.85em;
+          padding: 0 10px;
           &::after{
             content: '';
             display: block;

@@ -84,7 +84,7 @@ class Github extends Component {
 
           <div className="user-container__image">
             <img className="user-container__image--image" src={avatar_url} alt=""/>
-            <button className="user-container__image--desc"><a href={html_url} target="_blank">Github link</a></button>
+            <button className="user-container__image--desc"><a href={html_url}>Github link</a></button>
           </div>
           <div className="user-container__bio">
             <ul>

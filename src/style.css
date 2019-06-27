@@ -23,6 +23,8 @@ body {
         text-decoration: none; }
         .nav-bar .container .nav-links-container .nav-link:hover {
           color: #8b9dc3; }
+      .nav-bar .container .nav-links-container .active {
+        color: #8b9dc3; }
     .nav-bar .container .nav-icons {
       display: grid;
       grid-template-columns: 1fr 1fr; }
@@ -270,7 +272,9 @@ body {
           font-size: 1.6em; }
         #portfolio-page .portfolio-grid .card .card-description__language {
           text-align: center;
-          color: white; }
+          color: #d8d8d8;
+          font-size: 0.85em;
+          padding: 0 10px; }
           #portfolio-page .portfolio-grid .card .card-description__language::after {
             content: '';
             display: block;

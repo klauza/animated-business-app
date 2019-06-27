@@ -33,7 +33,7 @@ export default class About extends Component {
 
   startAbout(){
     document.querySelector('.about').style.opacity = "1";
-    console.log('load');
+    // console.log('load');
   setTimeout(() => {
       document.querySelector('#about-text').style.transform = "translateX(-50%)"
   }, 125)
@@ -44,9 +44,9 @@ export default class About extends Component {
 
 
   render() {
-    const { loading } = this.state;
+    // const { loading } = this.state;
     
-    console.log(loading);
+    // console.log(loading);
 
 
     
