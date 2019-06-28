@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios';
-import spinner from './loader/load.gif';
+import spinner from '../../media/loader2.gif';
 
 class Github extends Component {
 

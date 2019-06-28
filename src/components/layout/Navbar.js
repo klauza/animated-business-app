@@ -17,8 +17,8 @@ function Navbar() {
         </div>
       
         <div className="nav-icons">
-          <a href="https://www.google.com"><i className="fa fa-linkedin"></i></a>
-          <a href="https://www.google.com"><i className="fa fa-github"></i></a>
+          <a href="https://www.google.com"><i className="fab fa-linkedin-in"></i></a>
+          <a href="https://www.google.com"><i className="fab fa-github"></i></a>
         </div>
 
       </div>

@@ -227,7 +227,7 @@ body {
     padding-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
-    grid-auto-rows: minmax(500px, 1fr);
+    grid-auto-rows: 500px;
     grid-column-gap: 15px;
     grid-row-gap: 50px;
     -webkit-box-pack: center;
@@ -245,9 +245,7 @@ body {
       border: 0px solid black;
       border-radius: 5px; }
       #portfolio-page .portfolio-grid .card .card-background {
-        height: 100%;
-        -webkit-filter: brightness(0.9);
-                filter: brightness(0.9); }
+        height: 100%; }
         #portfolio-page .portfolio-grid .card .card-background img {
           width: 100%;
           height: 100%;
@@ -269,12 +267,14 @@ body {
         #portfolio-page .portfolio-grid .card .card-description__title {
           text-align: center;
           color: white;
-          font-size: 1.6em; }
+          font-size: 1.6em;
+          background: black; }
         #portfolio-page .portfolio-grid .card .card-description__language {
           text-align: center;
           color: #d8d8d8;
           font-size: 0.85em;
-          padding: 0 10px; }
+          padding: 0 10px;
+          background: rgba(0, 0, 0, 0.45); }
           #portfolio-page .portfolio-grid .card .card-description__language::after {
             content: '';
             display: block;
@@ -282,20 +282,28 @@ body {
             height: 2px;
             background: white;
             margin: 10px auto; }
-        #portfolio-page .portfolio-grid .card .card-description__icon {
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          border: 1px white solid;
-          margin: 0 auto;
-          overflow: hidden;
-          text-align: center;
-          background: orange; }
-          #portfolio-page .portfolio-grid .card .card-description__icon i {
-            display: inline-block;
-            color: white;
-            font-size: 32px;
-            line-height: 70px; }
+        #portfolio-page .portfolio-grid .card .card-description__icon--container {
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+                  flex-direction: row;
+          -webkit-box-pack: center;
+                  justify-content: center;
+          -webkit-box-pack: space-evenly;
+                  justify-content: space-evenly; }
+          #portfolio-page .portfolio-grid .card .card-description__icon--container .icon-language {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px white solid;
+            overflow: hidden;
+            text-align: center;
+            background: orange; }
+            #portfolio-page .portfolio-grid .card .card-description__icon--container .icon-language i {
+              color: white;
+              font-size: 34px;
+              line-height: 70px; }
         #portfolio-page .portfolio-grid .card .card-description__link {
           text-align: center;
           margin-top: 20px; }
@@ -325,7 +333,7 @@ body {
         text-align: center;
         width: 100%;
         height: 130px;
-        background: rgba(255, 255, 255, 0.075);
+        background: rgba(0, 0, 0, 0.45);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -339,6 +347,60 @@ body {
                 transform: translateY(5px);
         -webkit-transition: 450ms all ease;
         transition: 450ms all ease; }
+    #portfolio-page .portfolio-grid .photography-card .card-background {
+      -webkit-filter: brightness(0.75);
+              filter: brightness(0.75); }
+      #portfolio-page .portfolio-grid .photography-card .card-background img {
+        object-fit: none;
+        object-position: -60px -370px; }
+    #portfolio-page .portfolio-grid .guess-card .card-background {
+      -webkit-filter: brightness(0.6);
+              filter: brightness(0.6); }
+      #portfolio-page .portfolio-grid .guess-card .card-background img {
+        object-fit: cover;
+        object-position: -50px 0px; }
+    #portfolio-page .portfolio-grid .actor-card .card-background {
+      -webkit-filter: brightness(1.2);
+              filter: brightness(1.2); }
+      #portfolio-page .portfolio-grid .actor-card .card-background img {
+        object-fit: none;
+        object-position: -130px -260px; }
+    #portfolio-page .portfolio-grid .chest-card .card-background {
+      -webkit-filter: brightness(1.1);
+              filter: brightness(1.1); }
+      #portfolio-page .portfolio-grid .chest-card .card-background img {
+        object-fit: cover;
+        object-position: -190px 0px; }
+    #portfolio-page .portfolio-grid .hero-card .card-background {
+      -webkit-filter: brightness(0.6);
+              filter: brightness(0.6); }
+      #portfolio-page .portfolio-grid .hero-card .card-background img {
+        object-fit: cover;
+        object-position: -60px 0px; }
+    #portfolio-page .portfolio-grid .shelter-card .card-background {
+      -webkit-filter: brightness(0.55);
+              filter: brightness(0.55); }
+      #portfolio-page .portfolio-grid .shelter-card .card-background img {
+        object-fit: cover;
+        object-position: -150px 0px; }
+    #portfolio-page .portfolio-grid .hussars-card .card-background {
+      -webkit-filter: brightness(0.75);
+              filter: brightness(0.75); }
+      #portfolio-page .portfolio-grid .hussars-card .card-background img {
+        object-fit: cover;
+        object-position: -350px 0px; }
+    #portfolio-page .portfolio-grid .car-dealer-card .card-background {
+      -webkit-filter: brightness(0.6);
+              filter: brightness(0.6); }
+      #portfolio-page .portfolio-grid .car-dealer-card .card-background img {
+        object-fit: cover;
+        object-position: -250px 0px; }
+    #portfolio-page .portfolio-grid .church-card .card-background {
+      -webkit-filter: brightness(0.7);
+              filter: brightness(0.7); }
+      #portfolio-page .portfolio-grid .church-card .card-background img {
+        object-fit: cover;
+        object-position: 0px 0px; }
   #portfolio-page .separator {
     margin: 0 auto;
     width: 80%;

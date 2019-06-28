@@ -1,4 +1,13 @@
-import React from 'react'
+import React from 'react';
+import photographyImg from '../../media/portfolio-imgs/photography.jpg';
+import guessNumImg from '../../media/portfolio-imgs/guess-game.jpg';
+import actorGameImg from '../../media/portfolio-imgs/actor-game.jpg';
+import chestImg from '../../media/portfolio-imgs/chest.jpg';
+import heroImg from '../../media/portfolio-imgs/hero-project.jpg';
+import petShelterImg from '../../media/portfolio-imgs/petShelter.jpg';
+import hussarImg from '../../media/portfolio-imgs/hussar.jpg';
+import carDealershipImg from '../../media/portfolio-imgs/car-dealership.jpg';
+import churchImg from '../../media/portfolio-imgs/church.jpg';
 
 
 function Portfolio() {
@@ -7,56 +16,66 @@ function Portfolio() {
       {/* <div className="shadow"></div> */}
       <div className="portfolio-grid">
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card chest-card">
+          <div className="card-background"><img src={chestImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">coffer</div>
             <div className="card-description__language">JS state pattern, History API</div>
-            <div className="card-description__icon"><i className="fa fa-archive"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-js-square"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">This project is a container of any smaller idea. Was made to study JS state.</div>
         </div>
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card actor-card">
+          <div className="card-background"><img src={actorGameImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
-            <div className="card-description__title">taskMission - game</div>
-            <div className="card-description__language">JS revealing pattern, fetch API, localStore</div>
-            <div className="card-description__icon"><i className="fa fa-random"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__title">Actor discovery</div>
+            <div className="card-description__language">JS revealing pattern, fetch API, local storage</div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-js-square"></i></div>
+              <div className="icon-language"><i className="fas fa-database"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Actor game where you choose the popular celebrity to win... something.</div>
         </div>
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card guess-card">
+          <div className="card-background"><img src={guessNumImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">guessNumber</div>
-            <div className="card-description__language">JS Classes, local Storage, Regex</div>
-            <div className="card-description__icon"><i className="fa fa-puzzle-piece"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__language">JS Classes, local storage, Regex</div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-js-square"></i></div>
+              <div className="icon-language"><i className="fas fa-database"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Simply guess a number game. I believe there is no need to explain what to do.</div>
         </div>
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card hero-card">
+          <div className="card-background"><img src={heroImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
-            <div className="card-description__title">heroproject</div>
+            <div className="card-description__title">heroproject</div>  
             <div className="card-description__language">React, Sass</div>
-            <div className="card-description__icon"><i className="fa fa-sellsy"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-react"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
-          <div className="card-description__hover--text">Very first steps with React. Firebase is being used in background. The user has to login to create his own 2d hero.</div>
+          <div className="card-description__hover--text">Create 2d hero with a connection with firebase. Login system included.</div>
         </div>
 
 
@@ -69,68 +88,83 @@ function Portfolio() {
       <div className="portfolio-grid">
 
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card photography-card">
+          <div className="card-background"><img src={photographyImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">photography</div>
             <div className="card-description__language">HTML, Sass, jQuery</div>
-            <div className="card-description__icon"><i className="fa fa-camera-retro"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-html5"></i></div>
+              <div className="icon-language"><i className="fab fa-sass"></i></div>
+              <div className="icon-language"><i className="fab fa-js-square"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Hobbystic photography SPA with some jQuery DOM manipulation.</div>
         </div>
 
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card shelter-card">
+          <div className="card-background"><img src={petShelterImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">pet shelter</div>
             <div className="card-description__language">HTML, Sass</div>
-            <div className="card-description__icon"><i className="fa fa-home"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-html5"></i></div>
+              <div className="icon-language"><i className="fab fa-sass"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
-          <div className="card-description__hover--text">Sass based SPA for people who are keen to be taking care of animals. Made with great CSS GRID tool.</div>
+          <div className="card-description__hover--text">Sass based SPA for people who are keen to be taking care of animals. Made with CSS GRID tool.</div>
         </div>
 
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card hussars-card">
+          <div className="card-background"><img src={hussarImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">hussars</div>
             <div className="card-description__language">HTML, Sass, jQuery</div>
-            <div className="card-description__icon"><i className="fa fa-pied-piper-alt"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-html5"></i></div>
+              <div className="icon-language"><i className="fab fa-sass"></i></div>
+              <div className="icon-language"><i className="fab fa-js-square"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Horse cavalry at the turn of XVI century. One page website with colorful sections.</div>
         </div>
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card church-card">
+          <div className="card-background"><img src={churchImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">Parish church</div>
             <div className="card-description__language">Wordpress</div>
-            <div className="card-description__icon"><i className="fa fa-heart-o"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-wordpress"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Wordpress based page made for a parish church for non commercial purpose.</div>
         </div>
 
-        <div className="card">
-          <div className="card-background"><img src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/></div>
+        <div className="card car-dealer-card">
+          <div className="card-background"><img src={carDealershipImg} alt=""/></div>
           <div className="top-touch"></div>
           <div className="card-description">
             <div className="card-description__title">car dealership</div>
             <div className="card-description__language">Wordpress</div>
-            <div className="card-description__icon"><i className="fa fa-car"></i></div>
-            <div className="card-description__link"><a href="https://google.com">see page<i className="fa fa-file-o"></i></a><a href="https://google.com">see code<i className="fa fa-github"></i></a></div>
+            <div className="card-description__icon--container">
+              <div className="icon-language"><i className="fab fa-wordpress"></i></div>
+            </div>
+            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">A modest page for a car workshop to list available cars or just to contact a seller.</div>
@@ -139,7 +173,7 @@ function Portfolio() {
       </div>
 
       
-
+      
     </div>
   )
 }
