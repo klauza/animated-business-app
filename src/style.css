@@ -10,8 +10,16 @@ body {
   .nav-bar .container {
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 90% 1fr;
+    grid-template-columns: 60px 1fr 60px;
     margin: 0 auto; }
+    .nav-bar .container .nav-logo img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .nav-bar .container .nav-logo:hover {
+      background: rgba(255, 255, 255, 0.233); }
     .nav-bar .container .nav-links-container {
       grid-column: 2 / span 1;
       text-align: center; }
@@ -304,6 +312,12 @@ body {
               color: white;
               font-size: 34px;
               line-height: 70px; }
+            #portfolio-page .portfolio-grid .card .card-description__icon--container .icon-language img {
+              width: 36px;
+              position: relative;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%); }
         #portfolio-page .portfolio-grid .card .card-description__link {
           text-align: center;
           margin-top: 20px; }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import navLogo from '../../media/favicon.ico';
 
 
 
@@ -7,6 +8,9 @@ function Navbar() {
   return (
     <div className="nav-bar">
       <div className="container">
+        <div className="nav-logo">
+          <img src={navLogo} alt=""/>
+        </div>
 
         <div className="nav-links-container">
           <NavLink exact={true} to="/" className="nav-link">Home</NavLink>

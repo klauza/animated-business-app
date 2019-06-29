@@ -8,7 +8,7 @@ import petShelterImg from '../../media/portfolio-imgs/petShelter.jpg';
 import hussarImg from '../../media/portfolio-imgs/hussar.jpg';
 import carDealershipImg from '../../media/portfolio-imgs/car-dealership.jpg';
 import churchImg from '../../media/portfolio-imgs/church.jpg';
-
+import jqueryPng from '../../media/jquery.png';
 
 function Portfolio() {
   return (
@@ -25,7 +25,7 @@ function Portfolio() {
             <div className="card-description__icon--container">
               <div className="icon-language"><i className="fab fa-js-square"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://coffer-klauza.netlify.com">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/coffer">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://coffer-klauza.netlify.com">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/coffer">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">This project is a container of any smaller idea. Was made to study JS state.</div>
@@ -41,7 +41,7 @@ function Portfolio() {
               <div className="icon-language"><i className="fab fa-js-square"></i></div>
               <div className="icon-language"><i className="fas fa-database"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://actor-discovery-klauza.netlify.com/">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/actorDiscovery">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://actor-discovery-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/actorDiscovery">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Actor game where you choose the popular celebrity to win... something.</div>
@@ -57,7 +57,7 @@ function Portfolio() {
               <div className="icon-language"><i className="fab fa-js-square"></i></div>
               <div className="icon-language"><i className="fas fa-database"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://guess-a-number-klauza.netlify.com/">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/guessNumberGame">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://guess-a-number-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/guessNumberGame">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Simply guess a number game. I believe there is no need to explain what to do.</div>
@@ -72,7 +72,7 @@ function Portfolio() {
             <div className="card-description__icon--container">
               <div className="icon-language"><i className="fab fa-react"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://hero-project-klauza.firebaseapp.com/signin">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/heroproject">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://hero-project-klauza.firebaseapp.com/signin">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/heroproject">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Sign in & create 2d hero with a connection with firebase. You can see others work too.</div>
@@ -99,7 +99,7 @@ function Portfolio() {
               <div className="icon-language"><i className="fab fa-sass"></i></div>
               <div className="icon-language"><i className="fab fa-js-square"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://photography-klauza.netlify.com/">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/photography">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://photography-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/photography">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Hobbystic photography SPA with some jQuery DOM manipulation.</div>
@@ -116,7 +116,7 @@ function Portfolio() {
               <div className="icon-language"><i className="fab fa-html5"></i></div>
               <div className="icon-language"><i className="fab fa-sass"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://shelter-klauza.netlify.com/">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/Shelter">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://shelter-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/Shelter">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Sass based SPA for people who are keen to be taking care of animals. Made with CSS GRID tool.</div>
@@ -132,9 +132,9 @@ function Portfolio() {
             <div className="card-description__icon--container">
               <div className="icon-language"><i className="fab fa-html5"></i></div>
               <div className="icon-language"><i className="fab fa-sass"></i></div>
-              <div className="icon-language"><i className="fab fa-js-square"></i></div>
+              <div className="icon-language"><img src={jqueryPng} alt=""/></div>
             </div>
-            <div className="card-description__link"><a href="https://hussars-klauza.netlify.com/">see page<i class="far fa-file"></i></a><a href="https://github.com/klauza/hussars">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://hussars-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/hussars">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Horse cavalry at the turn of XVI century. One page website with colorful sections.</div>
@@ -149,7 +149,7 @@ function Portfolio() {
             <div className="card-description__icon--container">
               <div className="icon-language"><i className="fab fa-wordpress"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://google.com">see page<i className="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">Wordpress based page made for a parish church for non commercial purpose.</div>
@@ -164,7 +164,7 @@ function Portfolio() {
             <div className="card-description__icon--container">
               <div className="icon-language"><i className="fab fa-wordpress"></i></div>
             </div>
-            <div className="card-description__link"><a href="https://google.com">see page<i class="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
+            <div className="card-description__link"><a href="https://google.com">see page<i className="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
           </div>
 
           <div className="card-description__hover--text">A modest page for a car workshop to list available cars or just to contact a seller.</div>

@@ -86,23 +86,28 @@
           justify-content: center;
           justify-content: space-evenly;
           .icon-language{
-          
-          width: 70px;
-          height: 70px;
-          border-radius: 50%;
-          border: 1px white solid;
-          
-          overflow:hidden;
-          text-align: center;
-          background: orange;
-          i{  
             
-            color: white;
-            font-size: 34px;
-            line-height: 70px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px white solid;
             
+            overflow:hidden;
+            text-align: center;
+            background: orange;
+
+            i{  
+              color: white;
+              font-size: 34px;
+              line-height: 70px;
+            }
+            img{
+              width: 36px;  
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+            }
           }
-        }
         }
         &__link{
           text-align: center;

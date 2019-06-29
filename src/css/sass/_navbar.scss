@@ -13,9 +13,21 @@
   .container{
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 90% 1fr;
+    grid-template-columns: 60px 1fr 60px;
     margin: 0 auto;
   
+    .nav-logo{
+      img{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover{
+        background: rgba(255, 255, 255, 0.233);
+      }
+    }
+
     .nav-links-container{
       grid-column: 2 / span 1;
       text-align: center;
