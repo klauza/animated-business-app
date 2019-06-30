@@ -2,6 +2,19 @@ import React, {Component} from 'react'
 import axios from 'axios';
 import spinner from '../../media/loader2.gif';
 
+// API
+let githubClientId;
+let githubClientSecret;
+
+if(process.env.NODE_ENV !== 'production'){
+  githubClientId = process.env.REACT_APP_GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.REACT_APP_GITHUB_CLIENT_SECRET;
+  
+} else {
+  githubClientId = process.env.GITHUB_CLIENT_ID;
+  githubClientSecret = process.env.GITHUB_CLIENT_SECRET;
+}
+
 class Github extends Component {
 
   componentDidMount(){
@@ -20,10 +33,12 @@ class Github extends Component {
   // Get from external API
   getUser = async (user) => {
     
+    
     this.setState({ loading: true });
-    const res = await axios.get(`https://api.github.com/users/${user}?&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`); // axios deal with promises
+    
+    const res = await axios.get(`https://api.github.com/users/${user}?&client_id=${githubClientId}&client_secret=${githubClientSecret}`); // axios deal with promises
 
-    const repoResponse = await axios.get(`https://api.github.com/users/${user}/repos?per_page=4&sort='created: desc'&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+    const repoResponse = await axios.get(`https://api.github.com/users/${user}/repos?per_page=4&sort='created: desc'&client_id=${githubClientId}&client_secret=${githubClientSecret}`);
     
     this.setState({ data: res.data, repos: repoResponse.data, loading: false}); // passing data to state
   }
@@ -51,6 +66,7 @@ class Github extends Component {
     const { avatar_url } = this.state.data;
     const { html_url, public_repos, blog } = this.state.data;
     //console.log(this.state.repos);
+
 
     
     

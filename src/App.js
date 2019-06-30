@@ -8,6 +8,7 @@ import About from './components/layout/About';
 import Portfolio from './components/layout/Portfolio';
 import Skills from './components/layout/Skills';
 import Github from './components/layout/Github';
+import NotFound from './components/layout/NotFound';
 
 class App extends Component {
 
@@ -33,7 +34,9 @@ class App extends Component {
             <Route path='/portfolio' component={Portfolio} />
             <Route path='/skills' component={Skills} />
             <Route path='/github' component={Github} />
-
+            <Route path='/github' component={Github} />
+            
+            <Route component={NotFound} />
           </Switch>
         </div>
       </BrowserRouter>
