@@ -1,3 +1,12 @@
+// adding a scrollbar to any page to prevent page move
 body{
   overflow-y: scroll;
 }
+
+// portfolio background colors
+$top-portfolio-color: rgb(90, 90, 90);    // top segment page
+$bot-portfolio-color: rgb(66, 66, 66);    // bottom segment page
+
+// portfoliot font
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+$ff-Russo: 'Russo One', sans-serif;

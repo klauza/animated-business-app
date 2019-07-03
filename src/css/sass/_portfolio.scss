@@ -1,13 +1,11 @@
 #portfolio-page{
-  background: rgb(63, 63, 63);
-  padding-top: 50px;
+  background: $bot-portfolio-color;
   .portfolio-grid{
-    // background: white;
     //overflow: hidden;
-    width: 80%;
-    background: rgb(63, 63, 63);
-    margin: 25px auto 0px;
-    padding-bottom: 50px;
+    width: 100%;
+    background: $bot-portfolio-color;
+    margin: 0 auto;
+    padding: 100px 50px 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
     grid-auto-rows: 500px;
@@ -15,7 +13,10 @@
     grid-column-gap: 15px;
     grid-row-gap: 50px;
     justify-content: center;
-   
+
+    &:nth-child(1){ 
+      background: $top-portfolio-color;
+    }
     
     .card{
       position: relative;
@@ -26,7 +27,7 @@
       overflow: hidden;
       box-shadow: 0px 27px 40px -20px rgba(0,0,0,0.75);
       text-transform: uppercase;
-      font-family: verdana;
+      font-family: $ff-Russo;
       border: 0px solid black;
       border-radius: 5px;
 
@@ -253,24 +254,44 @@
   }
 
   .separator{
+    width: 100%;
     margin: 0 auto;
-    width: 80%;
-    height: 300px;
-    background: lightblue;
+    min-height: 400px;
+    background: $top-portfolio-color;
     text-align: center;
-    line-height: 300px;
-
+    clip-path: polygon(100% 0, 100% 70%, 70% 70%, 50% 95%, 30% 70%, 0 70%, 0 0);
+    position: relative;
+    &-para{
+      font-size: 1.5rem;
+      position: absolute; top: 60%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: $ff-Russo;
+    }
   }
 
   @media(max-width: 65em){
     .portfolio-grid{
-      width: 90%;
+      width: 100%;
+    }
+    .separator{
+      clip-path: polygon(100% 0, 100% 70%, 70% 70%, 50% 85%, 30% 70%, 0 70%, 0 0);
+      &-para{
+        font-size: 1.25rem;
+      }
     }
   }
   
   @media(max-width: 35em){
     .portfolio-grid{
-      width: 95%;
+      width: 100%;
+      padding: 100px 0px 50px;
+    }
+    .separator{
+      clip-path: polygon(100% 0, 100% 70%, 70% 70%, 50% 75%, 30% 70%, 0 70%, 0 0);
+      &-para{
+        font-size: 1rem;
+      }
     }
   }
 }
