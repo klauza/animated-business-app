@@ -16,13 +16,12 @@ function Navbar() {
           <NavLink exact={true} to="/" className="nav-link">Home</NavLink>
           <NavLink to="/about" className="nav-link">About</NavLink>
           <NavLink to="/portfolio" className="nav-link">Portfolio</NavLink>
-          <NavLink to="/skills" className="nav-link">Skills</NavLink>
           <NavLink to="/github" className="nav-link">Github</NavLink>
         </div>
       
         <div className="nav-icons">
-          <a href="https://www.google.com"><i className="fab fa-linkedin-in"></i></a>
-          <a href="https://www.google.com"><i className="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/michal-klauza-b22318186/"><i className="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/klauza"><i className="fab fa-github"></i></a>
         </div>
 
       </div>

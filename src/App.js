@@ -6,7 +6,6 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/layout/Home';
 import About from './components/layout/About';
 import Portfolio from './components/layout/Portfolio';
-import Skills from './components/layout/Skills';
 import Github from './components/layout/Github';
 import NotFound from './components/layout/NotFound';
 
@@ -32,7 +31,6 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route path='/about' component={About}/>
             <Route path='/portfolio' component={Portfolio} />
-            <Route path='/skills' component={Skills} />
             <Route path='/github' component={Github} />
             <Route path='/github' component={Github} />
             
