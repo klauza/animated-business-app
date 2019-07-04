@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
 // compile scss -> css
+
 function style(){
   //dir of scss file
   return gulp.src('./src/css/style.scss')
@@ -12,7 +13,7 @@ function style(){
 }
 
 function watch(){
-  gulp.watch('./src/css/**/*.scss', style) //watch( './scss/**/*.scss, style' )
+  gulp.watch('./src/css/**/*.scss', style) 
 }
 
 exports.style = style;
