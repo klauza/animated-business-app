@@ -62,7 +62,7 @@ body {
   background: white; }
 
 .container-home {
-  background: #A9B3D2; }
+  background: #8b9dc3; }
   .container-home__hero {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
             clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%); }
@@ -87,14 +87,15 @@ body {
     text-align: center;
     margin-top: -50px; }
     .container-home__experience span {
-      color: red;
+      font-family: "Russo One", sans-serif;
+      color: white;
       position: relative; }
       .container-home__experience span::before, .container-home__experience span::after {
         content: '';
         display: block;
         width: 20px;
-        height: 1px;
-        background: red;
+        height: 2px;
+        background: white;
         margin: 0 auto; }
       .container-home__experience span::before {
         position: absolute;
@@ -117,13 +118,60 @@ body {
     flex-wrap: wrap;
     -webkit-box-pack: center;
             justify-content: center; }
-    .container-home__skill-icons div {
-      min-width: 100px;
-      min-height: 100px;
+    .container-home__skill-icons .icon-container {
+      width: 100px;
+      height: 100px;
       text-align: center;
-      margin: 10px 10px;
+      margin: 15px 10px;
       background: black;
-      border: 1px solid red; }
+      border: 1px solid white; }
+      .container-home__skill-icons .icon-container i {
+        color: white;
+        font-size: 64px;
+        line-height: 100px; }
+      .container-home__skill-icons .icon-container .desc {
+        background: rgba(173, 173, 173, 0.295); }
+    .container-home__skill-icons .icon-container:nth-child(1) i {
+      color: yellow; }
+    .container-home__skill-icons .icon-container:nth-child(1) .desc {
+      color: yellow;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(2) i {
+      color: #4DD0E1; }
+    .container-home__skill-icons .icon-container:nth-child(2) .desc {
+      color: #4DD0E1;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(3) i {
+      color: #cf649a; }
+    .container-home__skill-icons .icon-container:nth-child(3) .desc {
+      color: #cf649a;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(4) i {
+      color: #fa2727; }
+    .container-home__skill-icons .icon-container:nth-child(4) .desc {
+      color: #fa2727;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(5) i {
+      color: #fff; }
+    .container-home__skill-icons .icon-container:nth-child(5) .desc {
+      color: #fff;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(6) i {
+      color: #e44f26; }
+    .container-home__skill-icons .icon-container:nth-child(6) .desc {
+      color: #e44f26;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(7) i {
+      color: #6f43a4; }
+    .container-home__skill-icons .icon-container:nth-child(7) .desc {
+      color: #6f43a4;
+      font-family: "Russo One", sans-serif; }
+    .container-home__skill-icons .icon-container:nth-child(8) i {
+      color: #19e634; }
+    .container-home__skill-icons .icon-container:nth-child(8) .desc {
+      color: #19e634;
+      font-family: "Russo One", sans-serif;
+      letter-spacing: -1px; }
 
 .about-main-container {
   background: white; }

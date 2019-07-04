@@ -36,7 +36,7 @@ export default class Home extends Component {
 
       
           <div className="container-home__hero">
-            <img src={heroImg} className="container-home__hero--img" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageErrored.bind(this)} />
+            <img src={heroImg} alt="" className="container-home__hero--img" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageErrored.bind(this)} />
             
             <div className="container-home__hero--para">
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, vel?</p>
@@ -50,12 +50,14 @@ export default class Home extends Component {
           </div>
 
           <div className="container-home__skill-icons">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
+            <div className="icon-container"><i className="fab fa-js-square"></i><div className="desc">JavaScript</div></div>
+            <div className="icon-container"><i className="fab fa-react"></i><div className="desc">React</div></div>
+            <div className="icon-container"><i className="fab fa-sass"></i><div className="desc">Sass</div></div>
+            <div className="icon-container"><i className="fas fa-tools"></i><div className="desc">Regex</div></div>
+            <div className="icon-container"><i className="fas fa-code-branch"></i><div className="desc">Github</div></div>
+            <div className="icon-container"><i className="fab fa-html5"></i><div className="desc">HTML</div></div>
+            <div className="icon-container"><i className="fab fa-bootstrap"></i><div className="desc">Bootstrap</div></div>
+            <div className="icon-container"><i className="fas fa-boxes"></i><div className="desc">RESTful API</div></div>
           </div>
         </div>
       </div>

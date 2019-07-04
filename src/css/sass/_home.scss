@@ -2,7 +2,7 @@
   background: white;
 }
 .container-home{
-  background: #A9B3D2;
+  background: #8b9dc3;
   &__hero{
     clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
     &--img{
@@ -31,14 +31,15 @@
     text-align: center;
     margin-top: -50px;
     span{
-      color: red;
+      font-family: $ff-Russo;
+      color: white;
       position: relative;
       &::before, &::after{
         content: '';
         display: block;
         width: 20px;
-        height: 1px;
-        background: red;
+        height: 2px;
+        background: white;
         margin: 0 auto;
       }
       &::before{
@@ -60,13 +61,54 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    div{
-      min-width: 100px;
-      min-height: 100px;
+    .icon-container{
+      width: 100px;
+      height: 100px;
+      // overflow: hidden;
       text-align: center;
-      margin: 10px 10px;
+      margin: 15px 10px;
       background: black;
-      border: 1px solid red;
+      border: 1px solid white;
+      i{  
+        color: white;
+        font-size: 64px;
+        line-height: 100px;
+      }
+      .desc{
+        background: rgba(173, 173, 173, 0.295);
+      }
+    }
+    .icon-container:nth-child(1){
+      i{color: yellow;}
+      .desc{color: yellow;font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(2){
+      i{color: #4DD0E1;}
+      .desc{color: #4DD0E1;font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(3){
+      i{color: #cf649a;}
+      .desc{color: #cf649a;font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(4){
+      i{color: rgb(250, 39, 39);}
+      .desc{color: rgb(250, 39, 39);font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(5){
+      i{color: #fff;}
+      .desc{color: #fff;font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(6){
+      i{color: #e44f26;}
+      .desc{color: #e44f26;font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(7){
+      i{color: #6f43a4;}
+      .desc{color: #6f43a4;font-family: $ff-Russo;}
+    }
+    .icon-container:nth-child(8){
+      i{color: #19e634;}
+      .desc{color: #19e634;font-family: $ff-Russo; letter-spacing: -1px;}
     }
   }
 
