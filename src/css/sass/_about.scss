@@ -1,13 +1,6 @@
 .about-main-container{
   background: white;
-  .about-spinner{
-    img{
-      width: 200px;
-    }
-    transition: 250ms all ease-in;
-    position: absolute; top: 160px; left: 50%;
-    transform: translateX(-50%);
-  }
+  
 }
 
 .about{

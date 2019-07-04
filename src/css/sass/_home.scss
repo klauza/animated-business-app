@@ -1,4 +1,8 @@
+.home{
+  background: white;
+}
 .container-home{
+  background: #A9B3D2;
   &__hero{
     clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
     &--img{
@@ -50,7 +54,8 @@
 
   &__skill-icons{
     width: 80%;
-    margin: 50px auto;
+    margin: 50px auto 0;
+    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

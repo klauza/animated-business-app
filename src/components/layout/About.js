@@ -9,7 +9,6 @@ export default class About extends Component {
 
   componentDidMount(){
     document.querySelector('.about').style.opacity ="0";
-    document.querySelector('.about').style.transition ="all 1s ease-in";
     document.querySelector('.about-spinner').style.opacity = "1";
   }
 
@@ -35,7 +34,6 @@ export default class About extends Component {
 
   startAbout(){
     document.querySelector('.about').style.opacity = "1";
-    document.querySelector('.about').style.transition ="all 1s ease-in";
     document.querySelector('.about-spinner').style.opacity = "0";
     document.querySelector('.about-spinner').style.visibility = "none";
     // console.log('load');

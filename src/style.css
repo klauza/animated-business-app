@@ -2,6 +2,15 @@
 body {
   overflow-y: scroll; }
 
+.about-spinner, .home-spinner {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  .about-spinner img, .home-spinner img {
+    width: 200px; }
+
 .nav-bar {
   height: 60px;
   width: 100%;
@@ -48,6 +57,9 @@ body {
       .nav-bar .container .nav-icons i {
         font-size: 24px;
         line-height: 60px; }
+
+.home {
+  background: white; }
 
 .container-home {
   background: #A9B3D2; }
@@ -115,16 +127,6 @@ body {
 
 .about-main-container {
   background: white; }
-  .about-main-container .about-spinner {
-    -webkit-transition: 250ms all ease-in;
-    transition: 250ms all ease-in;
-    position: absolute;
-    top: 160px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
-    .about-main-container .about-spinner img {
-      width: 200px; }
 
 .about {
   min-height: 90vh;
