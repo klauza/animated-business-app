@@ -8,6 +8,7 @@ export default class Home extends Component {
     document.querySelector('.home-spinner').style.opacity = "1";
   }
 
+
   constructor(props){
     super(props);
     this.state = { loading: true}
@@ -24,6 +25,7 @@ export default class Home extends Component {
     document.querySelector('.home-spinner').style.opacity = "0";
     document.querySelector('.home-spinner').style.visibility = "none";
   }
+
 
   render(){
 
@@ -42,7 +44,6 @@ export default class Home extends Component {
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, vel?</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae vero excepturi porro odit minus officiis ex fugiat enim pariatur!</p>
             </div>
-
           </div>
 
           <div className="container-home__experience">

@@ -2,7 +2,7 @@
   background: white;
 }
 .container-home{
-  background: #8b9dc3;
+  background: rgb(59,89,152);
   &__hero{
     clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
     &--img{
@@ -21,6 +21,17 @@
       max-width: 600px;
       p:nth-child(1){
         margin-bottom: 50px;
+        &::after{
+          content: '';
+          display: block;
+          margin: 0 auto;
+          position: absolute; 
+          top: 40%; left: 50%;
+          transform: translateX(-50%);
+          height: 2px;
+          width: 60px;
+          background: white;
+        }
       }
       p:nth-child(2){
       }

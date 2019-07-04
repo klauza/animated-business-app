@@ -82,7 +82,7 @@ function Portfolio() {
       </div>
 
       <div className="separator"> 
-        <p className="separator-para">Below... my foundational projects</p>
+        <p className="separator-para">Below are... my foundational projects</p>
       </div>
 
       <div className="portfolio-grid">
