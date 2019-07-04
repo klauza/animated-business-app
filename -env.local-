@@ -1,0 +1,6 @@
+// for local environment: rename this file to ".env.local"
+// content of this file (for local purposes):
+REACT_APP_GITHUB_CLIENT_ID='key'
+REACT_APP_GITHUB_CLIENT_SECRET='key'
+
+// live page, deployment: on netlify there is an option to add a key 
