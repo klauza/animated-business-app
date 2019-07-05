@@ -41,8 +41,7 @@ export default class Home extends Component {
             <img src={heroImg} alt="" className="container-home__hero--img" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageErrored.bind(this)} />
             
             <div className="container-home__hero--para">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, vel?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae vero excepturi porro odit minus officiis ex fugiat enim pariatur!</p>
+              <p>There is a long journey behind me, but even longer... ahead.</p>
             </div>
           </div>
 
