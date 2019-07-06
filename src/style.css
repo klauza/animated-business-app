@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Marck+Script&display=swap");
 body {
   overflow-y: scroll; }
 
@@ -14,9 +15,7 @@ body {
 .nav-bar {
   height: 60px;
   width: 100%;
-  box-shadow: 0px 7px 14px -5px rgba(0, 0, 0, 0.75);
-  background: -webkit-gradient(linear, left top, right top, from(#8b9dc3), color-stop(#3b5998), to(#8b9dc3));
-  background: linear-gradient(to right, #8b9dc3, #3b5998, #8b9dc3); }
+  background: #556bac; }
   .nav-bar .container {
     width: 80%;
     display: grid;
@@ -57,16 +56,53 @@ body {
       .nav-bar .container .nav-icons i {
         font-size: 24px;
         line-height: 60px; }
+  @media (max-width: 548px) {
+    .nav-bar .container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 60px;
+      margin: 0 auto; }
+      .nav-bar .container .nav-logo {
+        display: none; }
+      .nav-bar .container .nav-links-container {
+        grid-column: span 1;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center; }
+        .nav-bar .container .nav-links-container .nav-link {
+          width: auto;
+          color: white;
+          display: inline-block;
+          line-height: 60px;
+          text-decoration: none;
+          font-size: 0.8em; }
+        .nav-bar .container .nav-links-container .active {
+          color: #8b9dc3; } }
 
 .home {
   background: white; }
 
 .container-home {
-  background: #8b9dc3; }
+  background: rgba(59, 88, 152, 0.7);
+  position: relative;
+  overflow: hidden; }
+  .container-home::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: url("./media/hero-imgs/floor-tile.png") repeat; }
   .container-home__hero {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
             clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%); }
     .container-home__hero--img {
+      -webkit-filter: saturate(1.35);
+              filter: saturate(1.35);
       width: 100%;
       height: 92vh;
       object-fit: cover;
@@ -74,28 +110,49 @@ body {
     .container-home__hero--para {
       text-align: center;
       position: absolute;
-      top: 50%;
+      top: 15%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      color: white;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
       z-index: 2;
       max-width: 600px; }
-      .container-home__hero--para p:nth-child(1) {
-        margin-bottom: 50px; }
+      .container-home__hero--para p {
+        font-family: "Marck Script", cursive;
+        color: white;
+        font-size: 1.55rem; }
+        .container-home__hero--para p::after {
+          content: '';
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          bottom: -100%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
+          height: 2px;
+          width: 80px;
+          border-bottom: 2px dashed white; }
+      @media (max-width: 660px) {
+        .container-home__hero--para {
+          padding: 0 10px;
+          top: 10%;
+          max-width: unset;
+          width: 100%; }
+          .container-home__hero--para p::after {
+            bottom: -50%; } }
   .container-home__experience {
     text-align: center;
     margin-top: -50px; }
     .container-home__experience span {
       font-family: "Russo One", sans-serif;
-      color: white;
+      color: black;
       position: relative; }
       .container-home__experience span::before, .container-home__experience span::after {
         content: '';
         display: block;
         width: 20px;
-        height: 2px;
-        background: white;
+        height: 3px;
+        background: black;
         margin: 0 auto; }
       .container-home__experience span::before {
         position: absolute;
@@ -119,6 +176,7 @@ body {
     -webkit-box-pack: center;
             justify-content: center; }
     .container-home__skill-icons .icon-container {
+      z-index: 2;
       width: 100px;
       height: 100px;
       text-align: center;
@@ -130,26 +188,26 @@ body {
         font-size: 64px;
         line-height: 100px; }
       .container-home__skill-icons .icon-container .desc {
-        background: rgba(173, 173, 173, 0.295); }
+        background: rgba(105, 105, 105, 0.87); }
     .container-home__skill-icons .icon-container:nth-child(1) i {
       color: yellow; }
     .container-home__skill-icons .icon-container:nth-child(1) .desc {
-      color: yellow;
+      color: #fff;
       font-family: "Russo One", sans-serif; }
     .container-home__skill-icons .icon-container:nth-child(2) i {
       color: #4DD0E1; }
     .container-home__skill-icons .icon-container:nth-child(2) .desc {
-      color: #4DD0E1;
+      color: #fff;
       font-family: "Russo One", sans-serif; }
     .container-home__skill-icons .icon-container:nth-child(3) i {
       color: #cf649a; }
     .container-home__skill-icons .icon-container:nth-child(3) .desc {
-      color: #cf649a;
+      color: #fff;
       font-family: "Russo One", sans-serif; }
     .container-home__skill-icons .icon-container:nth-child(4) i {
       color: #fa2727; }
     .container-home__skill-icons .icon-container:nth-child(4) .desc {
-      color: #fa2727;
+      color: #fff;
       font-family: "Russo One", sans-serif; }
     .container-home__skill-icons .icon-container:nth-child(5) i {
       color: #fff; }
@@ -159,17 +217,17 @@ body {
     .container-home__skill-icons .icon-container:nth-child(6) i {
       color: #e44f26; }
     .container-home__skill-icons .icon-container:nth-child(6) .desc {
-      color: #e44f26;
+      color: #fff;
       font-family: "Russo One", sans-serif; }
     .container-home__skill-icons .icon-container:nth-child(7) i {
       color: #6f43a4; }
     .container-home__skill-icons .icon-container:nth-child(7) .desc {
-      color: #6f43a4;
+      color: #fff;
       font-family: "Russo One", sans-serif; }
     .container-home__skill-icons .icon-container:nth-child(8) i {
       color: #19e634; }
     .container-home__skill-icons .icon-container:nth-child(8) .desc {
-      color: #19e634;
+      color: #fff;
       font-family: "Russo One", sans-serif;
       letter-spacing: -1px; }
 
@@ -192,7 +250,8 @@ body {
     margin: 10px 25px;
     position: relative;
     line-height: 1.3em;
-    font-size: 1.75vw; }
+    font-size: 1.75vw;
+    /* +++++++++++++++++++++ HIGHLIGHT TEXT ANIMATION +++++++++++++++++++++ */ }
     @media screen and (min-width: 1335px) {
       .about__top {
         font-size: 1.4em; } }
@@ -208,6 +267,30 @@ body {
       height: 3px;
       width: 15%;
       background: #016cc4; }
+    .about__top .secret-text, .about__top .secret-text-two {
+      position: relative;
+      display: inline-block; }
+    .about__top .secret-text::after,
+    .about__top .secret-text-two::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.719); }
+    .about__top .secret-text::after {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px); }
+    .about__top .secret-text-two::after {
+      -webkit-transform: translateY(-125px);
+              transform: translateY(-125px); }
+    .about__top:hover .secret-text::after,
+    .about__top:hover .secret-text-two::after {
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px); }
   .about__mid {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
@@ -469,7 +552,7 @@ body {
           #portfolio-page .portfolio-grid .card .card-description__link a:nth-child(1) i {
             font-size: 18px; }
       #portfolio-page .portfolio-grid .card-description__hover--text {
-        padding-top: 20px;
+        padding: 20px 5px 0;
         text-align: center;
         width: 100%;
         height: 130px;

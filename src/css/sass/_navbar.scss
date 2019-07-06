@@ -1,15 +1,8 @@
 .nav-bar{
   height: 60px;
   width: 100%;
-  box-shadow: 0px 7px 14px -5px rgba(0,0,0,0.75);
-  background: linear-gradient(
-    to right,
-    rgb(139,157,195),
-    rgb(59,89,152),
-    rgb(139,157,195)
-  );
+  background: #556bac;
   
-
   .container{
     width: 80%;
     display: grid;
@@ -69,4 +62,36 @@
   }
 
   
+  @media (max-width: 548px){
+    .container{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 60px;
+      margin: 0 auto;
+    
+      .nav-logo{ display: none; }
+
+      .nav-links-container{
+        grid-column: span 1;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+      
+        .nav-link{
+          width: auto;
+          color: white;
+          display: inline-block;
+          line-height: 60px;
+          text-decoration: none;
+          font-size: 0.8em;
+          
+        }
+        .active{
+          color: rgb(139,157,195);;
+        }
+      }
+
+    }
+  }
 }
