@@ -2,10 +2,10 @@
   background: white;
 }
 .container-home{
-  //background: rgb(59,89,152);
   background: rgba(59, 88, 152, 0.7);
   position: relative;
   overflow: hidden;
+
   &::before{
     content: "";
     display: block;
@@ -17,8 +17,10 @@
     opacity: 0.4;
     background: url('./media/hero-imgs/floor-tile.png') repeat;
   }
+
   &__hero{
     clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
+
     &--img{
       filter: saturate(1.35); 
       width: 100%;
@@ -26,6 +28,7 @@
       object-fit: cover;
       object-position: 50% 30%;
     }
+
     &--para{
       text-align: center;
       position: absolute;
@@ -33,6 +36,7 @@
       transform: translateX(-50%);
       z-index: 2;
       max-width: 600px;
+
       p{
         font-family: $ff-Marck;
         color: white;
@@ -68,6 +72,7 @@
   &__experience{
     text-align: center;
     margin-top: -50px;
+    
     span{
       font-family: $ff-Russo;
       color: black;
@@ -110,44 +115,30 @@
       border: 1px solid white;
       i{  
         color: white;
-        font-size: 64px;
+        font-size: 68px;
         line-height: 100px;
       }
       .desc{
         background: rgba(105, 105, 105, 0.87);
+        color: #fff;font-family: $ff-Russo;
       }
     }
-    .icon-container:nth-child(1){
-      i{color: yellow;}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(2){
-      i{color: #4DD0E1;}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(3){
-      i{color: #cf649a;}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(4){
-      i{color: rgb(250, 39, 39);}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(5){
-      i{color: #fff;}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(6){
-      i{color: #e44f26;}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(7){
-      i{color: #6f43a4;}
-      .desc{color: #fff;font-family: $ff-Russo;}
-    }
-    .icon-container:nth-child(8){
+    .icon-container:nth-child(1){ i{ color: yellow; } }
+    .icon-container:nth-child(2){ i{ color: #4DD0E1; } }
+    .icon-container:nth-child(3){ i{color: #cf649a;} }
+    .icon-container:nth-child(4){ i{color: rgb(250, 39, 39);} }
+    .icon-container:nth-child(5){ i{color: #fff;} }
+    .icon-container:nth-child(6){ i{color: #e44f26;} }
+    .icon-container:nth-child(7){ i{color: #6f43a4;} }
+    .icon-container:nth-child(8){ 
       i{color: #19e634;}
-      .desc{color: #fff;font-family: $ff-Russo; letter-spacing: -1px;}
+      .desc{letter-spacing: -1px;}
+    }
+    .icon-container:nth-child(9){ 
+      img {
+        object-fit: cover; 
+        height: 98%;
+      }
     }
   }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
+import webpackImg from '../../media/hero-imgs/webpack.png'
 
 export default class Home extends Component {
   componentDidMount(){
@@ -58,6 +59,7 @@ export default class Home extends Component {
             <div className="icon-container"><i className="fab fa-html5"></i><div className="desc">HTML</div></div>
             <div className="icon-container"><i className="fab fa-bootstrap"></i><div className="desc">Bootstrap</div></div>
             <div className="icon-container"><i className="fas fa-boxes"></i><div className="desc">RESTful API</div></div>
+            <div className="icon-container"><img src={webpackImg} alt=""/><div className="desc">Bundler</div></div>
           </div>
         </div>
       </div>

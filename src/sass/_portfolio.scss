@@ -31,10 +31,6 @@
       border: 0px solid black;
       border-radius: 5px;
 
-      // &:hover{
-       
-      // }
-
       .card-background{
         height: 100%;
         img{
@@ -42,7 +38,6 @@
           object-fit: cover;
         }
       }
-      
 
       .top-touch{
         position: absolute;
@@ -70,16 +65,9 @@
           text-align: center;
           color: rgb(216, 216, 216);
           font-size: 0.85em;
-          padding: 0 10px;
+          padding: 8px 10px;
+          margin-bottom: 10px;
           background: rgba(0, 0, 0, 0.45);
-          &::after{
-            content: '';
-            display: block;
-            width: 10%;
-            height: 2px;
-            background: white;
-            margin: 10px auto;
-          }
         }
         &__icon--container{
           display: flex;
@@ -112,7 +100,7 @@
         }
         &__link{
           text-align: center;
-          margin-top: 20px;
+          margin-top: 10px;
           a{
             line-height: 40px;
             text-decoration: none;
@@ -121,7 +109,6 @@
             width: 50%;
             height: 100%;
             letter-spacing: 2px;
-            
           
             &:nth-child(1){
               background-color: brown;
@@ -249,8 +236,6 @@
         }
       }
     }
-
-
   }
 
   .separator{
