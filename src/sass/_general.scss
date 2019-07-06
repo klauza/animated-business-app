@@ -2,6 +2,13 @@
 body{
   overflow-y: scroll;
 }
+*, *::before, *::after{
+  box-sizing: border-box;
+  padding: 0;margin: 0;
+}
+html, body{
+  min-height: 100vh;
+}
 
 // portfolio background colors
 $top-portfolio-color: rgb(90, 90, 90);    // top segment page
