@@ -48,6 +48,8 @@
           width: 80px;
           // background: white;
           border-bottom: 2px dashed white;
+
+          @media (max-width: 1197px){bottom: -40%;}
         }
       }
       @media (max-width: 660px){
