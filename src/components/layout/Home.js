@@ -10,10 +10,11 @@ export default class Home extends Component {
   }
 
 
-  constructor(props){
-    super(props);
-    this.state = { loading: true}
+  state = {
+    loading: true
   }
+
+  
   handleImageLoaded(){ 
     this.setState({ loading: false});
     this.startHome();
@@ -23,6 +24,8 @@ export default class Home extends Component {
   }
   startHome(){
     document.querySelector('.container-home').style.opacity = "1";
+    document.querySelector('.container-home').style.transition = "all 350ms ease-in";
+    document.querySelector('.home-spinner').style.transition = "all 350ms ease-out";
     document.querySelector('.home-spinner').style.opacity = "0";
     document.querySelector('.home-spinner').style.visibility = "none";
   }

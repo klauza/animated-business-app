@@ -12,12 +12,10 @@ export default class About extends Component {
     document.querySelector('.about-spinner').style.opacity = "1";
   }
 
-
-  constructor(props){
-    super(props);
-    this.state = { loading: true}
-  
+  state = {
+    loading: true
   }
+
 
 
 
@@ -33,7 +31,9 @@ export default class About extends Component {
   }
 
   startAbout(){
+    document.querySelector('.about').style.transition = "all 350ms ease-in";
     document.querySelector('.about').style.opacity = "1";
+    document.querySelector('.about-spinner').style.transition = "all 350ms ease-out";
     document.querySelector('.about-spinner').style.opacity = "0";
     document.querySelector('.about-spinner').style.visibility = "none";
     // console.log('load');
