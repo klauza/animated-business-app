@@ -11,6 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 | ------------- | ------------- |
 | **axios** | 0.19.0  |
 | **node-sass** | 4.12.0  |
+| **react-image-appear** | 1.1.20  |
 
 <br/>
 
