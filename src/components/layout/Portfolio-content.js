@@ -22,7 +22,7 @@ export default class Content extends Component{
         <div className="portfolio-grid">
           
           <div className="card chest-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={chestImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
+            <div className="card-background"><ReactImageAppear placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={chestImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">coffer</div>
@@ -38,7 +38,7 @@ export default class Content extends Component{
           
 
           <div className="card actor-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={actorGameImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={actorGameImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">Actor discovery</div>
@@ -54,7 +54,7 @@ export default class Content extends Component{
           </div>
 
           <div className="card guess-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={guessNumImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={guessNumImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">guessNumber</div>
@@ -70,7 +70,7 @@ export default class Content extends Component{
           </div>
 
           <div className="card hero-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={heroImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={heroImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">heroproject</div>  
@@ -95,7 +95,7 @@ export default class Content extends Component{
 
 
           <div className="card photography-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={photographyImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={photographyImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">photography</div>
@@ -113,7 +113,7 @@ export default class Content extends Component{
 
 
           <div className="card shelter-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={petShelterImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={petShelterImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">pet shelter</div>
@@ -130,7 +130,7 @@ export default class Content extends Component{
 
 
           <div className="card hussars-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={hussarImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={hussarImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">hussars</div>
@@ -147,7 +147,7 @@ export default class Content extends Component{
           </div>
 
           <div className="card church-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={churchImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={churchImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">Parish church</div>
@@ -162,7 +162,7 @@ export default class Content extends Component{
           </div>
 
           <div className="card car-dealer-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ backgroundColor: 'black' }} className="card-background__image" src={carDealershipImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={carDealershipImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">car dealership</div>

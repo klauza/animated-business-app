@@ -9,10 +9,10 @@ export default class Portfolio extends Component{
     selectCards.forEach((card, index)=>{
 
       setTimeout(()=>{
-        card.style.transform = "translateY(0)"
-        card.style.opacity = "1"
-        card.style.transition = "ease-out all 250ms"
-      }, 150*index)
+        card.style.transform = "translateY(0)";
+        card.style.opacity = "1";
+        card.style.transition = "ease-out all 250ms";
+      }, 150*index);
 
     })
   }
