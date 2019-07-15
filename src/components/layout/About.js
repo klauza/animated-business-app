@@ -31,17 +31,22 @@ export default class About extends Component {
   }
 
   startAbout(){
-    document.querySelector('.about').style.transition = "all 350ms ease-in";
-    document.querySelector('.about').style.opacity = "1";
-    document.querySelector('.about-spinner').style.transition = "all 350ms ease-out";
-    document.querySelector('.about-spinner').style.opacity = "0";
-    document.querySelector('.about-spinner').style.visibility = "none";
+    const aboutText = document.querySelector('#about-text');
+    const meText = document.querySelector('#me-text');
+    const aboutPage = document.querySelector('.about');
+    const aboutSpinner = document.querySelector('.about-spinner');
+
+    aboutPage.style.transition = "all 350ms ease-in";
+    aboutPage.style.opacity = "1";
+    aboutSpinner.style.transition = "all 350ms ease-out";
+    aboutSpinner.style.opacity = "0";
+    aboutSpinner.style.visibility = "none";
     // console.log('load');
   setTimeout(() => {
-      document.querySelector('#about-text').style.transform = "translateX(-50%)"
+    aboutText.style.transform = "translateX(-50%)"
   }, 125)
   setTimeout(() => {
-      document.querySelector('#me-text').style.transform = "translateX(-50%)"
+    meText.style.transform = "translateX(-50%)"
   }, 125)
   }
 

@@ -52,22 +52,24 @@ export default class Home extends Component {
 
  // Experience text change
   changeTextAnimation(){
+    const experienceDiv = document.querySelector('.container-home__experience');
+    const experienceSpan = document.querySelector('.container-home__experience span');
     setTimeout(()=>{
-      document.querySelector('.container-home__experience span').style.transition = "all 1s ease";
-      document.querySelector('.container-home__experience').style.transition = "all 1s ease";
-      document.querySelector('.container-home__experience').style.transform = "translatex(500px)";
-      document.querySelector('.container-home__experience span').style.opacity = 0;
+      experienceSpan.style.transition = "all 1s ease";
+      experienceDiv.style.transition = "all 1s ease";
+      experienceDiv.style.transform = "translatex(500px)";
+      experienceSpan.style.opacity = 0;
       
     }, 1500);
     setTimeout(()=>{
-      document.querySelector('.container-home__experience').style.transition = "0s";
-      document.querySelector('.container-home__experience').style.transform = "translatex(-500px)";
+      experienceDiv.style.transition = "0s";
+      experienceDiv.style.transform = "translatex(-500px)";
     },2500);
     setTimeout(()=>{
-      document.querySelector('.container-home__experience span').textContent = "TOOLS";
-      document.querySelector('.container-home__experience').style.transition = "all 1s ease";
-      document.querySelector('.container-home__experience span').style.opacity = 1;
-      document.querySelector('.container-home__experience').style.transform = "translatex(0px)";
+      experienceSpan.textContent = "TOOLS";
+      experienceDiv.style.transition = "all 1s ease";
+      experienceSpan.style.opacity = 1;
+      experienceDiv.style.transform = "translatex(0px)";
 
     },2650);
 
