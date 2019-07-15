@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import photographyImg from '../../media/portfolio-imgs/photography.jpg';
+import pwdMaker from '../../media/portfolio-imgs/pwd-maker.jpg';
 import guessNumImg from '../../media/portfolio-imgs/guess-game.jpg';
 import actorGameImg from '../../media/portfolio-imgs/actor-game.jpg';
 import chestImg from '../../media/portfolio-imgs/chest.jpg';
@@ -11,16 +12,29 @@ import churchImg from '../../media/portfolio-imgs/church.jpg';
 import jqueryPng from '../../media/jquery.png';
 import ReactImageAppear from 'react-image-appear';
 
-export default class Content extends Component{
-  
-  render(){
-    
 
+  export default function Content() {
+    
+    
     return(
       <div id="portfolio-page">
 
         <div className="portfolio-grid">
-          
+
+          <div className="card regex-card">
+            <div className="card-background"><ReactImageAppear placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={pwdMaker} animation="fadeIn" easing="ease-in" alt="" /> </div>  
+            <div className="top-touch"></div>
+            <div className="card-description">
+              <div className="card-description__title">password-maker</div>
+              <div className="card-description__language">JS, regexp</div>
+              <div className="card-description__icon--container">
+                <div className="icon-language"><i className="fab fa-js-square"></i></div>
+              </div>
+              <div className="card-description__link"><a href="https://pwd-maker-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/password-maker">see code<i className="fab fa-github"></i></a></div>
+            </div>
+            <div className="card-description__hover--text">Generates regular expression password from the chosen settings. </div>
+          </div>
+
           <div className="card chest-card">
             <div className="card-background"><ReactImageAppear placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={chestImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
             <div className="top-touch"></div>
@@ -32,10 +46,8 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://coffer-klauza.netlify.com">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/coffer">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">This project is a container of any smaller idea. Was made to study JS state.</div>
           </div>
-          
 
           <div className="card actor-card">
             <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={actorGameImg} animation="fadeIn" easing="ease-in" alt="" /></div>
@@ -49,7 +61,6 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://actor-discovery-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/actorDiscovery">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Actor game where you choose the popular celebrity to win... something.</div>
           </div>
 
@@ -65,7 +76,6 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://guess-a-number-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/guessNumberGame">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Simply guess a number game. I believe there is no need to explain what to do.</div>
           </div>
 
@@ -80,7 +90,6 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://hero-project-klauza.firebaseapp.com/signin">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/heroproject">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Sign in & create 2d hero with a connection with firebase. You can see others work too.</div>
           </div>
 
@@ -107,10 +116,8 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://photography-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/photography">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Hobbystic photography SPA with some jQuery DOM manipulation.</div>
           </div>
-
 
           <div className="card shelter-card">
             <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={petShelterImg} animation="fadeIn" easing="ease-in" alt="" /></div>
@@ -124,10 +131,8 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://shelter-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/Shelter">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Sass based SPA for people who are keen to be taking care of animals. Made with CSS GRID tool.</div>
           </div>
-
 
           <div className="card hussars-card">
             <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={hussarImg} animation="fadeIn" easing="ease-in" alt="" /></div>
@@ -142,7 +147,6 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://hussars-klauza.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/hussars">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Horse cavalry at the turn of XVI century. One page website with colorful sections.</div>
           </div>
 
@@ -157,7 +161,6 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://google.com">see page<i className="far fa-file"></i></a><a href="https://google.com">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">Wordpress based page made for a parish church for non commercial purpose.</div>
           </div>
 
@@ -172,15 +175,11 @@ export default class Content extends Component{
               </div>
               <div className="card-description__link"><a href="https://klauza-car-dealer.000webhostapp.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/carDealer">see code<i className="fab fa-github"></i></a></div>
             </div>
-
             <div className="card-description__hover--text">A modest page for a car workshop to list available cars or just to contact a seller.</div>
           </div>
 
+
         </div>
-
-
-
       </div>
     )
   }
-}
