@@ -104,61 +104,67 @@
     flex-wrap: wrap;
     justify-content: center;
     
-
-    .icon-container{
-      opacity: 0;
-      transform: translateY(100px);
-      
-      z-index: 2;
-      width: 100px;
-      height: 100px;
-      // overflow: hidden;
-      text-align: center;
-      margin: 15px 10px;
-      background: black;
-      border: 1px solid white;
-      i{  
-        color: white;
-        font-size: 68px;
-        line-height: 100px;
+    // each skill block
+    .skill-block-parent{
+      perspective: 500px;
+      .icon-container{
+        
+        transform: rotateY(-360deg);
+        transform-origin:center top; 
+        
+        opacity: 0;
+        //transform: translateY(100px);
+        
+        z-index: 2;
+        width: 100px;
+        height: 100px;
+        // overflow: hidden;
+        text-align: center;
+        margin: 15px 10px;
+        background: black;
+        border: 1px solid white;
+        i{  
+          color: white;
+          font-size: 68px;
+          line-height: 100px;
+        }
+        .desc{
+          background: rgba(105, 105, 105, 0.87);
+          color: #fff;font-family: $ff-Russo;
+        }
       }
-      .desc{
-        background: rgba(105, 105, 105, 0.87);
-        color: #fff;font-family: $ff-Russo;
-      }
+     
     }
-    .icon-container:nth-child(1){ i{ color: yellow; } }
-    .icon-container:nth-child(2){ i{ color: #4DD0E1; } }
-    .icon-container:nth-child(3){ i{color: #cf649a;} }
-    .icon-container:nth-child(4){ i{color: rgb(250, 39, 39);} }
-    .icon-container:nth-child(5){ i{color: #fff;} }
-    .icon-container:nth-child(6){ i{color: #e44f26;} }
-    .icon-container:nth-child(7){ i{color: #6f43a4;} }
-    .icon-container:nth-child(8){ 
+    .skill-block-parent:nth-child(1) .icon-container{ i{ color: yellow; } }
+    .skill-block-parent:nth-child(2) .icon-container{ i{ color: #4DD0E1; } }
+    .skill-block-parent:nth-child(3) .icon-container{ i{color: #cf649a;} }
+    .skill-block-parent:nth-child(4) .icon-container{ i{color: rgb(250, 39, 39);} }
+    .skill-block-parent:nth-child(5) .icon-container{ i{color: #fff;} }
+    .skill-block-parent:nth-child(6) .icon-container{ i{color: #e44f26;} }
+    .skill-block-parent:nth-child(7) .icon-container{ i{color: #6f43a4;} }
+    .skill-block-parent:nth-child(8) .icon-container{ 
       i{color: #19e634;}
       .desc{letter-spacing: -1px;}
     }
-    .icon-container:nth-child(9){ 
+    .skill-block-parent:nth-child(9) .icon-container{ 
       img {
         object-fit: cover; 
         height: 98%;
       }
     }
+  
   }
 
    // skill blocks animation [ icon-container class ]
   @keyframes animation-icon-block{
     0%{
       opacity: 0;
-      transform: translateY(100px);
+      transform: rotateY(-360deg);
     }
-    50%{
-      transform: translateY(30px);
-    }
-   
+
     100%{
-      opacity: 1;
-      transform: translateY(0px);
+      opacity: 1; 
+      transform: rotateY(0deg);
     }
   }
 }
