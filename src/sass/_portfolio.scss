@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 350px));
     grid-auto-rows: 500px;
-    
+
     grid-column-gap: 15px;
     grid-row-gap: 50px;
     justify-content: center;
@@ -275,6 +275,24 @@
   @media(max-width: 65em){
     .portfolio-grid{
       width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+      grid-auto-rows: 380px;
+      padding: 100px 25px 100px;
+      .card{
+        .card-background{
+          img{
+            object-position: center center;
+          }
+        }
+        .card-description{
+          &__link{
+            a{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
     }
     .separator{
       clip-path: polygon(100% 0, 100% 70%, 70% 70%, 50% 85%, 30% 70%, 0 70%, 0 0);
