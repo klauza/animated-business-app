@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import navLogo from '../../media/favicon.ico';
+import navLogo from '../../media/icon.png';
 
 
 
