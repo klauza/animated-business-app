@@ -90,14 +90,14 @@ import ReactImageAppear from 'react-image-appear';
               </div>
               <div className="card-description__link"><a href="https://hero-project-klauza.firebaseapp.com/signin">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/heroproject">see code<i className="fab fa-github"></i></a></div>
             </div>
-            <div className="card-description__hover--text">Sign in & create 2d hero with a connection with firebase. You can see others work too.</div>
+            <div className="card-description__hover--text">Login system; Firebase. 2d hero creator. Possible to see other people's work too.</div>
           </div>
 
 
         </div>
 
         <div className="separator"> 
-          <p className="separator-para">Below are... my foundational projects</p>
+          <p className="separator-para">Below are my foundational/first projects</p>
         </div>
 
         <div className="portfolio-grid">

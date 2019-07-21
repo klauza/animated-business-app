@@ -106,9 +106,10 @@
     
     // each skill block
     .skill-block-parent{
+      transition: all 300ms ease;
       perspective: 500px;
       .icon-container{
-        
+     
         transform: rotateY(-360deg);
         transform-origin:center top; 
         
@@ -133,7 +134,39 @@
           color: #fff;font-family: $ff-Russo;
         }
       }
-     
+
+      &:hover{
+        cursor: pointer;
+        transform: translateY(-8px);
+        transition: transform 300ms ease;
+      }
+    }
+
+    .shadow{
+      transition: all 300ms ease;
+      position: relative;
+      &::after{
+        content:'';
+        opacity: 0;
+        transition: all 300ms ease;
+        animation: shadow 1s forwards;
+        width: 90px;
+        height: 3px;
+        position: absolute;
+        bottom: -16px; left: 50%;
+        transform: translateX(-50%);
+        filter: blur(3px);
+        background: black;
+        position: absolute;
+      }
+    }
+    @keyframes shadow{
+      0%{
+      
+      }
+      100%{
+        opacity: 0.7;
+      }
     }
     .skill-block-parent:nth-child(1) .icon-container{ i{ color: yellow; } }
     .skill-block-parent:nth-child(2) .icon-container{ i{ color: #4DD0E1; } }
@@ -152,7 +185,7 @@
         height: 98%;
       }
     }
-  
+
   }
 
    // skill blocks animation [ icon-container class ]
@@ -167,4 +200,6 @@
       transform: rotateY(0deg);
     }
   }
+
+
 }

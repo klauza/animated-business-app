@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
-import webpackImg from '../../media/hero-imgs/webpack.png'
+import webpackImg from '../../media/hero-imgs/webpack.png';
+import animateBlocks from './shadow.js';
 
 export default class Home extends Component {
   componentDidMount(){
@@ -11,8 +12,10 @@ export default class Home extends Component {
     const targets = document.querySelectorAll('.icon-container');   // target all blocks for animation
 
     targets.forEach(this.blockIconsLoad); // apply animation function to each block
+    animateBlocks();
 
   }
+
 
 
   state = {
@@ -22,18 +25,9 @@ export default class Home extends Component {
   // animate each skill block
   blockIconsLoad = (target) => {
     const io = new IntersectionObserver((entries, observer) => {
-      let trigger = true;
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          
-          // animate the text when window intersects the blocks
-          if(trigger===true){
-            console.log(this);
-            this.changeTextAnimation();
-            trigger=false;
-          }
-          
           const block = entry.target;
 
           const getDelay = block.getAttribute('data-delay');
@@ -50,30 +44,8 @@ export default class Home extends Component {
     io.observe(target)
   }
 
- // Experience text change
-  changeTextAnimation(){
-    const experienceDiv = document.querySelector('.container-home__experience');
-    const experienceSpan = document.querySelector('.container-home__experience span');
-    setTimeout(()=>{
-      experienceSpan.style.transition = "all 1s ease";
-      experienceDiv.style.transition = "all 1s ease";
-      experienceDiv.style.transform = "translatex(500px)";
-      experienceSpan.style.opacity = 0;
-      
-    }, 1500);
-    setTimeout(()=>{
-      experienceDiv.style.transition = "0s";
-      experienceDiv.style.transform = "translatex(-500px)";
-    },2500);
-    setTimeout(()=>{
-      experienceSpan.textContent = "TOOLS";
-      experienceDiv.style.transition = "all 1s ease";
-      experienceSpan.style.opacity = 1;
-      experienceDiv.style.transform = "translatex(0px)";
 
-    },2650);
 
-  }
 
   handleImageLoaded(){ 
     this.setState({ loading: false});
