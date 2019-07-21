@@ -7,7 +7,7 @@
 }
 
 .about{
-  z-index: 5;
+  
   min-height: 90vh;
   //border: 5px solid black;
   //background: white;
@@ -34,7 +34,7 @@
   }
 
   &__top{
-
+    
     font-family: Verdana;
     
     grid-column: 1 / 3;
@@ -66,31 +66,31 @@
     
 
     /* +++++++++++++++++++++ HIGHLIGHT TEXT ANIMATION +++++++++++++++++++++ */
-    .secret-text, .secret-text-two{
-      position: relative;
-      display: inline-block;
+    // .secret-text, .secret-text-two{
+    //   position: relative;
+    //   display: inline-block;
       
-    }
-    .secret-text::after,
-    .secret-text-two::after{
-      display: none;      // TEMP HIDDEN
-      content:'';
-      position: absolute; top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.719);
-    }
-    .secret-text::after{
-      transform: translateY(-100px);
-    }
-    .secret-text-two::after{
-      transform: translateY(-125px);
-    }
-    &:hover .secret-text::after,
-    &:hover .secret-text-two::after{
-      transition: all 1s ease;
-      transform: translateY(0px);
-    }
+    // }
+    // .secret-text::after,
+    // .secret-text-two::after{
+    //   display: none;      // TEMP HIDDEN
+    //   content:'';
+    //   position: absolute; top: 0; left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: rgba(0, 0, 0, 0.719);
+    // }
+    // .secret-text::after{
+    //   transform: translateY(-100px);
+    // }
+    // .secret-text-two::after{
+    //   transform: translateY(-125px);
+    // }
+    // &:hover .secret-text::after,
+    // &:hover .secret-text-two::after{
+    //   transition: all 1s ease;
+    //   transform: translateY(0px);
+    // }
 
     
   }

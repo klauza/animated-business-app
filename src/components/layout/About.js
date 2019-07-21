@@ -67,10 +67,10 @@ export default class About extends Component {
       </div>
 
       <div className="about">
-        <div className="about__top">Hey there, my name is Michal and <div className="secret-text">I'm glad</div> you came here to see my portfolio. <div className="secret-text-two">Alright</div>, without further delay I'd like you to read few words about me.</div>	
+        <div className="about__top">I'm Michal, a self taught coder with ambitions to be a fullstack javascript developer. I'm friendly, ambitious and motivated person.</div>	
         <h1 className="about__mid"><span id="about-text">ABOUT</span></h1>
         <h1 className="about__mid-right"><span id="me-text">ME</span></h1>
-        <p className="about__bottom">Web development was around me for quite a while, but in serious way I started to think about it since 2018. I enjoy coding, struggling with problems, creating something from nothing. The final results provide me phenomenal feelings and injection of positivity. Mainly I'm creating Single Page Applications. For last period of time I was practicingwith React.</p>
+        <p className="about__bottom">I began my adventure back in 2018 exploring what web development is. React was overwhelming that time, but today, I aim to get deeper and deeper into that library. Currently I'm focusing on react, javascript, sass and node.js. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
         <figure><img src={image} alt="" className="about__image" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageErrored.bind(this)} /></figure>
       </div>
     </div>

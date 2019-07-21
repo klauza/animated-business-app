@@ -94,7 +94,7 @@ export default class Home extends Component {
             <div className="skill-block-parent"><div data-delay="6" className="icon-container"><i className="fab fa-html5"></i><div className="desc">HTML</div></div></div>
             <div className="skill-block-parent"><div data-delay="7" className="icon-container"><i className="fab fa-bootstrap"></i><div className="desc">Bootstrap</div></div></div>
             <div className="skill-block-parent"><div data-delay="8" className="icon-container"><i className="fas fa-boxes"></i><div className="desc">RESTful API</div></div></div>
-            <div className="skill-block-parent"><div data-delay="9" className="icon-container"><img src={webpackImg} alt=""/><div className="desc">Bundler</div></div></div>
+            <div className="skill-block-parent"><div data-delay="9" className="icon-container"><img src={webpackImg} alt=""/><div className="desc">Bundlers</div></div></div>
           </div>
         </div>
       </div>
