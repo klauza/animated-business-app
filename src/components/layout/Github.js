@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios';
 import spinner from '../../media/loader2.gif';
+import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
 // API
 let githubClientId;
@@ -18,7 +19,6 @@ if(process.env.NODE_ENV !== 'production'){
 class Github extends Component {
 
   componentDidMount(){
-   
     this.getUser('klauza');
     //console.log(this.props.user);
   }
@@ -33,17 +33,22 @@ class Github extends Component {
   // Get from external API
   getUser = async (user) => {
     
-    
     this.setState({ loading: true });
-    
+    try{
     const res = await axios.get(`https://api.github.com/users/${user}?&client_id=${githubClientId}&client_secret=${githubClientSecret}`); // axios deal with promises
 
     const repoResponse = await axios.get(`https://api.github.com/users/${user}/repos?per_page=4&sort='created: desc'&client_id=${githubClientId}&client_secret=${githubClientSecret}`);
     
     this.setState({ data: res.data, repos: repoResponse.data, loading: false}); // passing data to state
+    } catch(err){
+      console.log(err);
+      this.setState({ loading: false});
+      M.toast({html: 'No such user exists!', displayLength: '1500'})
+    }
   }
 
- 
+
+
   handleSearch = (e) => {
     this.setState({ [e.target.name]: e.target.value });
     
@@ -94,7 +99,6 @@ class Github extends Component {
     return (
    
       <div id="github-page">
-        
      
         <div className="user-container">
 
@@ -108,7 +112,7 @@ class Github extends Component {
                 <div><span>name: </span> {login}</div>
                 <form onSubmit={this.handleSubmit}>
                   
-                  <input className="search-user" placeholder="Change name?" name="search" onChange={this.handleSearch} type="text"/>
+                  <input className="search-user" placeholder="Change name" name="search" onChange={this.handleSearch} type="text"/>
                   <button>Ok</button>
                 </form>
               </li>
