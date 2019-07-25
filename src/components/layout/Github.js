@@ -93,7 +93,7 @@ class Github extends Component {
     
     return (
    
-      <div className="container" id="github-page">
+      <div id="github-page">
         
      
         <div className="user-container">

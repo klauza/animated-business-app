@@ -67,7 +67,8 @@ export default class About extends Component {
       </div>
 
       <div className="about">
-        <div className="about__top">I'm Michal, a self taught coder with ambitions to be a fullstack javascript developer. I'm friendly, ambitious and motivated person.</div>	
+        <div className="about__top">I'm Michal, a self taught coder with aspirations to be a fullstack javascript developer. I'm friendly, ambitious and motivated person.</div>	
+        <div className="about__separator">  </div>
         <h1 className="about__mid"><span id="about-text">ABOUT</span></h1>
         <h1 className="about__mid-right"><span id="me-text">ME</span></h1>
         <p className="about__bottom">I began my adventure back in 2018 exploring what web development is. React was overwhelming that time, but today, I aim to get deeper and deeper into that library. Currently I'm focusing on react, javascript, sass and node.js. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
