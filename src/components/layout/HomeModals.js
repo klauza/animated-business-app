@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 const HomeModals = () => {
   return (
     <Fragment>
-      <div id="javascript-modal" className="modal" style={modalStyle}>
+    <div id="javascript-modal" className="modal" style={modalStyle}>
         <h2>this is js modal</h2>
       </div>
       <div id="react-modal" className="modal" style={modalStyle}>
@@ -22,8 +22,63 @@ const HomeModals = () => {
         <h2>this is html modal</h2>
       </div>
       <div id="bootstrap-modal" className="modal" style={modalStyle}>
-        <h2>this is bootstrap modal</h2>
+      
+        <div className="row">
+          <div className="col s12 text-center">
+            <h2 className="d-inline-block">Bootstrap</h2>
+            <h4 className="d-inline-block">but also Materialize</h4>
+          </div>
+        </div>
+
+           
+
+        <div className="row">
+          <div className="col s6 center-align">
+
+            <div className="row align-items-center" style={staticHeight}>
+              <div className="col-12 p-0">
+                <span className="d-block">Flexibility1</span>
+                <i className="material-icons d-block">book</i>
+              </div>
+            </div>
+
+
+            <div className="row align-items-center" style={staticHeight}>
+              <div className="col-12 p-0">
+                <span className="d-block">Flexibility1</span>
+                <i className="material-icons d-block">book</i>
+              </div>
+            </div>
+            
+          </div>
+
+          <div className="col s6 center-align">
+            
+            <div className="row align-items-center" style={staticHeight}>
+              <div className="col-12 p-0">
+                <span className="d-block">Flexibility1</span>
+                <i className="material-icons d-block">book</i>
+              </div>
+            </div> 
+
+            <div className="row align-items-center" style={staticHeight}>
+              <div className="col-12 p-0">
+                <span className="d-block">Flexibility1</span>
+                <i className="material-icons d-block">book</i>
+              </div>
+            </div>
+
+          </div>
+        </div> 
+
+        <div className="row">
+          <div className="col-sm-12 col-md-8 col-lg-6 mx-auto">
+            <img className="img-fluid" alt="Responsive image" src="http://via.placeholder.com/1920x1080" alt=""/>
+          </div>
+        </div>
+        
       </div>
+
       <div id="rest-modal" className="modal" style={modalStyle}>
         <h2>this is restful api modal</h2>
       </div>
@@ -35,9 +90,18 @@ const HomeModals = () => {
 }
 
 const modalStyle = {
-  width: '75%',
-  height: '75%'
+  width: '80%',
+  height: 'auto'
 };  
+
+const staticHeight = {
+  height: '150px',
+  width: '100px',
+  margin: 'auto'
+}
+const inline = {
+  display: 'inline-block'
+}
 
 
 
