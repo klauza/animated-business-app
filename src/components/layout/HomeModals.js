@@ -1,36 +1,45 @@
 import React, {Fragment} from 'react';
-import Bootstrap from './modals/Bootstrap';
+import JavaScriptModal from './modals/JavaScriptModal';
+import ReactModal from './modals/ReactModal';
+import SassModal from './modals/SassModal';
+import RegexModal from './modals/RegexModal';
+import GithubModal from './modals/GithubModal';
+import HtmlModal from './modals/HtmlModal';
+import BootstrapModal from './modals/BootstrapModal';
+import RestApiModal from './modals/RestApiModal';
+import BundlersModal from './modals/BundlersModal';
+
+
 
 const HomeModals = () => {
   return (
     <Fragment>
       <div id="javascript-modal" className="modal" style={modalStyle}>
-        <h2>this is js modal</h2>
+        <JavaScriptModal />
       </div>
       <div id="react-modal" className="modal" style={modalStyle}>
-        <h2>this is react modal</h2>
+        <ReactModal />
       </div>
       <div id="sass-modal" className="modal" style={modalStyle}>
-        <h2>this is sass modal</h2>
+        <SassModal />
       </div>
       <div id="regex-modal" className="modal" style={modalStyle}>
-        <h2>this is regex modal</h2>
+        <RegexModal />
       </div>
       <div id="github-modal" className="modal" style={modalStyle}>
-        <h2>this is github modal</h2>
+        <GithubModal />
       </div>
       <div id="html-modal" className="modal" style={modalStyle}>
-        <h2>this is html modal</h2>
+        <HtmlModal />
       </div>
       <div id="bootstrap-modal" className="modal" style={modalStyle}>
-        <Bootstrap/>
+        <BootstrapModal />
       </div>
-
       <div id="rest-modal" className="modal" style={modalStyle}>
-        <h2>this is restful api modal</h2>
+        <RestApiModal />
       </div>
       <div id="bundlers-modal" className="modal" style={modalStyle}>
-        <h2>this is bundlers modal</h2>
+        <BundlersModal />
       </div>
     </Fragment>
   )

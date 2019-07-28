@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import bootstrapImg from '../../../media/hero-imgs/modals/bootstrap.jpg';
 
 
-const Bootstrap = () => {
+const BootstrapModal = () => {
   return (
     <Fragment>
       <div className="row">
@@ -67,4 +67,4 @@ const also = {
   padding: "0 10px"
 }
 
-export default Bootstrap
+export default BootstrapModal
