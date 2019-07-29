@@ -82,7 +82,7 @@ export default class Home extends Component {
           </div>
 
           <div className="container-home__experience">
-            <span>EXPERIENCE</span>
+            <span>EXPERIENCE ~ TOOLS</span>
           </div>
 
           <HomeSkills />
