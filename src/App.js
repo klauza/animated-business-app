@@ -23,6 +23,8 @@ const App = () =>{
     
     <BrowserRouter>
       <div className="App">
+   
+
         <HomeModals />
         <Navbar />
 

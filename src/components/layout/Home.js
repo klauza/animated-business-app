@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import MetaTags from 'react-meta-tags';
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
 import animateBlocks from './shadow.js';
 import HomeSkills from './HomeSkills';
+
 
 export default class Home extends Component {
   componentDidMount(){
@@ -68,12 +68,7 @@ export default class Home extends Component {
 
     return (
       <div className="home">
-        <MetaTags>
-          <title>Klauza | portfolio</title>
-          <meta property="og:title" content="my personal portfolio" />
-          <meta property='og:image' content="/linkedin-cover-photo.jpg" />
-          <meta property="og:description" content="The showcase of my skills and knowledge as a web developer"/>
-        </MetaTags>
+      
 
         <div className="home-spinner">
           <img src={spinner} alt=""/>
