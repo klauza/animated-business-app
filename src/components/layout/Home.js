@@ -71,7 +71,7 @@ export default class Home extends Component {
         <MetaTags>
           <title>Klauza | portfolio</title>
           <meta property="og:title" content="my personal portfolio" />
-          <meta property='og:image' content="../../media/linkedin-cover-photo.jpg" />
+          <meta property='og:image' content="/linkedin-cover-photo.jpg" />
           <meta property="og:description" content="The showcase of my skills and knowledge as a web developer"/>
         </MetaTags>
 
