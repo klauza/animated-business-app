@@ -1,4 +1,5 @@
 import React from 'react';
+import nobleImg from '../../media/portfolio-imgs/game-hub.jpg';
 import photographyImg from '../../media/portfolio-imgs/photography.jpg';
 import pwdMaker from '../../media/portfolio-imgs/pwd-maker.jpg';
 import guessNumImg from '../../media/portfolio-imgs/guess-game.jpg';
@@ -13,7 +14,8 @@ import jqueryPng from '../../media/jquery.png';
 import ReactImageAppear from 'react-image-appear';
 
 
-  export default function Content() {
+export default function Content() {
+
     
     
     return(
@@ -21,8 +23,23 @@ import ReactImageAppear from 'react-image-appear';
 
         <div className="portfolio-grid">
 
+        <div className="card noble-leaders-card">
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={nobleImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
+            <div className="top-touch"></div>
+            <div className="card-description">
+              <div className="card-description__title">Game hub</div>
+              <div className="card-description__language">React, Redux, MongoDB</div>
+              <div className="card-description__icon--container">
+                <div className="icon-language"><i className="fab fa-react"></i></div>
+                <div className="icon-language"><i className="fas fa-database"></i></div>
+              </div>
+              <div className="card-description__link"><a href="#!">in dev<i className="far fa-file"></i></a><a href="https://github.com/klauza/noble-leaders">see code<i className="fab fa-github"></i></a></div>
+            </div>
+            <div className="card-description__hover--text">Noble Leaders - the game hub. It's a place where you can place your noble name on leaderboard.</div>
+          </div>
+
           <div className="card regex-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={pwdMaker} animation="fadeIn" easing="ease-in" alt="" /> </div>  
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={pwdMaker} animation="fadeIn" easing="ease-in" alt="" /> </div>  
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">password-maker</div>
@@ -36,7 +53,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card chest-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={chestImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={chestImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">coffer</div>
@@ -50,7 +67,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card actor-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={actorGameImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={actorGameImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">Actor discovery</div>
@@ -65,7 +82,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card guess-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={guessNumImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={guessNumImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">guessNumber</div>
@@ -80,13 +97,14 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card hero-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={heroImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={heroImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">heroproject</div>  
-              <div className="card-description__language">React, Sass</div>
+              <div className="card-description__language">React, Redux, Firebase</div>
               <div className="card-description__icon--container">
                 <div className="icon-language"><i className="fab fa-react"></i></div>
+                <div className="icon-language"><i className="fas fa-database"></i></div>
               </div>
               <div className="card-description__link"><a href="https://hero-project-klauza.firebaseapp.com/signin">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/heroproject">see code<i className="fab fa-github"></i></a></div>
             </div>
@@ -104,7 +122,7 @@ import ReactImageAppear from 'react-image-appear';
 
 
           <div className="card photography-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={photographyImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={photographyImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">photography</div>
@@ -120,7 +138,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card shelter-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={petShelterImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={petShelterImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">pet shelter</div>
@@ -135,7 +153,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card hussars-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={hussarImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={hussarImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">hussars</div>
@@ -151,7 +169,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card church-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={churchImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={churchImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">Parish church</div>
@@ -165,7 +183,7 @@ import ReactImageAppear from 'react-image-appear';
           </div>
 
           <div className="card car-dealer-card">
-            <div className="card-background"><ReactImageAppear placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={carDealershipImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={carDealershipImg} animation="fadeIn" easing="ease-in" alt="" /></div>
             <div className="top-touch"></div>
             <div className="card-description">
               <div className="card-description__title">car dealership</div>
@@ -182,4 +200,5 @@ import ReactImageAppear from 'react-image-appear';
         </div>
       </div>
     )
+  
   }

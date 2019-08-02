@@ -167,6 +167,15 @@
       // different styles on images
     
    
+    .noble-leaders-card{
+      .card-background{
+        filter: brightness(1);
+        img{
+          object-fit: cover;
+          object-position: 0px 0px;
+        }
+      }
+    }
     .photography-card{
       .card-background{
         filter: brightness(0.75);
