@@ -33,7 +33,7 @@ export default function Content() {
                 <div className="icon-language"><i className="fab fa-react"></i></div>
                 <div className="icon-language"><i className="fas fa-database"></i></div>
               </div>
-              <div className="card-description__link"><a href="#!">in dev<i className="far fa-file"></i></a><a href="https://github.com/klauza/noble-leaders">see code<i className="fab fa-github"></i></a></div>
+              <div className="card-description__link"><a href="https://noble-leaders.herokuapp.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/noble-leaders">see code<i className="fab fa-github"></i></a></div>
             </div>
             <div className="card-description__hover--text">Noble Leaders - the game hub. It's a place where you can place your noble name on leaderboard.</div>
           </div>

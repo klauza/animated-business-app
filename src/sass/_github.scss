@@ -124,7 +124,7 @@
       margin-top: 20px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      border-bottom: 1px solid black;
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.438);
       .repo-item-header{
         color: grey;
         list-style: none;
@@ -142,6 +142,7 @@
           background: rgb(223,227,238);
         }
         &-ul{
+          margin: 0;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           
