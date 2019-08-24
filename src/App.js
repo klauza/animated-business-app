@@ -33,7 +33,6 @@ const App = () =>{
           <Route path='/about' component={About}/>
           <Route path='/portfolio' component={Portfolio} />
           <Route path='/github' component={Github} />
-          <Route path='/github' component={Github} />
           
           <Route component={NotFound} />
         </Switch>

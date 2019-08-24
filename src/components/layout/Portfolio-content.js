@@ -1,5 +1,6 @@
 import React from 'react';
 import nobleImg from '../../media/portfolio-imgs/game-hub.jpg';
+import bhutanotel from '../../media/portfolio-imgs/bhutanotel.jpg';
 import photographyImg from '../../media/portfolio-imgs/photography.jpg';
 import pwdMaker from '../../media/portfolio-imgs/pwd-maker.jpg';
 import guessNumImg from '../../media/portfolio-imgs/guess-game.jpg';
@@ -23,7 +24,21 @@ export default function Content() {
 
         <div className="portfolio-grid">
 
-        <div className="card noble-leaders-card">
+         <div className="card noble-leaders-card">
+            <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={bhutanotel} animation="fadeIn" easing="ease-in" alt="" /> </div>  
+            <div className="top-touch"></div>
+            <div className="card-description">
+              <div className="card-description__title">Bhutanotel</div>
+              <div className="card-description__language">React, Redux, styled-components</div>
+              <div className="card-description__icon--container">
+                <div className="icon-language"><i className="fab fa-react"></i></div>
+              </div>
+              <div className="card-description__link"><a href="https://bhutanotel.netlify.com/">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/bhutanotel">see code<i className="fab fa-github"></i></a></div>
+            </div>
+            <div className="card-description__hover--text">Hotel page with mythical content.</div>
+          </div>
+
+         <div className="card noble-leaders-card">
             <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={nobleImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
             <div className="top-touch"></div>
             <div className="card-description">
