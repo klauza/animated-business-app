@@ -67,7 +67,7 @@ export default function Content() {
             <div className="card-description__hover--text">Generates regular expression password from the chosen settings. </div>
           </div>
 
-          <div className="card chest-card">
+          {/* <div className="card chest-card">
             <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={chestImg} animation="fadeIn" easing="ease-in" alt="" /> </div>  
             <div className="top-touch"></div>
             <div className="card-description">
@@ -79,7 +79,7 @@ export default function Content() {
               <div className="card-description__link"><a href="https://coffer-klauza.netlify.com">see page<i className="far fa-file"></i></a><a href="https://github.com/klauza/coffer">see code<i className="fab fa-github"></i></a></div>
             </div>
             <div className="card-description__hover--text">This project is a container of any smaller idea. Was made to study JS state.</div>
-          </div>
+          </div> */}
 
           <div className="card actor-card">
             <div className="card-background"><ReactImageAppear showLoader={false} placeholderStyle={{  transition: "all ease 350ms", backgroundColor: 'black' }} className="card-background__image" src={actorGameImg} animation="fadeIn" easing="ease-in" alt="" /></div>

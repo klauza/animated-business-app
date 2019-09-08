@@ -36,7 +36,7 @@ const JavaScriptModal = () => {
             <h4>What I've learnt so far</h4>
             <p>If we want to learn JavaScript, we need to understand the basics of JavaScript and ECMAScriptES - a standard for JavaScript that adds new features.</p>
             <p>I've started to study plain vanilla JavaScript, which means JS without any framework or library. <strong>Arrays, objects, functions, operations on numbers and strings, loops, error handling</strong> are highly familiar to me.</p>
-            <p>ES6 is also not foreign to me, standards such as <strong>.map() .filter() .forEach() or arrow functions and Classes</strong> are pretty straghtforward and understandable, and also truly useful.</p>
+            <p>ES6/+ is not foreign to me, standards such as <strong>.map() .filter() .forEach() or arrow functions and Classes</strong> are pretty straghtforward and understandable, and also truly useful.</p>
           </div>
         </div>
         <hr/>

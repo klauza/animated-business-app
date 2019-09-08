@@ -10,7 +10,7 @@ const BootstrapModal = () => {
           <h4 className="d-inline-block">Bootstrap</h4>
           <span style={also}>but also</span>
           <h4 className="d-inline-block">Materialize</h4>
-          <p className="mb-2 mt-2">I like these libraries for some reasons, they increase my workflow - I can prioritize time on important tasks that I desire to accomplish. Ready packed tools are great, forms, modals - are just few of many. Responsive layout system is also a big plus from me.</p>
+          <p className="mb-2 mt-2">I like these libraries for few reasons, they increase the workflow - you can prioritize time on important tasks that you desire to accomplish. Ready packed tools are great, forms, modals - are just few of many. Responsive layout system is also a big plus from me.</p>
         </div>
       </div>
 

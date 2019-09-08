@@ -1,9 +1,0 @@
-// It's not an original .env.local file, for project workflow, 
-// rename it into such name
-
-// content:
-REACT_APP_GITHUB_CLIENT_ID='key'
-REACT_APP_GITHUB_CLIENT_SECRET='key'
-
-// deployment API:
-// netlify: there is an option in 'deploy' tab to add keys 

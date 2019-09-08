@@ -17,8 +17,8 @@ const BundlersModal = () => {
           </div>
           <hr/>
           <h4 className="mt-5 center">Gulp</h4>
-          <p className="pt-3">Gulp is a build tool for compiling and compressing JS/assets, and it does live reload on the browsers. Gulp is an ancestor of Webpack but I use it for smaller applications.</p> 
-          <p>Gulp file is basically a file with the set of instructions, which Gulp should do. The file can have a default task or several other tasks to be called from one another.</p>
+          <p className="pt-3">Gulp is a build tool for compiling and compressing JS/assets, and it does live-reload in the browsers. Gulp is an ancestor of Webpack but has less to configure so should be used in smaller applications.</p> 
+          <p>Gulp file is basically a file with the set of instructions, which Gulp will follow. The file can have a default task or several other tasks to be called from one another.</p>
 
         </div>
       </div>
