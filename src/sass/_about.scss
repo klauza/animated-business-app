@@ -3,7 +3,29 @@
   background: white;
 
   
- 
+  .about-contacts{
+    display: flex; flex-direction: row;
+    font-weight: 700;
+    position: absolute;
+    top: 65px; left: 50%; transform: translateX(-50%);
+    div{
+      display: flex; flex-direction: row;
+    }
+    div span{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    div:nth-child(1) i{
+      margin-right: 10px;
+    }
+    div:nth-child(2) p{
+    }
+    div:nth-child(2) i{
+      border-left: 0.5px solid black;
+      padding-left: 10px;
+    }
+    div > *{ display: inline-block; }
+  }
 }
 
 .about{

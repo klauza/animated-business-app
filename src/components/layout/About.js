@@ -74,6 +74,11 @@ export default class About extends Component {
         <p className="about__bottom">I began my adventure back in 2018 exploring what web development is. React was overwhelming that time, but today, I aim to get deeper and deeper into that library. Currently I'm focusing on react, javascript, sass and node.js. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
         <figure><img src={image} alt="" className="about__image" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageErrored.bind(this)} /></figure>
       </div>
+      
+      <div className="about-contacts">
+        <div> <span> <a href="tel:07719122293">07719122293</a> </span> <i className="material-icons"> phone_enabled </i> </div>
+        <div> <i className="material-icons"> email </i> <span> <a href="mailto:klauza.dev@gmail.com">klauza.dev@gmail.com</a> </span></div>
+      </div>
     </div>
     )
   
