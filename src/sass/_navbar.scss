@@ -33,6 +33,7 @@
       .nav-links{
         width: 80px;
         color: white;
+        font-weight: 700;
         display: inline-block;
         line-height: 60px; height: 60px;
         text-decoration: none;
@@ -68,7 +69,7 @@
   }
 
   
-  @media (max-width: 548px){
+  @media (max-width: 570px){
     .nav-container{
       width: 100%;
       display: grid;

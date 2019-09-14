@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
@@ -12,15 +12,11 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 const App = () =>{
 
-
-
   return (
     
     <BrowserRouter>
       <div className="App">
    
-
-        
         <Navbar />
 
         <Switch>

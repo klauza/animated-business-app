@@ -1,5 +1,8 @@
 #portfolio-page{
   background: $bot-portfolio-color;
+
+
+
   .portfolio-grid{
     //overflow: hidden;
     width: 100%;
@@ -13,6 +16,8 @@
     grid-column-gap: 15px;
     grid-row-gap: 50px;
     justify-content: center;
+
+
 
     &:nth-child(1){ 
       background: $top-portfolio-color;
@@ -167,7 +172,7 @@
       // different styles on images
     
    
-    .noble-leaders-card{
+    .noble-leaders-card, .bhutanotel-card, .e-newsstand-card{
       .card-background{
         filter: brightness(1);
         img{
