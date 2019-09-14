@@ -7,17 +7,12 @@ import About from './components/layout/About';
 import Portfolio from './components/layout/Portfolio';
 import Github from './components/layout/Github';
 import NotFound from './components/layout/NotFound';
-import HomeModals from './components/layout/HomeModals';
 
 import 'materialize-css/dist/css/materialize.min.css';
-import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
 const App = () =>{
 
-  useEffect(() => {
-    M.AutoInit(); // Initializes Materialize JS
 
-  })
 
   return (
     
@@ -25,7 +20,7 @@ const App = () =>{
       <div className="App">
    
 
-        <HomeModals />
+        
         <Navbar />
 
         <Switch>

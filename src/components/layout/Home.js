@@ -3,10 +3,13 @@ import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
 import animateBlocks from './shadow.js';
 import HomeSkills from './HomeSkills';
+import HomeModals from './HomeModals';
+import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
 
 export default class Home extends Component {
   componentDidMount(){
+    M.AutoInit(); // Initializes Materialize JS
     document.querySelector('.container-home').style.opacity ="0";
     document.querySelector('.home-spinner').style.opacity = "1";
 
@@ -68,7 +71,7 @@ export default class Home extends Component {
 
     return (
       <div className="home">
-      
+        <HomeModals />
 
         <div className="home-spinner">
           <img src={spinner} alt=""/>
