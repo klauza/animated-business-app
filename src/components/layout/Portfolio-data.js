@@ -9,9 +9,9 @@ const portfData =  [
     language: "React, Redux, node.js",
     icons: ["fab fa-react", "fas fa-database"],
     completed: "in dev",
-    live_page: "",
+    live_page: "https://e-newsstand.herokuapp.com/",
     github_page: "https://github.com/klauza/e-newsstand",
-    description: "e-commerce project (dev phase) with paying setup, and also state/url search plus filtering"
+    description: "E-commerce project with paying engine, state/url query search and filtering"
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const portfData =  [
     completed: "see page",
     live_page: "https://noble-leaders.herokuapp.com/",
     github_page: "https://github.com/klauza/noble-leaders",
-    description: "It's a gaming platform where you gain points for playing"
+    description: "A gaming platform where you gain points for playing"
   },
   {
     id: 4,

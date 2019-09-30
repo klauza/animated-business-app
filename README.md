@@ -1,6 +1,7 @@
 ## About
 
-My official portfolio site.
+It's my official portfolio site. <br/>
+I have chosen my best projects which are illustrating my experience the most. 
 
 
 <br/>
