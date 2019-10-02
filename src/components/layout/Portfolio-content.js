@@ -1,7 +1,4 @@
 import React from 'react'; 
-// import {actorGameImg, chestImg, guessNumImg} from '../../media/index';
-import { eNewsstandImg, bhutanotel, carDealershipImg, churchImg, nobleImg, heroImg, hussarImg, petShelterImg, photographyImg, pwdMaker} from '../../media/index';
-
 import jqueryPng from '../../media/jquery.png';
 import ReactImageAppear from 'react-image-appear';
 import {portfData, portfDataTwo} from './Portfolio-data';

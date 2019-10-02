@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { connect } from 'react-redux';
+import { pageLoad } from '../../actions/mainAction';
+
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
 import animateBlocks from './shadow.js';
@@ -7,27 +10,43 @@ import HomeModals from './HomeModals';
 import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
 
-export default class Home extends Component {
-  componentDidMount(){
+const Home = ({pageLoad, main: {pageLoaded}}) => {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
     M.AutoInit(); // Initializes Materialize JS
-    document.querySelector('.container-home').style.opacity ="0";
-    document.querySelector('.home-spinner').style.opacity = "1";
 
-    const targets = document.querySelectorAll('.icon-container');   // target all blocks for animation
+    if(pageLoaded.home){
+      startBlockAnim();
+    }
 
-    targets.forEach(this.blockIconsLoad); // apply animation function to each block
-    animateBlocks();
 
+
+
+  }, [loading])
+
+
+  if(!pageLoaded.home){
+    loadImageAsync(heroImg)
+    .then(() => pageLoad({...pageLoaded, home: true}) )
+    .catch(reason => console.log(reason));
+  }
+  
+  function loadImageAsync(image){
+    return new Promise((resolve, reject) => {
+      const img1 = new Image();
+      img1.addEventListener('load', event => resolve(img1));
+      img1.addEventListener('erorr', reason => reject(new Error('error')));
+      img1.src = image
+    })
   }
 
 
 
-  state = {
-    loading: true
-  }
 
   // animate each skill block
-  blockIconsLoad = (target) => {
+  const blockIconsLoad = (target) => {
     const io = new IntersectionObserver((entries, observer) => {
 
       entries.forEach((entry) => {
@@ -51,50 +70,60 @@ export default class Home extends Component {
 
 
 
-  handleImageLoaded(){ 
-    this.setState({ loading: false});
-    this.startHome();
+  const handleImageLoaded = () => { 
+    setLoading(false);
   }
-  handleImageErrored() {
-    this.setState({ loading: true});
-  }
-  startHome(){
-    document.querySelector('.container-home').style.opacity = "1";
-    document.querySelector('.container-home').style.transition = "all 350ms ease-in";
-    document.querySelector('.home-spinner').style.transition = "all 350ms ease-out";
-    document.querySelector('.home-spinner').style.opacity = "0";
-    document.querySelector('.home-spinner').style.visibility = "none";
+  const handleImageErrored = () => {
+    setLoading(true);
   }
 
 
-  render(){
+  const startBlockAnim = () => {
+    document.querySelectorAll('.icon-container').forEach(blockIconsLoad); // apply animation function to each block
+    animateBlocks();
+  }
 
-    return (
-      <div className="home">
-        <HomeModals />
 
-        <div className="home-spinner">
-          <img src={spinner} alt=""/>
-        </div>
-        <div className="container-home">
 
-      
-          <div className="container-home__hero">
-            <img src={heroImg} alt="" className="container-home__hero--img" onLoad={this.handleImageLoaded.bind(this)} onError={this.handleImageErrored.bind(this)} />
-            
-            <div className="container-home__hero--para">
-              <p>There is a long journey behind me, but even longer... ahead.</p>
-            </div>
-          </div>
 
-          <div className="container-home__experience">
-            <span>TOOL PALETTE</span>
-          </div>
+  if(pageLoaded.home === true){
+    
+  return (
+    <div className="home">
+      <HomeModals />
 
-          <HomeSkills />
+      <div className="container-home">
+
+    
+        <div className="container-home__hero">
+          <img src={heroImg} alt="" className="container-home__hero--img" onLoad={handleImageLoaded} onError={handleImageErrored} />
           
+          <div className="container-home__hero--para">
+            <p>There is a long journey behind me, but even longer... ahead.</p>
+          </div>
         </div>
+
+        <div className="container-home__experience">
+          <span>TOOL PALETTE</span>
+        </div>
+
+        <HomeSkills />
+        
       </div>
-    )
-  }
+    </div>
+  )
+} else {
+  return(
+    <div className="home-spinner">
+      <img src={spinner} alt=""/>
+    </div>
+  )
 }
+
+ 
+}
+
+const mapStateToProps = (state) => ({
+  main: state.main
+})
+export default connect(mapStateToProps, {pageLoad})(Home)

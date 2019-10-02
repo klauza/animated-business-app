@@ -2,9 +2,12 @@
   background: white;
 }
 .container-home{
+  opacity: 0;
+  animation: animatePage 500ms forwards;
   background: rgba(59, 88, 152, 0.7);
   position: relative;
   overflow: hidden;
+
 
   &::before{
     content: "";

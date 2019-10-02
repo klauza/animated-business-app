@@ -1,5 +1,7 @@
 .about-main-container{
- 
+  opacity: 0;
+  animation: animatePage 500ms forwards;
+
   background: white;
 
   
@@ -17,8 +19,6 @@
     }
     div:nth-child(1) i{
       margin-right: 10px;
-    }
-    div:nth-child(2) p{
     }
     div:nth-child(2) i{
       border-left: 0.5px solid black;
