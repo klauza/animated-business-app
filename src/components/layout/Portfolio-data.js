@@ -96,13 +96,9 @@ const portfData =  [
     live_page: "https://hero-project-klauza.firebaseapp.com/signin",
     github_page: "https://github.com/klauza/heroproject",
     description: "Login system; Firebase. 2d hero creator. Possible to see others people work too"
-  }
-]
-export {portfData}
-
-const portfDataTwo = [
+  },
   {
-    id: 1,
+    id: 9,
     cardClass: "photography-card",
     image: photographyImg,
     title: "photography",
@@ -114,7 +110,7 @@ const portfDataTwo = [
     description: "Hobbystic photography SPA with some jQuery DOM manipulation"
   },
   {
-    id: 2,
+    id: 10,
     cardClass: "shelter-card",
     image: petShelterImg,
     title: "pet shelter",
@@ -126,7 +122,48 @@ const portfDataTwo = [
     description: "Sass based SPA for people who are keen to be taking care of animals. Made with CSS GRID tool"
   },
   {
-    id: 3,
+    id: 11,
+    cardClass: "hussars-card",
+    image: hussarImg,
+    title: "hussars",
+    language: "HTML, Sass, jQuery",
+    icons: ["fab fa-html5", "fab fa-sass"],
+    completed: "see page",
+    live_page: "https://hussars-klauza.netlify.com/",
+    github_page: "https://github.com/klauza/hussars",
+    description: "Horse cavalry at the turn of XVI century. One page website with colorful sections"
+  }
+]
+export {portfData}
+
+/*
+const portfDataTwo = [
+  {
+    id: 9,
+    cardClass: "photography-card",
+    image: photographyImg,
+    title: "photography",
+    language: "HTML, Sass, jQuery",
+    icons: ["fab fa-html5", "fab fa-sass", "fab fa-js-square"],
+    completed: "see page",
+    live_page: "https://photography-klauza.netlify.com/",
+    github_page: "https://github.com/klauza/photography",
+    description: "Hobbystic photography SPA with some jQuery DOM manipulation"
+  },
+  {
+    id: 10,
+    cardClass: "shelter-card",
+    image: petShelterImg,
+    title: "pet shelter",
+    language: "HTML, Sass",
+    icons: ["fab fa-html5", "fab fa-sass"],
+    completed: "see page",
+    live_page: "https://shelter-klauza.netlify.com/",
+    github_page: "https://github.com/klauza/Shelter",
+    description: "Sass based SPA for people who are keen to be taking care of animals. Made with CSS GRID tool"
+  },
+  {
+    id: 11,
     cardClass: "hussars-card",
     image: hussarImg,
     title: "hussars",
@@ -164,3 +201,4 @@ const portfDataTwo = [
 ]
 
 export {portfDataTwo}
+*/

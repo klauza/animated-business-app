@@ -1,7 +1,7 @@
 import React from 'react'; 
-import jqueryPng from '../../media/jquery.png';
+// import jqueryPng from '../../media/jquery.png';
 import ReactImageAppear from 'react-image-appear';
-import {portfData, portfDataTwo} from './Portfolio-data';
+import {portfData} from './Portfolio-data';
 
 
 export default function Content() {
@@ -10,8 +10,11 @@ export default function Content() {
     
     return(
       <div id="portfolio-page">
-        
+        <h2>PORTFOLIO</h2>
+        <p>sorted by <span>recent first</span></p>
+        <p>All projects under <a href="https://www.github.com/klauza?tab=repositories">THIS</a> link</p>
         <div className="portfolio-grid">
+
 
         {portfData.map(tile => {
           return (
@@ -37,9 +40,8 @@ export default function Content() {
         </div>
 
         <div className="separator"> 
-          <p className="separator-para">Below are my foundational/first projects</p>
         </div>
-
+{/*  
         <div className="portfolio-grid">
           {portfDataTwo.map(tile => {
             return (
@@ -67,6 +69,7 @@ export default function Content() {
 
 
         </div>
+*/}
       </div>
     )
   

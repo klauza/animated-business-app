@@ -1,12 +1,32 @@
 #portfolio-page{
+  position: relative;
   background: $bot-portfolio-color;
-
-
-
+  h2{
+    text-align: center;
+    padding: 0; margin: 0;
+    color: mintcream;
+  }
+  p{
+    padding: 0; margin: 0;
+    margin: 5px 0;
+    text-align: center;
+    color: mintcream;
+    span{
+      text-decoration: underline;
+    }
+   
+  }
+  p:nth-of-type(2)::after{
+    content: '';
+    display: block;
+    background: mintcream;
+    height: 2px; width: 30px;
+    margin: 10px auto;
+  }
   .portfolio-grid{
     //overflow: hidden;
     width: 100%;
-    background: $bot-portfolio-color;
+    // background: $bot-portfolio-color;
     margin: 0 auto;
     padding: 100px 50px 100px;
     display: grid;
@@ -275,20 +295,14 @@
   }
 
   .separator{
-    width: 100%;
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -2;
     margin: 0 auto;
     min-height: 150px;
     background: $top-portfolio-color;
     text-align: center;
-    clip-path: polygon(100% 0, 100% 50%, 70% 50%, 50% 100%, 30% 50%, 0 50%, 0 0);
-    position: relative;
-    &-para{
-      font-size: 1.5rem;
-      position: absolute; top: 35%; left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-family: $ff-Russo;
-    }
+    clip-path: polygon(100% 0, 0 0, 100% 100%, 0 100%, 50% 50%, 50% 50%, 50% 50%);
   }
 
   @media(max-width: 65em){
@@ -317,27 +331,27 @@
       }
 
     }
-    .separator{
-      &-para{
-        font-size: 1.25rem;
-      }
-    }
+    // .separator{
+    //   &-para{
+    //     font-size: 1.25rem;
+    //   }
+    // }
   }
   
   @media(max-width: 35em){
     .portfolio-grid{
       width: 100%;
-      padding: 100px 0px 50px;
+      padding: 100px 0px 75px;
       grid-column-gap: 5px;
       grid-row-gap: 30px;
       
     }
-    .separator{
-      clip-path: polygon(100% 0, 100% 70%, 70% 70%, 50% 90%, 30% 70%, 0 70%, 0 0);
-      &-para{
-        font-size: 1rem;
-        position: absolute; top: 55%; left: 50%;
-      }
-    }
+    // .separator{
+    //   clip-path: polygon(100% 0, 100% 70%, 70% 70%, 50% 90%, 30% 70%, 0 70%, 0 0);
+    //   &-para{
+    //     font-size: 1rem;
+    //     position: absolute; top: 55%; left: 50%;
+    //   }
+    // }
   }
 }
