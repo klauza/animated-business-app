@@ -114,7 +114,7 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
   )
 } else {
   return(
-    <div className="home-spinner">
+    <div className="spinner">
       <img src={spinner} alt=""/>
     </div>
   )
