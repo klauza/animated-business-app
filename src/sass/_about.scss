@@ -29,11 +29,7 @@
 }
 
 .about{
-  
   min-height: 90vh;
-  //border: 5px solid black;
-  //background: white;
-  
   width: 100%;
   margin: 0 auto;
   padding: 200px 5%;
@@ -74,36 +70,6 @@
     @media screen and (min-width:1930px){
         font-size: 2em;
     }
-
- 
-    
-
-    /* +++++++++++++++++++++ HIGHLIGHT TEXT ANIMATION +++++++++++++++++++++ */
-    // .secret-text, .secret-text-two{
-    //   position: relative;
-    //   display: inline-block;
-      
-    // }
-    // .secret-text::after,
-    // .secret-text-two::after{
-    //   display: none;      // TEMP HIDDEN
-    //   content:'';
-    //   position: absolute; top: 0; left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background: rgba(0, 0, 0, 0.719);
-    // }
-    // .secret-text::after{
-    //   transform: translateY(-100px);
-    // }
-    // .secret-text-two::after{
-    //   transform: translateY(-125px);
-    // }
-    // &:hover .secret-text::after,
-    // &:hover .secret-text-two::after{
-    //   transition: all 1s ease;
-    //   transform: translateY(0px);
-    // }
 
     
   }

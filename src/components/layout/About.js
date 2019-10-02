@@ -77,11 +77,11 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
 
 
         <div className="about">
-          <div className="about__top">I'm Michal, a self taught coder with desire to gain more and more knowledge. I'm friendly, ambitious and motivated person.</div>	
+          <div className="about__top">I'm Michal, a self taught coder with desire to gain programming knowledge. I'm a friendly, ambitious and motivated person.</div>	
           <div className="about__separator">  </div>
           <h1 className="about__mid"><span id="about-text">ABOUT</span></h1>
           <h1 className="about__mid-right"><span id="me-text">ME</span></h1>
-          <p className="about__bottom">I began my adventure back in 2018 exploring what web development is. React was overwhelming that time, but today, I aim to get deeper and deeper into that library. Currently I'm focusing on react, javascript, sass and node.js. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
+          <p className="about__bottom">I began my coding adventure back in 2018 exploring what web development is. React was overwhelming that time. Today, I aim to get deeper and better in this JS framework but I also develop my time in environment around it: on Redux, node plus Express.js and databases. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
           <figure><img src={image} alt="" className="about__image" onLoad={handleImageLoaded} onError={handleImageErrored} /></figure>
         </div>
         
