@@ -6,13 +6,13 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Provider } from 'react-redux';
 import store from './store';
 
-import Navbar from './components/layout/Navbar';
+import Navbar from './components/Navigation/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import ProjectsMain from './components/Projects/ProjectsMain';
 import Github from './components/Github/Github';
 import LexiconMain from './components/layout/Lexicon/LexiconMain';
-import NotFound from './components/layout/NotFound';
+import NotFound from './components/NotFound';
 
 import 'materialize-css/dist/css/materialize.min.css';
 
