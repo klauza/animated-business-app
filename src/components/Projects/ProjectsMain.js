@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Content from './Portfolio-content';
+import Content from './ProjectsContent';
 
 export default class Portfolio extends Component{
 

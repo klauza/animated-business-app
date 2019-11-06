@@ -1,7 +1,7 @@
 import React from 'react'; 
 // import jqueryPng from '../../media/jquery.png';
 import ReactImageAppear from 'react-image-appear';
-import {portfData} from './Portfolio-data';
+import {portfData} from './ProjectsData';
 
 
 export default function Content() {

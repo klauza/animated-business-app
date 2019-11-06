@@ -9,7 +9,7 @@ import store from './store';
 import Navbar from './components/layout/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import Portfolio from './components/layout/Portfolio';
+import ProjectsMain from './components/Projects/ProjectsMain';
 import Github from './components/Github/Github';
 import LexiconMain from './components/layout/Lexicon/LexiconMain';
 import NotFound from './components/layout/NotFound';
@@ -39,7 +39,7 @@ const App = () =>{
               <Switch location={location}>
                 <Route exact path='/' component={Home} />
                 <Route path='/about' component={About}/>
-                <Route path='/portfolio' component={Portfolio} />
+                <Route path='/projects' component={ProjectsMain} />
                 <Route path='/github' component={Github} />
                 <Route path='/lexicon' component={LexiconMain} />
                 <Route component={NotFound} />
