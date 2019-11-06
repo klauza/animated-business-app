@@ -5,7 +5,7 @@ import ReactImageAppear from 'react-image-appear';
 
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
-import animateBlocks from './shadow.js';
+import animateBlocks from '../layout/shadow.js';
 import HomeSkills from './HomeSkills';
 import HomeModals from './HomeModals';
 import M from 'materialize-css/dist/js/materialize.min.js'; // modals

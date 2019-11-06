@@ -15,8 +15,9 @@ function Navbar() {
         <div className="nav-links-container">
           <NavLink exact={true} to="/" className="nav-links">Home</NavLink>
           <NavLink to="/about" className="nav-links">About</NavLink>
-          <NavLink to="/portfolio" className="nav-links">Portfolio</NavLink>
+          <NavLink to="/portfolio" className="nav-links">Projects</NavLink>
           <NavLink to="/github" className="nav-links">Github</NavLink>
+          <NavLink to="/lexicon" className="nav-links">Lexicon</NavLink>
         </div>
       
         <div className="nav-icons">
