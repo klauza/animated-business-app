@@ -28,8 +28,8 @@ export default function Content() {
               {tile.icons.map((icon, i) => <div key={i} className="icon-language"><i className={`${icon}`}></i></div> )}
             </div> 
             <div className="card-description__link">
-              <a href={tile.live_page}>{tile.completed}<i className="far fa-file"></i></a>
-              <a href={tile.github_page}>see code<i className="fab fa-github"></i></a>
+              <a rel="noopener noreferrer" target="_blank" href={tile.live_page}>{tile.completed}<i className="far fa-file"></i></a>
+              <a rel="noopener noreferrer" target="_blank" href={tile.github_page}>see code<i className="fab fa-github"></i></a>
             </div>
           </div>
           <div className="card-description__hover--text">{tile.description}</div>
