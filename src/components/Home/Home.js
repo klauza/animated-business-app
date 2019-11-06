@@ -5,7 +5,7 @@ import ReactImageAppear from 'react-image-appear';
 
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
-import animateBlocks from '../layout/shadow.js';
+import animateBlocks from './shadow';
 import HomeSkills from './HomeSkills';
 import HomeModals from './HomeModals';
 import M from 'materialize-css/dist/js/materialize.min.js'; // modals
@@ -16,23 +16,24 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    M.AutoInit(); // Initializes Materialize JS
-    startBlockAnim();
-    // if(pageLoaded.home){
-    //   startBlockAnim();
-    // }
+    // Initializes Materialize JS
+    M.AutoInit(); 
 
-
-
+    // apply animation to blocks if page loaded
+    if(pageLoaded.home){
+      startBlockAnim();
+    }
 
   }, [loading])
 
 
-  // if(!pageLoaded.home){
-  //   loadImageAsync(heroImg)
-  //   .then(() => pageLoad({...pageLoaded, home: true}) )
-  //   .catch(reason => console.log(reason));
-  // }
+  // Check if not loaded globally. 
+  if(!pageLoaded.home){
+    loadImageAsync(heroImg)
+    .then(() => pageLoad({...pageLoaded, home: true})) 
+    .then(() => setLoading(false))
+    .catch(reason => console.log(reason));
+  }
   
   function loadImageAsync(image){
     return new Promise((resolve, reject) => {
@@ -71,12 +72,12 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
 
 
-  const handleImageLoaded = () => { 
-    setLoading(false);
-  }
-  const handleImageErrored = () => {
-    setLoading(true);
-  }
+  // const handleImageLoaded = () => { 
+  //   setLoading(false);
+  // }
+  // const handleImageErrored = () => {
+  //   setLoading(true);
+  // }
 
 
   const startBlockAnim = () => {
@@ -87,7 +88,7 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
 
 
-  // if(pageLoaded.home === true){
+  if(pageLoaded.home === true){
     
   return (
     <div className="home">
@@ -97,7 +98,10 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
     
         <div className="container-home__hero">
-          <div className="container-home__hero--img"><ReactImageAppear  showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={heroImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+          
+          <div className="container-home__hero--img">
+            <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={heroImg} animation="fadeIn" easing="ease-in" alt="" />
+          </div>
 
           
           <div className="container-home__hero--para">
@@ -106,7 +110,7 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
         </div>
 
         <div className="container-home__experience">
-          <span>TOOL PALETTE</span>
+          <span>MY TOOL PALETTE</span>
         </div>
 
         <HomeSkills />
@@ -114,13 +118,13 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
       </div>
     </div>
   )
-// } else {
-//   return(
-//     <div className="spinner">
-//       <img src={spinner} alt=""/>
-//     </div>
-//   )
-// }
+} else {
+  return(
+    <div className="spinner">
+      <img src={spinner} alt=""/>
+    </div>
+  )
+}
 
  
 }
