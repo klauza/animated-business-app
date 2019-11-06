@@ -11,7 +11,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import ProjectsMain from './components/Projects/ProjectsMain';
 import Github from './components/Github/Github';
-import LexiconMain from './components/layout/Lexicon/LexiconMain';
+import LexiconMain from './components/Lexicon/LexiconMain';
 import NotFound from './components/NotFound';
 
 import 'materialize-css/dist/css/materialize.min.css';

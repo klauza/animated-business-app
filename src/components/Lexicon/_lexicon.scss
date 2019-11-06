@@ -1,0 +1,56 @@
+.lexicon{
+  position: absolute; top: 60px; left: 0; right: 0;
+
+  h3, h5{
+    text-align: center;
+  }
+
+  &-container{
+    width: 90%; margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+
+    &__sticky{
+      width: 25%;
+      height: 100%;
+      position: sticky;
+      top: 50%; transform: translateY(-50%);
+
+      &-sidebar{
+        border: 1px solid rgb(53, 52, 52);
+        width: 100%; height: 100%;
+        padding: 50px 0;
+        .goTop{
+          text-align: right;
+          padding-right: 10px;
+        }
+        a{
+          display: block;
+          width: 100%;
+          text-align: center;
+          &:hover{
+            background: rgb(226, 226, 226);
+          }
+        }
+      }
+
+    }
+
+    &__grid{
+      margin-top: 20px;
+      width: 72.5%;
+    }
+    &__item-list{
+      border: 1px solid orange;
+      ul{
+        li{
+          height: 100vh;
+          padding-top: 50px;
+
+        }
+      }
+
+    }
+  }
+}
