@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
+import ReactImageAppear from 'react-image-appear';
 
 import image from '../../media/about-pc.jpeg';
 import spinner from '../../media/loader2.gif';
@@ -13,10 +14,10 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(()=>{
-
-    if(pageLoaded.about){
-      startAbout();
-    }
+    startAbout();
+    // if(pageLoaded.about){
+    //   startAbout();
+    // }
 
   }, [loading])
 
@@ -71,7 +72,7 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
 
 
 
-  if(pageLoaded.about === true){
+  // if(pageLoaded.about === true){
     return (
       <div className="about-main-container">
 
@@ -82,7 +83,7 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
           <h1 className="about__mid"><span id="about-text">ABOUT</span></h1>
           <h1 className="about__mid-right"><span id="me-text">ME</span></h1>
           <p className="about__bottom">I began my coding adventure back in 2018 exploring what web development is. React was overwhelming that time. Today, I aim to get deeper and better in this JS framework but I also develop my time in environment around it: on Redux, node plus Express.js and databases. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
-          <figure><img src={image} alt="" className="about__image" onLoad={handleImageLoaded} onError={handleImageErrored} /></figure>
+          <div className="about__image"><ReactImageAppear onLoad={handleImageLoaded} onError={handleImageErrored} showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" /></div>
         </div>
         
         <div className="about-contacts">
@@ -91,13 +92,13 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
         </div>
       </div>
     )
-  } else{
-    return(
-      <div className="spinner">
-        <img src={spinner} alt=""/>
-      </div>
-    )
-  }
+  // } else{
+  //   return(
+  //     <div className="spinner">
+  //       <img src={spinner} alt=""/>
+  //     </div>
+  //   )
+  // }
   
 }
 
