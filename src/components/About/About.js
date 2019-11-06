@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
 import ReactImageAppear from 'react-image-appear';
@@ -51,11 +51,12 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
 
       const aboutText = document.querySelector('#about-text');
       const meText = document.querySelector('#me-text');
-      const aboutPage = document.querySelector('.about');
+      // const aboutPage = document.querySelector('.about');
       // const aboutSpinner = document.querySelector('.about-spinner');
 
-      aboutPage.style.transition = "all 350ms ease-in";
-      aboutPage.style.opacity = "1";
+      // aboutPage.style.transition = "all 350ms ease-in";
+      // aboutPage.style.opacity = "1";
+
       // aboutSpinner.style.transition = "all 350ms ease-out";
       // aboutSpinner.style.opacity = "0";
       // aboutSpinner.style.visibility = "none";
@@ -72,7 +73,7 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
 
 
 
-  if(pageLoaded.about === true){
+  // if(pageLoaded.about === true){
     return (
       <div className="about-main-container">
 
@@ -80,11 +81,15 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
         <div className="about">
           <div className="about__top">I'm Michal, a self taught coder with desire to gain programming knowledge. I'm a friendly, ambitious and motivated person.</div>	
           <div className="about__separator">  </div>
-          <h1 className="about__mid"><span id="about-text">ABOUT</span></h1>
-          <h1 className="about__mid-right"><span id="me-text">ME</span></h1>
+          {pageLoaded.about &&
+            <Fragment>
+              <h1 className="about__mid"><span id="about-text">ABOUT</span></h1>
+              <h1 className="about__mid-right"><span id="me-text">ME</span></h1>
+            </Fragment>
+          }
           <p className="about__bottom">I began my coding adventure back in 2018 exploring what web development is. React was overwhelming that time. Today, I aim to get deeper and better in this JS framework but I also develop my time in environment around it: on Redux, node plus Express.js and databases. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
           <div className="about__image">
-            <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" />
+          {pageLoaded.about && <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" /> }
           </div>
         </div>
         
@@ -94,13 +99,13 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
         </div>
       </div>
     )
-  } else{
-    return(
-      <div className="spinner">
-        <img src={spinner} alt=""/>
-      </div>
-    )
-  }
+  // } else{
+  //   return(
+  //     <div className="spinner">
+  //       <img src={spinner} alt=""/>
+  //     </div>
+  //   )
+  // }
   
 }
 

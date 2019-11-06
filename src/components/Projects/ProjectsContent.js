@@ -9,7 +9,7 @@ export default function Content() {
     
     
     return(
-      <div id="portfolio-page">
+      <div className="portfolio-page">
         <h2>PORTFOLIO</h2>
         <p>sorted by <span>recent first</span></p>
         <p>All projects under <a href="https://www.github.com/klauza?tab=repositories">THIS</a> link</p>

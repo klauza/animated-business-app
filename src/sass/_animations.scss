@@ -1,0 +1,116 @@
+// ALL PAGES TRANSITION BETWEEN
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms linear 150ms; /* 150ms */
+}
+
+// HOME
+.fade-exit-active .container-home{
+  &__skill-icons{
+    // transition: transform 250ms ease;
+    // transform: translateY(-50px);
+  }
+
+
+}
+
+// ABOUT
+.fade-appear .about-contacts,
+.fade-enter .about-contacts{
+  div{
+    transform: translateY(-100px);
+  }
+}
+.fade-appear-active .about-contacts,
+.fade-enter.fade-enter-active .about-contacts{
+  div{
+    transition: transform 500ms ease 650ms;
+    transform: translateY(0px);
+  }
+}
+.fade-exit .about-contacts{
+  div{
+    transform: translateY(0px);
+  }
+}
+.fade-exit.fade-exit-active .about-contacts{
+  div{
+    transition: transform 1000ms ease;
+    transform: translateY(-100px);
+  }
+}
+
+// PROJECTS
+.fade-appear,.fade-enter.portfolio-page{
+  &>h2{
+    transform: translateY(-100px);
+  }
+  &>p:nth-of-type(1){
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  &>p:nth-of-type(2){
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active.portfolio-page{
+  &>h2{
+    transform: translateY(0px);
+    transition: transform 500ms ease;
+  }
+  &>p:nth-of-type(1){
+    transition: transform 500ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  &>p:nth-of-type(2){
+    transition: transform 500ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.fade-exit.portfolio-page{
+  &>h2{
+    transform: translateY(0px);
+  }
+  &>p:nth-of-type(1){
+    opacity: 1;
+  }
+  &>p:nth-of-type(2){
+    opacity: 1;
+  }
+}
+
+.fade-exit.fade-exit-active.portfolio-page{
+  &>h2{
+    transition: transform 500ms ease;
+    transform: translateY(-100px);
+  }
+  &>p:nth-of-type(1){
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  &>p:nth-of-type(2){
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
