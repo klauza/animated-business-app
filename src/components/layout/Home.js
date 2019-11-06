@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
+import ReactImageAppear from 'react-image-appear';
 
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
@@ -16,10 +17,10 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
   useEffect(() => {
     M.AutoInit(); // Initializes Materialize JS
-
-    if(pageLoaded.home){
-      startBlockAnim();
-    }
+    startBlockAnim();
+    // if(pageLoaded.home){
+    //   startBlockAnim();
+    // }
 
 
 
@@ -27,11 +28,11 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
   }, [loading])
 
 
-  if(!pageLoaded.home){
-    loadImageAsync(heroImg)
-    .then(() => pageLoad({...pageLoaded, home: true}) )
-    .catch(reason => console.log(reason));
-  }
+  // if(!pageLoaded.home){
+  //   loadImageAsync(heroImg)
+  //   .then(() => pageLoad({...pageLoaded, home: true}) )
+  //   .catch(reason => console.log(reason));
+  // }
   
   function loadImageAsync(image){
     return new Promise((resolve, reject) => {
@@ -86,7 +87,7 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
 
 
-  if(pageLoaded.home === true){
+  // if(pageLoaded.home === true){
     
   return (
     <div className="home">
@@ -96,7 +97,8 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
     
         <div className="container-home__hero">
-          <img src={heroImg} alt="" className="container-home__hero--img" onLoad={handleImageLoaded} onError={handleImageErrored} />
+          <div className="container-home__hero--img"><ReactImageAppear  showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={heroImg} animation="fadeIn" easing="ease-in" alt="" /></div>
+
           
           <div className="container-home__hero--para">
             <p>There is a long journey behind me, but even longer... ahead.</p>
@@ -112,13 +114,13 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
       </div>
     </div>
   )
-} else {
-  return(
-    <div className="spinner">
-      <img src={spinner} alt=""/>
-    </div>
-  )
-}
+// } else {
+//   return(
+//     <div className="spinner">
+//       <img src={spinner} alt=""/>
+//     </div>
+//   )
+// }
 
  
 }
