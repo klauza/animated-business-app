@@ -1,7 +1,8 @@
 ## About
 
-It's my official portfolio site. <br/>
-I have chosen my best projects which are illustrating my experience the most. 
+It's my official personal portfolio site. <br/>
+I have chosen my best recent projects which are illustrating overall experience that I gained from self-study. <br/>
+[link to the live page](https://www.klauza-dev.com/)
 
 
 <br/>
@@ -9,30 +10,18 @@ I have chosen my best projects which are illustrating my experience the most.
 ## Dependencies
 | Name  | version |
 | ------------- | ------------- |
+| **react** | 16.8.6  |
+| **redux** | 4.0.4  |
 | **axios** | 0.19.0  |
 | **node-sass** | 4.12.0 |
 | **react-image-appear** | 1.1.21  |
+| **materialize-css** | 1.0.0  |
 
 <br/>
 
-## Installation and scripts
+## Some quick links
+### of my other React works
 
-#### Initial setup:
-### `install NodeJS` [from here](https://nodejs.org/en/)
-#### Install packages:
-### `npm install` 
-
-#### In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-<br>
-
-## Deployment
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
+[React e-commerce platform](https://github.com/klauza/e-newsstand) <br/>
+[React game-hub](https://github.com/klauza/noble-leaders) <br/>
+[React hotel facility](https://github.com/klauza/bhutanotel)
