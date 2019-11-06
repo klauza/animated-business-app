@@ -73,9 +73,13 @@ class Github extends Component {
     //console.log(this.state.repos);
 
 
+
     
-    
-    if (loading) return (<img src={spinner} alt="spinner" style={{ width: '200px', margin: '100px auto auto', display: 'block' }} /> );
+    if (loading) return (
+    <div className="spinner">
+      <img src={spinner} alt="spinner" style={{ width: '200px', margin: '100px auto auto', display: 'block' }} /> 
+    </div>
+    );
    
     const eachRepo = this.state.repos;
   
