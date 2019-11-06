@@ -39,7 +39,7 @@
 .fade-appear-active .about-contacts,
 .fade-enter.fade-enter-active .about-contacts{
   div{
-    transition: transform 500ms ease 650ms;
+    transition: transform 450ms ease;
     transform: translateY(0px);
   }
 }
@@ -56,7 +56,7 @@
 }
 
 // PROJECTS
-.fade-appear,.fade-enter.portfolio-page{
+.fade-appear.portfolio-page,.fade-enter.portfolio-page{
   &>h2{
     transform: translateY(-100px);
   }
@@ -76,12 +76,12 @@
     transition: transform 500ms ease;
   }
   &>p:nth-of-type(1){
-    transition: transform 500ms ease 100ms, opacity 600ms ease;
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
     opacity: 1;
     transform: translateX(0px);
   }
   &>p:nth-of-type(2){
-    transition: transform 500ms ease 100ms, opacity 600ms ease;
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
     opacity: 1;
     transform: translateX(0px);
   }
@@ -114,3 +114,5 @@
     transform: translateX(50px);
   }
 }
+
+// LEXICON

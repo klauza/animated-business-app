@@ -32,7 +32,7 @@ const App = () =>{
               in={true}
               appear={true}
               key={location.key}
-              timeout={1450}
+              timeout={450}
               classNames="fade" 
             >
 
