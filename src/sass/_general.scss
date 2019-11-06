@@ -8,11 +8,12 @@ body{
 }
 html, body{
   min-height: 100vh;
+  // background: black;
 }
 
 // portfolio background colors
 $top-portfolio-color: rgb(90, 90, 90);    // top segment page
-$bot-portfolio-color: rgba(66, 66, 66, 0.95);    // bottom segment page
+$bot-portfolio-color: rgb(117, 117, 117);    // bottom segment page
 
 // portfolio fonts
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
@@ -27,11 +28,32 @@ $ff-Nav: 'Turret Road', cursive;
 // spinners
 
 .spinner{
+  position: absolute; top: 160px; left: 50%;
+  transform: translateX(-50%);
   img{
     width: 200px;
   }
-  position: absolute; top: 160px; left: 50%;
-  transform: translateX(-50%);
+
+}
+
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms linear 150ms; /* 150ms */
 }
 
 @keyframes animatePage {
@@ -40,5 +62,12 @@ $ff-Nav: 'Turret Road', cursive;
   }
   100%{
     opacity: 1;
+  }
+}
+
+.fade-exit-active .container-home{
+  &__skill-icons{
+    // transition: transform 250ms ease;
+    // transform: translateY(-50px);
   }
 }

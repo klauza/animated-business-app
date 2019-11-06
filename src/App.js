@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -10,6 +11,7 @@ import Home from './components/layout/Home';
 import About from './components/layout/About';
 import Portfolio from './components/layout/Portfolio';
 import Github from './components/layout/Github';
+import LexiconMain from './components/layout/Lexicon/LexiconMain';
 import NotFound from './components/layout/NotFound';
 
 import 'materialize-css/dist/css/materialize.min.css';
@@ -22,15 +24,30 @@ const App = () =>{
         <div className="App">
     
           <Navbar />
+          <Route render={({ location }) => (
 
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/about' component={About}/>
-            <Route path='/portfolio' component={Portfolio} />
-            <Route path='/github' component={Github} />
-            
-            <Route component={NotFound} />
-          </Switch>
+          <TransitionGroup>
+
+            <CSSTransition
+              in={true}
+              appear={true}
+              key={location.key}
+              timeout={450}
+              classNames="fade" 
+            >
+
+              <Switch location={location}>
+                <Route exact path='/' component={Home} />
+                <Route path='/about' component={About}/>
+                <Route path='/portfolio' component={Portfolio} />
+                <Route path='/github' component={Github} />
+                <Route path='/lexicon' component={LexiconMain} />
+                <Route component={NotFound} />
+              </Switch>
+
+            </CSSTransition>
+          </TransitionGroup>
+          )} />
         </div>
       </BrowserRouter>
     </Provider>
