@@ -105,7 +105,7 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
           
           <div className="container-home__hero--para">
-            <p>There is a long journey behind me, but even longer... ahead.</p>
+            <p>There is a long journey behind us, but even longer... ahead.</p>
           </div>
         </div>
 

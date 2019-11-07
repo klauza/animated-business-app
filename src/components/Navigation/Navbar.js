@@ -17,7 +17,7 @@ function Navbar() {
           <NavLink to="/about" className="nav-links">About</NavLink>
           <NavLink to="/projects" className="nav-links">Projects</NavLink>
           <NavLink to="/github" className="nav-links">Github</NavLink>
-          <NavLink to="/lexicon" className="nav-links">Lexicon</NavLink>
+          {/* <NavLink to="/lexicon" className="nav-links">Lexicon</NavLink> */}
         </div>
       
         <div className="nav-icons">
