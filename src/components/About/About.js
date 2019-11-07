@@ -89,7 +89,8 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
           }
           <p className="about__bottom">I began my coding adventure back in 2018 exploring what web development is. React was overwhelming that time. Today, I aim to get deeper and better in this JS framework but I also develop my time in environment around it: on Redux, node plus Express.js and databases. I enjoy coding and will definitely bind it for a longer time with my life. I also possess a good working knowledge with photoshop.</p>
           <div className="about__image">
-          {pageLoaded.about && <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" /> }
+          {/* {pageLoaded.about && <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" /> } */}
+          {pageLoaded.about ? (<img src={image} alt="" />) : (null)}
           </div>
         </div>
         
