@@ -7,8 +7,8 @@ const LexiconMain = () => {
   return (
     <div className="lexicon" id="top">
       <h3> Lexicon - the bunker of knowledge </h3>
-      <h5>This is my bag of wisdom which I grind and polish</h5>
-      <p>Everything is not here, there won't be everything. I just try to place together the most important stuff.</p>
+      <h5>This is my bag of wisdom</h5>
+      <p>Everything is not here, and won't be. I try to place together the most important stuff.</p>
 
       <div className="lexicon-container">
 
@@ -16,7 +16,7 @@ const LexiconMain = () => {
           <div className="lexicon-container__sticky-sidebar">
             <a href="#top" className="goTop">Top <i className="fa fa-arrow-up"></i></a>
             <a href="#react">React</a>
-            <a href="#javascript">JavaScript</a>
+            <a href="#javaScript">JavaScript</a>
             <a href="#redux">Redux</a>
         
           </div>
@@ -25,15 +25,22 @@ const LexiconMain = () => {
         <div className="lexicon-container__grid">
 
           <div className="lexicon-container__item-list">
-            <ul>
+            <ul className="item-list-ul">
 
                 
-                <li id="react"> 
-                  <i className="fa fa-leaf"></i> <h5>React</h5>
+                <li id="react" className="item-list-li"> 
+                  <i style={{color: "green"}} className="fa fa-leaf"></i> <h5>React</h5>
                   <div className="description-main content-react">
-
                     <div className="description-main__core">
-                      <span>It is a rich frontend application</span>
+                      <span>It is a rich frontend application for building user interfaces.</span>
+                      <ul>With react you can
+                        <li>crate reusable components</li>
+                      </ul>
+                    </div>
+
+                    <div className="description-main__extended">
+                      <span className="span-bold">JSX</span>
+                      <div>React uses JSX which is an extension to ECMAScript. JSX is an XML/HTML-like alternative JS syntax which is then transpiled by Babel to transform it into HTML-like text which then JavaScript is parsing. </div>
                     </div>
 
                     <div className="description-main__extended">
@@ -58,11 +65,16 @@ const LexiconMain = () => {
                       <span className="span-bold">High-Order Component</span>
                       <div>It's a component which accepts the data in its `props` and passes that data down into its view or nested components. To interact with the component, users trigger actions such as pressing a button and the component responds to that interaction by emitting events</div>
                     </div>
+                    <div className="description-main__extended">
+                      <span className="span-bold">props & state</span>
+                      <div>- Props are variables, can be used to pass data down to a certain component. Props are immutable</div>
+                      <div>- State is used to store data in current page. State is an independent variable set inside a component. State is mutable and has worse performance than props.</div>
+                    </div>
 
                   </div> 
                 </li>
 
-                <li id="javascript"> 
+                <li id="javaScript" className="item-list-li"> 
                   <i className="fa fa-leaf"></i> <h5>JavaScript</h5>
                   <div className="description-main content-javascript">
                     
@@ -78,7 +90,7 @@ const LexiconMain = () => {
                   </div> 
                 </li>
 
-                <li id="redux"> 
+                <li id="redux" className="item-list-li"> 
                   <i className="fa fa-leaf"></i> <h5>Redux</h5>
                   <div className="description-main content-redux">desc</div> 
                 </li>

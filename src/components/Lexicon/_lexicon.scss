@@ -59,8 +59,8 @@
     }
     &__item-list{
       border: 1px solid orange;
-      ul{
-        li{
+      .item-list-ul{
+        .item-list-li{
           height: 100vh;
           padding-top: 50px;
           margin-left: 5px;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
 import ReactImageAppear from 'react-image-appear';
@@ -24,6 +24,7 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
       startBlockAnim();
     }
 
+  // eslint-disable-next-line
   }, [loading])
 
 

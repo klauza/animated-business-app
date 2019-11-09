@@ -1,4 +1,5 @@
-import { eNewsstandImg, bhutanotel, carDealershipImg, churchImg, nobleImg, heroImg, hussarImg, petShelterImg, photographyImg, pwdMaker} from '../../media/index';
+import { eNewsstandImg, bhutanotel, nobleImg, heroImg, hussarImg, petShelterImg, photographyImg, pwdMaker} from '../../media/index';
+// import { carDealershipImg, churchImg } from '../../media/index';
 
 const portfData =  [
   {

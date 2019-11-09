@@ -25,3 +25,5 @@ yarn-error.log*
 
 # other - css
 src/style.css
+
+dfile.md

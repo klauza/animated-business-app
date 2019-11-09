@@ -1,10 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
-import ReactImageAppear from 'react-image-appear';
+// import ReactImageAppear from 'react-image-appear';
 
 import image from '../../media/about-pc.jpeg';
-import spinner from '../../media/loader2.gif';
 
 
 
@@ -17,7 +16,7 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
     if(pageLoaded.about){
       startAbout();
     }
-
+    // eslint-disable-next-line
   }, [loading])
 
   if(!pageLoaded.about){
