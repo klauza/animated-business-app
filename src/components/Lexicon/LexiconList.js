@@ -69,6 +69,11 @@ const LexiconList = () => {
       <i className="fa fa-leaf"></i> <h5>Redux</h5>
       <div className="description-main content-redux">desc</div> 
     </li>
+
+    <li id="mongodb" className="item-list-li"> 
+      <i className="fa fa-leaf"></i> <h5>MongoDB</h5>
+      <div className="description-main content-mongodb">desc</div> 
+    </li>
   </Fragment>
   )
 }

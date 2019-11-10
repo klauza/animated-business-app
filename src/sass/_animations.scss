@@ -119,30 +119,49 @@
   // #header
   // #sub-header
   // #paragraph-header
+  // &>.lexicon-container__sticky
+  // &>.lexicon-container__item-list
 .fade-appear.lexicon,
 .fade-enter.lexicon{
   #header, #sub-header, #paragraph-header{
     opacity: 0;
     transform: translateY(-100px);
   }
+  .lexicon-container__sticky{
+    opacity: 0;
+    transform: translate(-50px, -50%);
+  }
+  .lexicon-container__item-list{
+    opacity: 0;
+    transform: translateY(50px);
+  }
 }
 .fade-appear-active.lexicon,
 .fade-enter.fade-enter-active.lexicon{
-  #header, #sub-header, #paragraph-header{
+  #header, #sub-header, #paragraph-header, .lexicon-container__item-list{
     transition: transform 300ms ease, opacity 300ms ease;
-    transform: translateY(0px);
+    transform: translate(0px);
+    opacity: 1;
+  }
+  .lexicon-container__sticky{
+    transition: transform 300ms ease, opacity 300ms ease;
+    transform: translate(0px, -50%);
     opacity: 1;
   }
   #sub-header{
     transition-delay: 75ms;
   }
-  #paragraph-header{
+  #paragraph-header, .lexicon-container__sticky, .lexicon-container__item-list{
     transition-delay: 150ms;
   }
 }
 .fade-exit.lexicon{
-  #header, #sub-header, #paragraph-header{
+  #header, #sub-header, #paragraph-header, .lexicon-container__item-list{
     transform: translateY(0px);
+    opacity: 1;
+  }
+  .lexicon-container__sticky{
+    transform: translate(0px, -50%);
     opacity: 1;
   }
 }
@@ -155,7 +174,18 @@
   #sub-header{
     transition-delay: 75ms;
   }
-  #paragraph-header{
+  #paragraph-header, .lexicon-container__sticky, .lexicon-container__item-list{
     transition-delay: 150ms;
+  }
+
+  .lexicon-container__sticky{
+    transition: transform 300ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translate(-100px, -50%);
+  }
+  .lexicon-container__item-list{
+    transition: transform 300ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateY(100px);
   }
 }

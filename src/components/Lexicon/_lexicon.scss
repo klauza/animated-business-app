@@ -31,7 +31,7 @@
       height: 100%;
       position: sticky;
       top: 50%; transform: translateY(-50%);
-      background: white;
+      background: rgba(255, 255, 255, 0.75);
 
       &-sidebar{
         border: 1px solid rgb(53, 52, 52);
@@ -54,11 +54,11 @@
     }
 
     &__grid{
-      margin-top: 20px;
+      margin-top: 33px;
       width: 72.5%;
     }
     &__item-list{
-      border: 1px solid orange;
+      border: 1px solid lightgrey;
       .item-list-ul{
         .item-list-li{
           height: 100vh;

@@ -7,9 +7,9 @@ const LexiconMain = () => {
 
   return (
     <div className="lexicon" id="top">
-      <h3> Lexicon - the bunker of knowledge </h3>
-      <h5>This is my bag of wisdom</h5>
-      <p>Everything is not here, and won't be. I try to place together the most important stuff.</p>
+      <h3 id="header">Lexicon - the bunker of knowledge</h3>
+      <h5 id="sub-header">This is my bag of wisdom</h5>
+      <p id="paragraph-header">Everything is not here, and won't be. I try to place together the most important stuff.</p>
 
       <div className="lexicon-container">
 
@@ -19,6 +19,7 @@ const LexiconMain = () => {
             <a href="#react">React</a>
             <a href="#javaScript">JavaScript</a>
             <a href="#redux">Redux</a>
+            <a href="#mongodb">MongoDB</a>
         
           </div>
         </div>
@@ -27,7 +28,8 @@ const LexiconMain = () => {
 
           <div className="lexicon-container__item-list">
             <ul className="item-list-ul">
-              
+
+              {/* lexicon list */}
               <LexiconList />
 
             </ul>
