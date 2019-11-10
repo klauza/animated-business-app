@@ -116,3 +116,46 @@
 }
 
 // LEXICON
+  // #header
+  // #sub-header
+  // #paragraph-header
+.fade-appear.lexicon,
+.fade-enter.lexicon{
+  #header, #sub-header, #paragraph-header{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+.fade-appear-active.lexicon,
+.fade-enter.fade-enter-active.lexicon{
+  #header, #sub-header, #paragraph-header{
+    transition: transform 300ms ease, opacity 300ms ease;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  #sub-header{
+    transition-delay: 75ms;
+  }
+  #paragraph-header{
+    transition-delay: 150ms;
+  }
+}
+.fade-exit.lexicon{
+  #header, #sub-header, #paragraph-header{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.fade-exit.fade-exit-active.lexicon{
+  #header, #sub-header, #paragraph-header{
+    transition: transform 300ms ease, opacity 300ms ease;
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  #sub-header{
+    transition-delay: 75ms;
+  }
+  #paragraph-header{
+    transition-delay: 150ms;
+  }
+}
