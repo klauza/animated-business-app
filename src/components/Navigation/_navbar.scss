@@ -29,6 +29,7 @@
       height: 60px;
       grid-column: 2 / span 1;
       text-align: center;
+
     
       .nav-links{
         width: auto;
@@ -69,6 +70,7 @@
         font-size: 24px;
         line-height: 60px;
       }
+      
     }
   }
 
@@ -77,7 +79,7 @@
     .nav-container{
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 60px;
+      grid-template-columns: 1fr;
       margin: 0 auto;
     
       .my-nav-logo{ display: none; }
@@ -86,7 +88,7 @@
         grid-column: span 1;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         justify-items: center;
       
         .nav-links{
@@ -95,14 +97,17 @@
           display: inline-block;
           line-height: 60px;
           text-decoration: none;
-          font-size: 1em;
+          font-size: .8em;
+
           
         }
         .active{
           color: rgb(139,157,195);;
         }
       }
-
+      .nav-icons{
+        display: none;
+      }
     }
   }
 }

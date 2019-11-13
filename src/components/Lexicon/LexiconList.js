@@ -46,6 +46,7 @@ const LexiconList = () => {
           <div>- State is used to store data in current page. State is an independent variable set inside a component. State is mutable and has worse performance than props.</div>
         </div>
 
+
       </div> 
     </li>
 
@@ -54,12 +55,12 @@ const LexiconList = () => {
       <div className="description-main content-javascript">
         
         <div className="description-main__core">
-          <span>desc</span>
+          <span>It's a scripting language letting pages to be interactive and dynamic.</span>
         </div>
 
         <div className="description-main__extended">
-          <span className="span-bold"> a </span>
-          <div> ext </div>
+          <span className="span-bold">  </span>
+          <div>  </div>
         </div>
       
       </div> 
@@ -67,13 +68,48 @@ const LexiconList = () => {
 
     <li id="redux" className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>Redux</h5>
-      <div className="description-main content-redux">desc</div> 
+      <div className="description-main content-redux">
+        <div className="description-main__core">
+          <span>It's a tool for an app that mutates the state and makes two-way state exchange possible between the App and a Store.</span>
+        </div>
+        <div className="description-main__extended">
+          <span className="span-bold">Store</span>
+          <div>It's a place in the memory within the browser where the application keeps its state.</div>
+        </div>
+        <div className="description-main__extended">
+          <span className="span-bold">Redux-Thunk</span>
+          <div>It's a synchronization tool. It puts instructions into a queue and makes sure each action is performed one at a time.</div>
+        </div>
+      </div> 
     </li>
 
     <li id="mongodb" className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>MongoDB</h5>
-      <div className="description-main content-mongodb">desc</div> 
+      <div className="description-main content-mongodb">
+        <div className="description-main__core">
+          <span>It's a document database. Can be hosted in the cloud.</span>
+        </div>
+        <div className="description-main__extended">
+          <span className="span-bold">mongoose</span>
+          <div>It allows to manage relationships between data and provides schema which defines the structure of document, validations, and default values.</div>
+        </div>
+      </div> 
     </li>
+
+    <li id="nodejs" className="item-list-li"> 
+      <i className="fa fa-leaf"></i> <h5>node.js</h5>
+      <div className="description-main content-nodejs">
+        <div className="description-main__core">
+          <span>node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.</span>
+        </div>
+        <div className="description-main__extended">
+          <span className="span-bold">Express.js</span>
+          <div>It is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It enables easy API development.</div>
+        </div>
+      </div> 
+    </li>
+
+
   </Fragment>
   )
 }
