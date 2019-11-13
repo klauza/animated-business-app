@@ -1,9 +1,14 @@
 import React, {Fragment} from 'react'
 
-const LexiconList = () => {
+const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef}) => {
+
+  
+
+
+
   return (
   <Fragment>
-    <li id="react" className="item-list-li"> 
+    <li ref={reactRef} className="item-list-li"> 
       <i style={{color: "green"}} className="fa fa-leaf"></i> <h5>React</h5>
       <div className="description-main content-react">
         <div className="description-main__core">
@@ -50,7 +55,7 @@ const LexiconList = () => {
       </div> 
     </li>
 
-    <li id="javaScript" className="item-list-li"> 
+    <li ref={javascriptRef} className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>JavaScript</h5>
       <div className="description-main content-javascript">
         
@@ -66,7 +71,7 @@ const LexiconList = () => {
       </div> 
     </li>
 
-    <li id="redux" className="item-list-li"> 
+    <li ref={reduxRef} className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>Redux</h5>
       <div className="description-main content-redux">
         <div className="description-main__core">
@@ -83,7 +88,7 @@ const LexiconList = () => {
       </div> 
     </li>
 
-    <li id="mongodb" className="item-list-li"> 
+    <li ref={mongodbRef} className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>MongoDB</h5>
       <div className="description-main content-mongodb">
         <div className="description-main__core">
@@ -96,7 +101,7 @@ const LexiconList = () => {
       </div> 
     </li>
 
-    <li id="nodejs" className="item-list-li"> 
+    <li ref={nodejsRef} className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>node.js</h5>
       <div className="description-main content-nodejs">
         <div className="description-main__core">

@@ -1,28 +1,41 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import LexiconList from './LexiconList';
+
+ 
 
 const LexiconMain = () => {
 
+  const reactRef = useRef();
+  const javascriptRef = useRef();
+  const reduxRef = useRef();
+  const mongodbRef = useRef();
+  const nodejsRef = useRef();
+  const topRef = useRef();
 
+  const executeScroll = (myRef) => scrollToRef(myRef)
+  
+  const scrollToRef = (ref) => {
+    console.log(ref);
+    window.scrollTo(0, ref.current.offsetTop+200)
+  }
 
   return (
-    <div className="lexicon" id="top">
+    <div className="lexicon" ref={topRef} id="top">
       <h3 id="header">Lexicon <span>the bunker of web knowledge</span></h3>
       <h5 id="sub-header">A bag of tech wisdom</h5>
-      <p id="paragraph-header">Everything is not here, and won't be. I try to place together the most important stuff.</p>
+      <p id="paragraph-header">Here, I try to place together the most important stuff.</p>
 
       <div className="lexicon-container">
 
         <div className="lexicon-container__sticky">
-          <div className="lexicon-container__sticky-sidebar">
-            <a href="#top" className="goTop">Top <i className="fa fa-arrow-up"></i></a>
-            <a href="#react">React</a>
-            <a href="#javaScript">JavaScript</a>
-            <a href="#redux">Redux</a>
-            <a href="#mongodb">MongoDB</a>
-            <a href="#nodejs">nodeJS</a>
-        
-          </div>
+          <ul className="lexicon-container__sticky-sidebar">
+            <li onClick={()=>executeScroll(topRef)} className="goTop">Top <i className="fa fa-arrow-up"></i></li>
+            <li onClick={()=>executeScroll(reactRef)}>React</li>
+            <li onClick={()=>executeScroll(javascriptRef)}>JavaScript</li>
+            <li onClick={()=>executeScroll(reduxRef)}>Redux</li>
+            <li onClick={()=>executeScroll(mongodbRef)}>MongoDB</li>
+            <li onClick={()=>executeScroll(nodejsRef)}>nodeJS</li>
+          </ul>
         </div>
 
         <div className="lexicon-container__grid">
@@ -31,7 +44,7 @@ const LexiconMain = () => {
             <ul className="item-list-ul">
 
               {/* lexicon list */}
-              <LexiconList />
+              <LexiconList reactRef={reactRef} javascriptRef={javascriptRef} reduxRef={reduxRef} mongodbRef={mongodbRef} nodejsRef={nodejsRef} />
 
             </ul>
           </div>
