@@ -73,7 +73,17 @@
       
     }
   }
+  @media(max-width: 768px){
+    .nav-container{
+      width: 100%;
+      grid-template-columns: 1fr 60px;
+      .my-nav-logo{ display: none; }
 
+      .nav-links-container{
+        grid-column: span 1;
+      }
+    }
+  }
   
   @media (max-width: 570px){
     .nav-container{

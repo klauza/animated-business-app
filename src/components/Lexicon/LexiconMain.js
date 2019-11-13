@@ -29,7 +29,7 @@ const LexiconMain = () => {
 
         <div className="lexicon-container__sticky">
           <ul className="lexicon-container__sticky-sidebar">
-            <li onClick={()=>executeScroll(topRef)} className="goTop">Top <i className="fa fa-arrow-up"></i></li>
+            <li onClick={()=>window.scrollTo(0, 0)} className="goTop">Top <i className="fa fa-arrow-up"></i></li>
             <li onClick={()=>executeScroll(reactRef)}>React</li>
             <li onClick={()=>executeScroll(javascriptRef)}>JavaScript</li>
             <li onClick={()=>executeScroll(reduxRef)}>Redux</li>
