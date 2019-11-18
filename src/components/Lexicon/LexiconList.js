@@ -13,8 +13,10 @@ const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef})
       <div className="description-main content-react">
         <div className="description-main__core">
           <span>It is a rich frontend application for building user interfaces.</span>
-          <ul>With react you can
-            <li>crate reusable components</li>
+          <ul>react's main features:
+            <li>can create reusable components</li>
+            <li>has client side routing</li>
+            <li>loads one time only</li>
           </ul>
         </div>
 
@@ -60,7 +62,7 @@ const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef})
       <div className="description-main content-javascript">
         
         <div className="description-main__core">
-          <span>It's a scripting language letting pages to be interactive and dynamic.</span>
+          <span>It's an object-oriented scripting language letting pages to be interactive and dynamic. As an interpreted language. Instructions are being executed directly.</span>
         </div>
 
         <div className="description-main__extended">
@@ -110,6 +112,22 @@ const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef})
         <div className="description-main__extended">
           <span className="span-bold">Express.js</span>
           <div>It is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It enables easy API development.</div>
+        </div>
+      </div> 
+    </li>
+
+    <li ref={nodejsRef} className="item-list-li"> 
+      <i className="fa fa-leaf"></i> <h5>HTML</h5>
+      <div className="description-main content-nodejs">
+        <div className="description-main__core">
+          <span>It's a markup language designed to be displayed in web browsers.</span>
+        </div>
+        <div className="description-main__extended">
+          <span className="span-bold">Local Storage</span>
+          <div>- It's a simple API that allows to store any information in user's browser using JavaScript. In practice it is one big old JS object.</div>
+          <div>- It's not a secure tool. It's designed to be a simple string only key/value store that can be used to build slightly more complex single page apps.</div>
+          <div>- It is synchronous. This means each local storage operation you run will be one-at-a-time. So it will slow down the app's runtime.</div>
+          <div>- Can store up to 5MB data.</div>
         </div>
       </div> 
     </li>
