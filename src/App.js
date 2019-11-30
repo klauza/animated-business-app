@@ -6,6 +6,9 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Provider } from 'react-redux';
 import store from './store';
 
+//context
+import ThemeContextProvider from './context/ThemeContext';
+
 import Navbar from './components/Navigation/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
@@ -13,6 +16,8 @@ import ProjectsMain from './components/Projects/ProjectsMain';
 import Github from './components/Github/Github';
 import LexiconMain from './components/Lexicon/LexiconMain';
 import NotFound from './components/NotFound';
+import NightMode from './components/NightMode';
+
 
 import 'materialize-css/dist/css/materialize.min.css';
 
@@ -22,33 +27,37 @@ const App = () =>{
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-    
-          <Navbar />
-          <Route render={({ location }) => (
+          <ThemeContextProvider>
+      
+            <Navbar />
+            <NightMode />
+            <Route render={({ location }) => (
 
-          <TransitionGroup>
+              <TransitionGroup>
 
-            <CSSTransition
-              in={true}
-              appear={true}
-              key={location.key}
-              timeout={450}
-              classNames="fade" 
-            >
+                <CSSTransition
+                  in={true}
+                  appear={true}
+                  key={location.key}
+                  timeout={450}
+                  classNames="fade" 
+                >
 
-              <Switch location={location}>
-                <Route exact path='/' component={Home} />
-                <Route path='/about' component={About}/>
-                <Route path='/projects' component={ProjectsMain} />
-                <Route path='/github' component={Github} />
-                <Route path='/lexicon' component={LexiconMain} />
-                <Route component={NotFound} />
-              </Switch>
+                  <Switch location={location}>
+                    <Route exact path='/' component={Home} />
+                    <Route path='/about' component={About}/>
+                    <Route path='/projects' component={ProjectsMain} />
+                    <Route path='/github' component={Github} />
+                    <Route path='/lexicon' component={LexiconMain} />
+                    <Route component={NotFound} />
+                  </Switch>
 
-            </CSSTransition>
-          </TransitionGroup>
-          )} />
+                </CSSTransition>
+              </TransitionGroup>
+            )} />
+          </ThemeContextProvider>
         </div>
+        
       </BrowserRouter>
     </Provider>
   );
