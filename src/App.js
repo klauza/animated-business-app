@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // redux
 import { Provider } from 'react-redux';
 import store from './store';
-
+import history from './history';
 //context
 import ThemeContextProvider from './context/ThemeContext';
 
@@ -25,7 +25,7 @@ const App = () =>{
 
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <Router history={history}>
         <div className="App">
           <ThemeContextProvider>
       
@@ -58,7 +58,7 @@ const App = () =>{
           </ThemeContextProvider>
         </div>
         
-      </BrowserRouter>
+      </Router>
     </Provider>
   );
   
