@@ -10,6 +10,7 @@ const LexiconMain = () => {
   const reduxRef = useRef();
   const mongodbRef = useRef();
   const nodejsRef = useRef();
+  const htmlRef = useRef();
   const topRef = useRef();
 
   const executeScroll = (myRef) => scrollToRef(myRef)
@@ -35,6 +36,7 @@ const LexiconMain = () => {
             <li onClick={()=>executeScroll(reduxRef)}>Redux</li>
             <li onClick={()=>executeScroll(mongodbRef)}>MongoDB</li>
             <li onClick={()=>executeScroll(nodejsRef)}>nodeJS</li>
+            <li onClick={()=>executeScroll(htmlRef)}>HTML</li>
           </ul>
         </div>
 
@@ -44,7 +46,7 @@ const LexiconMain = () => {
             <ul className="item-list-ul">
 
               {/* lexicon list */}
-              <LexiconList reactRef={reactRef} javascriptRef={javascriptRef} reduxRef={reduxRef} mongodbRef={mongodbRef} nodejsRef={nodejsRef} />
+              <LexiconList reactRef={reactRef} javascriptRef={javascriptRef} reduxRef={reduxRef} mongodbRef={mongodbRef} nodejsRef={nodejsRef} htmlRef={htmlRef} />
 
             </ul>
           </div>

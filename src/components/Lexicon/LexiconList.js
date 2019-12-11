@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 
-const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef}) => {
+const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef, htmlRef}) => {
 
   
 
@@ -87,6 +87,16 @@ const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef})
           <span className="span-bold">Redux-Thunk</span>
           <div>It's a synchronization tool. It puts instructions into a queue and makes sure each action is performed one at a time.</div>
         </div>
+        <div className="description-main__extended">
+          <span className="span-bold">Reducer</span>
+          <div>It centralizes all methods for changing states into a single function which interacts with state /data.</div>
+        </div>
+        <div className="description-main__extended">
+          <span className="span-bold">Action</span>
+          <div>It's an object which describes the type of change inside the reducer function. example: {"{type: 'ADD_BOOK'}"}</div>
+          <span className="span-bold">Dispatch action</span>
+          <div>sends the action to the reducer we can pass a second argument with is a payload. example: {"{type: 'ADD_BOOK', payload}"} </div>
+        </div>
       </div> 
     </li>
 
@@ -116,7 +126,7 @@ const LexiconList = ({reactRef, javascriptRef, reduxRef, mongodbRef, nodejsRef})
       </div> 
     </li>
 
-    <li ref={nodejsRef} className="item-list-li"> 
+    <li ref={htmlRef} className="item-list-li"> 
       <i className="fa fa-leaf"></i> <h5>HTML</h5>
       <div className="description-main content-nodejs">
         <div className="description-main__core">
