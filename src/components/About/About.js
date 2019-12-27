@@ -1,12 +1,20 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState, useContext } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
 // import ReactImageAppear from 'react-image-appear';
 
 import image from '../../media/about-pc.jpeg';
 
+import { ThemeContext } from '../../context/ThemeContext';
+import styled from 'styled-components';
 
-
+const AboutMain = styled.div`
+  background-color: ${props => props.themeBackground};
+  color: ${props => props.themeTextColor};
+  .about-contacts div a{
+  color: ${props => props.isNight ? 'rgb(1, 108, 196)' : 'default'};
+  }
+`;
 
 const About = ({pageLoad, main: {pageLoaded}}) => {
 
@@ -18,6 +26,9 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
     }
     // eslint-disable-next-line
   }, [loading])
+
+  const { light, dark, theme } = useContext( ThemeContext );
+  const motive = theme.theme.night ? dark : light;
 
   if(!pageLoaded.about){
     loadImageAsync(image)
@@ -74,7 +85,7 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
 
   // if(pageLoaded.about === true){
     return (
-      <div className="about-main-container">
+      <AboutMain className="about-main-container" themeBackground={motive.background} themeTextColor={motive.text} isNight={theme.theme.night}>
 
 
         <div className="about">
@@ -97,7 +108,7 @@ const About = ({pageLoad, main: {pageLoaded}}) => {
           <div> <span> <a href="tel:07719122293">07719122293</a> </span> <i className="material-icons"> phone_enabled </i> </div>
           <div> <i className="material-icons"> email </i> <span> <a href="mailto:klauza.dev@gmail.com">klauza.dev@gmail.com</a> </span></div>
         </div>
-      </div>
+      </AboutMain>
     )
   // } else{
   //   return(

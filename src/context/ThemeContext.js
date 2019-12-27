@@ -17,8 +17,8 @@ const ThemeContextProvider = (props) => {
   }, [theme])
 
 
-  const [light] = useState({ text: '#fff', layout: '#ddd', backgroung: '#eee' });
-  const [dark] = useState({ text: '#000', layout: '#333', background: '#555' });
+  const [light] = useState({ text: '#000', layout: '#ddd', background: '#fff' });
+  const [dark] = useState({ text: '#fff', layout: '#333', background: '#000' });
 
 
   return (

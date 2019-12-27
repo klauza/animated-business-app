@@ -1,6 +1,6 @@
 .portfolio-page{
   position: absolute; top: 60px; left: 0; right: 0;
-  background: $bot-portfolio-color;
+  // background: $bot-portfolio-color;
   z-index: 2;
   h2{
     text-align: center;
@@ -23,7 +23,7 @@
   p:nth-of-type(2)::after{
     content: '';
     display: block;
-    background: mintcream;
+    // background: mintcream;
     height: 2px; width: 30px;
     margin: 10px auto;
   }
@@ -305,7 +305,7 @@
     z-index: -1;
     margin: 0 auto;
     min-height: 150px;
-    background: $top-portfolio-color;
+    // background: $top-portfolio-color;
     text-align: center;
     clip-path: polygon(100% 0, 0 0, 100% 100%, 0 100%, 50% 50%, 50% 50%, 50% 50%);
   }

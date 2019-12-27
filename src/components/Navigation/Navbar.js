@@ -1,10 +1,29 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, {useMemo} from 'react';
+import { NavLink, withRouter } from 'react-router-dom';
 import navLogo from '../../media/icon.png';
+import history from '../../history';
 
 
 
 function Navbar() {
+
+  const path = history.location.pathname;
+
+  useMemo(()=>{
+    switch(path){
+      case "/github": 
+        console.log('hello github');
+        break;
+      case "/":
+        console.log('hello home');
+        break;
+
+      default:
+        break
+    }
+  }, [history.location.pathname])
+
+  
   return (
     <div className="nav-bar">
       <div className="nav-container">
@@ -30,4 +49,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default withRouter(Navbar)

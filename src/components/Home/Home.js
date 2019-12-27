@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
 import ReactImageAppear from 'react-image-appear';
@@ -10,6 +10,25 @@ import HomeSkills from './HomeSkills';
 import HomeModals from './HomeModals';
 import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
+import { ThemeContext } from '../../context/ThemeContext';
+import styled from 'styled-components';
+
+const HomeMain = styled.div`
+  background-color: ${props => props.bg};
+  span{
+    color: ${props => props.motiveTextColor};
+  }
+  .container-home__hero--para p::after{
+    border-bottom: 2px dashed ${props => props.motiveTextColor};
+  }
+  .container-home__experience span::before,
+  .container-home__experience span::after{
+    background-color: ${props=> props.motiveTextColor};
+  }
+  .icon-container .desc{
+    color: ${props=> props.motiveTextColor};
+  }
+`;
 
 const Home = ({pageLoad, main: {pageLoaded}}) => {
 
@@ -27,6 +46,8 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
   // eslint-disable-next-line
   }, [loading])
 
+  const { light, dark, theme } = useContext( ThemeContext );
+  const motive = theme.theme.night ? dark : light;
 
   // Check if not loaded globally. 
   if(!pageLoaded.home){
@@ -88,14 +109,16 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
 
 
-
   if(pageLoaded.home === true){
     
   return (
     <div className="home">
       <HomeModals />
 
-      <div className="container-home">
+      <HomeMain className="container-home" 
+        bg={theme.theme.night ? "#000" : "rgba(59, 88, 152, 0.7)"}
+        motiveTextColor={motive.text}
+      >
 
     
         <div className="container-home__hero">
@@ -106,17 +129,17 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
           
           <div className="container-home__hero--para">
-            <p>There is a long journey behind us, but even longer... ahead.</p>
+            <p style={{color: motive.text}}>There is a long journey behind us, but even longer... ahead.</p>
           </div>
         </div>
 
         <div className="container-home__experience">
-          <span>MY TOOL PALETTE</span>
+          <span >MY TOOL PALETTE</span>
         </div>
 
         <HomeSkills />
         
-      </div>
+      </HomeMain>
     </div>
   )
 } else {

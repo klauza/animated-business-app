@@ -29,8 +29,8 @@ const App = () =>{
         <div className="App">
           <ThemeContextProvider>
       
-            <Navbar />
             <NightMode />
+            <Navbar />
             <Route render={({ location }) => (
 
               <TransitionGroup>

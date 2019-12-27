@@ -1,7 +1,15 @@
-import React, {useRef} from 'react';
+import React, {useRef, useContext} from 'react';
 import LexiconList from './LexiconList';
 
- 
+import { ThemeContext } from '../../context/ThemeContext';
+import styled from 'styled-components';
+
+const LexiconContainer = styled.div`
+background-color: ${props => props.themeBackground};
+  *{
+    color: ${props => props.motiveTextColor};
+  }
+`;
 
 const LexiconMain = () => {
 
@@ -20,8 +28,11 @@ const LexiconMain = () => {
     window.scrollTo(0, ref.current.offsetTop+200)
   }
 
+  const { light, dark, theme } = useContext( ThemeContext );
+  const motive = theme.theme.night ? dark : light;
+
   return (
-    <div className="lexicon" ref={topRef} id="top">
+    <LexiconContainer className="lexicon" ref={topRef} id="top" isNight={theme.theme.night} motiveTextColor={motive.text} themeBackground={motive.background}>
       <h3 id="header">Lexicon <span>the bunker of web knowledge</span></h3>
       <h5 id="sub-header">A bag of tech wisdom</h5>
       <p id="paragraph-header">Here, I try to place together the most important stuff.</p>
@@ -55,7 +66,7 @@ const LexiconMain = () => {
 
       </div>
 
-    </div>
+    </LexiconContainer>
   )
 
 }

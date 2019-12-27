@@ -4,7 +4,8 @@
 .container-home{
   opacity: 0;
   animation: animatePage 500ms forwards;
-  background: rgba(59, 88, 152, 0.7);
+  // background: rgba(59, 88, 152, 0.7);
+  // background: black;
   position: absolute; top: 60px;
   overflow: hidden;
 
@@ -57,7 +58,7 @@
           height: 2px;
           width: 80px;
           // background: white;
-          border-bottom: 2px dashed white;
+          // border-bottom: 2px dashed white;
 
           @media (max-width: 1197px){bottom: -40%;}
         }
@@ -88,7 +89,7 @@
         display: block;
         width: 20px;
         height: 3px;
-        background: black;
+        // background: black;
         margin: 0 auto;
       }
       &::before{
@@ -137,7 +138,8 @@
         }
         .desc{
           background: rgba(105, 105, 105, 0.87);
-          color: #fff;font-family: $ff-Russo;
+          // color: #fff;
+          font-family: $ff-Russo;
         }
       }
 
