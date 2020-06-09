@@ -13,3 +13,11 @@ export {default as petShelterImg} from './portfolio-imgs/petShelter.jpg';
 export {default as photographyImg} from './portfolio-imgs/photography.jpg';
 export {default as pwdMaker} from './portfolio-imgs/pwd-maker.jpg';
 export {default as eNewsstandImg} from './portfolio-imgs/pexels-photo-2676587-sm.jpg';
+
+// general exports
+// HOME
+export {default as heroImage} from './hero-imgs/hero.jpg';
+export {default as heroBackground} from './hero-imgs/floor-tile.png';
+// ABOUT
+export {default as aboutBackground} from './about-bg.png';
+export {default as aboutImage} from './about-pc.jpeg';

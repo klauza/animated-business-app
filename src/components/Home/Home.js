@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
 import ReactImageAppear from 'react-image-appear';
 
+// media
+import { heroBackground } from '../../media';
+
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
 import animateBlocks from './shadow';
@@ -12,6 +15,8 @@ import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
 import { ThemeContext } from '../../context/ThemeContext';
 import styled from 'styled-components';
+
+import { Container } from './HomeCSS';
 
 const HomeMain = styled.div`
   background-color: ${props => props.bg};
@@ -110,37 +115,43 @@ const Home = ({pageLoad, main: {pageLoaded}}) => {
 
 
   if(pageLoaded.home === true){
-    
+
   return (
-    <div className="home">
-      <HomeModals />
+    <Container background={heroBackground} >
+      <div className="home">
+        <HomeModals />
 
-      <HomeMain className="container-home" 
-        bg={theme.theme.night ? "#000" : "rgba(59, 88, 152, 0.7)"}
-        motiveTextColor={motive.text}
-      >
+        <HomeMain className="container-home" 
+          bg={theme.theme.night ? "#000" : "rgba(59, 88, 152, 0.7)"}
+          motiveTextColor={motive.text}
+        >
 
-    
-        <div className="container-home__hero">
-          
-          <div className="container-home__hero--img">
-            <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={heroImg} animation="fadeIn" easing="ease-in" alt="" />
+      
+          <div className="container-home__hero">
+            
+            <div className="container-home__hero--img">
+              <ReactImageAppear 
+                showLoader={false} 
+                placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} 
+                src={heroImg} 
+                animation="fadeIn" easing="ease-in" alt="" />
+            </div>
+
+            
+            <div className="container-home__hero--para">
+              <p style={{color: motive.text}}>There is a long journey behind us, but even longer... ahead.</p>
+            </div>
           </div>
 
-          
-          <div className="container-home__hero--para">
-            <p style={{color: motive.text}}>There is a long journey behind us, but even longer... ahead.</p>
+          <div className="container-home__experience">
+            <span >MY TOOL PALETTE</span>
           </div>
-        </div>
 
-        <div className="container-home__experience">
-          <span >MY TOOL PALETTE</span>
-        </div>
-
-        <HomeSkills />
-        
-      </HomeMain>
-    </div>
+          <HomeSkills />
+          
+        </HomeMain>
+      </div>
+    </Container>
   )
 } else {
   return(

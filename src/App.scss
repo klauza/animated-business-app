@@ -1,11 +1,12 @@
+@import "./sass/variables";
 @import './sass/general';
 @import './sass/animations';
 @import './components/Navigation/navbar'; 
-@import './components/home/home'; 
-@import './components/about/about';
+// @import './components/home/home'; 
+@import './sass/about';
 @import './components/Projects/projects';
 @import './components/Github/github';
-@import './components/Lexicon/lexicon';
-@import './components/Lexicon/lexiconList';
+@import './sass/lexicon';
+@import './sass/lexiconList';
 @import './components/notFound';
 @import './components/nightMode';
