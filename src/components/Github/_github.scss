@@ -1,24 +1,26 @@
-#github-page{
-  position: absolute; top: 60px; left: 0;
+#github-page {
+  position: absolute;
+  top: 60px;
+  left: 0;
   background: white;
   padding-top: 50px;
   min-height: 100vh;
-  .user-container{
+  width: 100%;
+  .user-container {
     display: grid;
     width: 60%;
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
 
-    &__image{
-     
-      &--image{
+    &__image {
+      &--image {
         margin: 0 auto;
         display: block;
         min-width: 240px;
         width: 50%;
         object-fit: cover;
       }
-      &--desc{
+      &--desc {
         display: block;
         width: 155px;
         margin: 15px auto;
@@ -26,7 +28,7 @@
         text-align: center;
         background: white;
         border: 1px solid black;
-        a{
+        a {
           padding: 5px;
           display: block;
           color: black;
@@ -35,17 +37,16 @@
           text-decoration: none;
           width: 100%;
           border: 1px solid black;
-          &:hover{
-              background-color: #3b5998;
-              color: white;
-              border: 1px solid white;
+          &:hover {
+            background-color: #3b5998;
+            color: white;
+            border: 1px solid white;
           }
         }
       }
-
     }
 
-    &__bio{
+    &__bio {
       align-self: start;
       text-align: left;
       width: 90%;
@@ -54,100 +55,98 @@
       ul {
         display: flex;
         flex-direction: column;
-        
-        li{
+
+        li {
           list-style: none;
           display: block;
           padding: 15px 20px;
           background-color: #fff;
-          border: 1px solid rgb(139,157,195);
+          border: 1px solid rgb(139, 157, 195);
           font-weight: bold;
 
-          span{
+          span {
             color: grey;
             font-weight: 300;
           }
-
         }
-        li:nth-of-type(1){
+        li:nth-of-type(1) {
           display: flex;
           justify-content: space-between;
           flex-direction: row;
-          form{
+          form {
             margin-left: 5px;
             display: inline-block;
-            input{
+            input {
               width: 100px;
               height: 20px;
             }
-            button{
+            button {
               border: 0;
               background: rgba(139, 157, 195, 0.466);
               width: 30px;
               height: 20px;
-              &:hover{
+              &:hover {
                 cursor: pointer;
-                background: rgb(139,157,195);
+                background: rgb(139, 157, 195);
                 color: white;
               }
             }
           }
         }
       }
-      
-      &--about{
+
+      &--about {
         text-align: center;
-        &::before{
+        &::before {
           content: '';
           width: 80%;
           margin: 50px auto 15px;
           height: 1px;
-          background: rgb(139,157,195);
+          background: rgb(139, 157, 195);
           display: block;
         }
       }
     }
   }
 
-  .repo-container{
+  .repo-container {
     text-align: center;
     width: 60%;
     margin: 200px auto 0px;
     padding-bottom: 100px;
 
-    
-    &__title{
+    &__title {
       font-size: 1.25em;
       font-weight: bold;
     }
 
-    .repo-headers{
+    .repo-headers {
       margin-top: 20px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       // border-bottom: 1px solid rgba(0, 0, 0, 0.438);
-      .repo-item-header{
+      .repo-item-header {
         color: grey;
         list-style: none;
         align-self: center;
       }
     }
 
-    .repo-list{
+    .repo-list {
       margin-top: 5px;
-    
-      .repo{
+
+      .repo {
         display: block;
         padding: 15px 0;
-        &:nth-of-type(odd){
-          background: rgb(223,227,238);
+        &:nth-of-type(odd) {
+          background: rgb(223, 227, 238);
         }
-        &-ul{
+        &-ul {
           margin: 0;
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          
-          .repo-item{
+
+          .repo-item {
             list-style: none;
             align-self: center;
           }
@@ -156,43 +155,37 @@
     }
   }
 
-
-  
-  @media(max-width: 65em){
-    .user-container{
+  @media (max-width: 65em) {
+    .user-container {
       width: 85%;
-      &__image{
-
-        &--image{
+      &__image {
+        &--image {
           width: 70%;
         }
       }
-
     }
-    .repo-container{
+    .repo-container {
       width: 85%;
       margin: 125px auto 40px;
     }
   }
-  @media(max-width: 35em){
-    .user-container{
+  @media (max-width: 35em) {
+    .user-container {
       width: 95%;
       grid-template-columns: 1fr;
 
-      &__image{
-
-        &--image{
+      &__image {
+        &--image {
           width: 80%;
         }
-
       }
-      &__bio{
-        &--about{
+      &__bio {
+        &--about {
           margin-top: 30px;
         }
       }
     }
-    .repo-container{
+    .repo-container {
       width: 100%;
       padding: 0 2px;
       font-size: 0.9em;

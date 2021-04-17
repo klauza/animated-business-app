@@ -18,50 +18,43 @@ import LexiconMain from './components/Lexicon/LexiconMain';
 import NotFound from './components/NotFound';
 import NightMode from './components/NightMode';
 
-
 import 'materialize-css/dist/css/materialize.min.css';
 
-const App = () =>{
-
+const App = () => {
   return (
     <Provider store={store}>
       <Router history={history}>
         <div className="App">
           <ThemeContextProvider>
-      
-            <NightMode />
+            {/* <NightMode /> */}
             <Navbar />
-            <Route render={({ location }) => (
-
-              <TransitionGroup>
-
-                <CSSTransition
-                  in={true}
-                  appear={true}
-                  key={location.key}
-                  timeout={450}
-                  classNames="fade" 
-                >
-
-                  <Switch location={location}>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/about' component={About}/>
-                    <Route path='/projects' component={ProjectsMain} />
-                    <Route path='/github' component={Github} />
-                    <Route path='/lexicon' component={LexiconMain} />
-                    <Route component={NotFound} />
-                  </Switch>
-
-                </CSSTransition>
-              </TransitionGroup>
-            )} />
+            <Route
+              render={({ location }) => (
+                <TransitionGroup>
+                  <CSSTransition
+                    in={true}
+                    appear={true}
+                    key={location.key}
+                    timeout={450}
+                    classNames="fade"
+                  >
+                    <Switch location={location}>
+                      <Route exact path="/" component={Home} />
+                      <Route path="/about" component={About} />
+                      <Route path="/projects" component={ProjectsMain} />
+                      <Route path="/github" component={Github} />
+                      <Route path="/lexicon" component={LexiconMain} />
+                      <Route component={NotFound} />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              )}
+            />
           </ThemeContextProvider>
         </div>
-        
       </Router>
     </Provider>
   );
-  
-}
+};
 
 export default App;
