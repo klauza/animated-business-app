@@ -1,9 +1,8 @@
-import React, {Fragment} from 'react';
-import chromeImg from '../../../media/hero-imgs/modals/chrome.png';
-import nodeImg from '../../../media/hero-imgs/modals/node.png';
-import pdfImg from '../../../media/hero-imgs/modals/pdf.png';
-import rickAstleyImg from '../../../media/hero-imgs/modals/rick.jpg';
-
+import React, { Fragment } from 'react';
+import chromeImg from '../../../media/hero-imgs/modals/navigation/nav-1.jpeg';
+import nodeImg from '../../../media/hero-imgs/modals/navigation/nav-2.jpeg';
+import pdfImg from '../../../media/hero-imgs/modals/navigation/nav-3.jpeg';
+import rickAstleyImg from '../../../media/hero-imgs/modals/navigation/nav-4.jpeg';
 
 const JavaScriptModal = () => {
   return (
@@ -11,44 +10,72 @@ const JavaScriptModal = () => {
       <div className="container pt-5">
         <div className="row">
           <div className="col s12">
-            <h4>JavaScript - a brief history</h4>
-            <p>JavaScript is the most widely used language for client-side scripting of web pages created by Brendan Eich from Netscape. JavaScript enables interactive web pages and is an essential part of web applications. It has APIs for working with text, arrays, dates, regular expressions, and the DOM. JavaScript engines are now embedded in many other types of host software, such as desktop widgets, PDF FormData, in web servers and databases.</p>
+            <h4>About GPS navigation</h4>
+            <p>
+              A GPS device allows you to accurately find your location on a
+              digital map. Those designed specifically for outdoor travel are
+              often built rugged and weatherproof. Another popular option is to
+              use a smartphone with a GPS app, but consider that most phones are
+              more fragile so you’ll likely need to protect it with a case.
+              Whichever you choose, keep in mind that these gadgets run on
+              batteries, so you’ll need to monitor your battery power and
+              possibly carry extra batteries.
+            </p>
           </div>
         </div>
-       
+
         <div className="row align-items-center">
           <div className="col s3">
-            <img className="img-fluid mx-auto d-block w-50" src={chromeImg} alt=""/>
+            <img
+              className="img-fluid mx-auto d-block w-50"
+              src={chromeImg}
+              alt=""
+            />
           </div>
           <div className="col s3">
-            <img className="img-fluid mx-auto d-block w-50" src={nodeImg} alt=""/>
+            <img
+              className="img-fluid mx-auto d-block w-100"
+              src={nodeImg}
+              alt=""
+            />
           </div>
           <div className="col s3">
-            <img className="img-fluid mx-auto d-block w-50" src={pdfImg} alt=""/>
-          </div> 
+            <img
+              className="img-fluid mx-auto d-block w-100"
+              src={pdfImg}
+              alt=""
+            />
+          </div>
           <div className="col s3">
-           <img className="img-fluid mx-auto d-block w-50" src={rickAstleyImg} alt=""/>
+            <img
+              className="img-fluid mx-auto d-block w-100"
+              src={rickAstleyImg}
+              alt=""
+            />
           </div>
         </div>
 
         <div className="row">
           <div className="col s12">
-            <h4>What I've learnt so far</h4>
-            <p>If we want to learn JavaScript, we need to understand the basics of JavaScript and ECMAScriptES - a standard for JavaScript that adds new features.</p>
-            <p>I've started to study plain vanilla JavaScript, which means JS without any framework or library. <strong>Arrays, objects, functions, operations on numbers and strings, loops, error handling</strong> are highly familiar to me.</p>
-            <p>ES6/+ is not foreign to me, standards such as <strong>.map() .filter() .forEach() or arrow functions and Classes</strong> are pretty straghtforward and understandable, and also truly useful.</p>
+            <h4>More about navigating</h4>
+            <p>
+              Gadgets can be used to alert emergency personnel if you need help
+              in the backcountry. When activated in an emergency, they will
+              determine your position using GPS and send a message via
+              government or commercial satellites.
+            </p>
           </div>
         </div>
-        <hr/>
+        <hr />
         <div className="row">
           <div className="col s12">
-            <h5>External links</h5>
-            <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript">MDN - JavaScript</a>
+            <h5>Affiliate links</h5>
+            <a href="https://www.amazon.com/">See here</a>
           </div>
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default JavaScriptModal
+export default JavaScriptModal;
