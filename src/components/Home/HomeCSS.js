@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   .home {
-    background: white;
+    /* background: white; */
     /* width: 100%; */
   }
   .container-home {

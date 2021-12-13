@@ -20,6 +20,6 @@ export { default as heroImage } from './hero-imgs/hero.jpg';
 export { default as heroBackground } from './hero-imgs/floor-tile.png';
 // ABOUT
 export { default as aboutBackground } from './about-bg.png';
-export { default as aboutImage } from './about-pc.jpeg';
+export { default as aboutImage } from './profile.jpg';
 // FOOTER
 export { default as drzewka } from './drzewka.png';
