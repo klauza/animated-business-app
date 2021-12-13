@@ -18,6 +18,9 @@ import LexiconMain from './components/Lexicon/LexiconMain';
 import NotFound from './components/NotFound';
 import NightMode from './components/NightMode';
 
+//footer
+import Footer from './components/Footer/Footer';
+
 import 'materialize-css/dist/css/materialize.min.css';
 
 const App = () => {
@@ -50,6 +53,7 @@ const App = () => {
                 </TransitionGroup>
               )}
             />
+            {/* <Footer /> */}
           </ThemeContextProvider>
         </div>
       </Router>

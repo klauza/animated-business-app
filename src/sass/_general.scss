@@ -1,19 +1,23 @@
 // adding a scrollbar to any page to prevent page move
-body{
+body {
   overflow-y: scroll;
 }
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;margin: 0;
+  padding: 0;
+  margin: 0;
 }
-html, body{
+html,
+body {
   min-height: 100vh;
   // background: black;
 }
 
 // portfolio background colors
-$top-portfolio-color: rgb(90, 90, 90);    // top segment page
-$bot-portfolio-color: rgb(117, 117, 117);    // bottom segment page
+$top-portfolio-color: rgb(90, 90, 90); // top segment page
+$bot-portfolio-color: rgb(117, 117, 117); // bottom segment page
 
 // portfolio fonts
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
@@ -27,20 +31,21 @@ $ff-Nav: 'Turret Road', cursive;
 
 // spinners
 
-.spinner{
-  position: absolute; top: 160px; left: 50%;
+.spinner {
+  position: absolute;
+  top: 160px;
+  left: 50%;
   transform: translateX(-50%);
-  img{
+  img {
     width: 200px;
   }
-
 }
 
 @keyframes animatePage {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

@@ -6,6 +6,9 @@ import ReactImageAppear from 'react-image-appear';
 // media
 import { heroBackground } from '../../media';
 
+// footer
+import Footer from '../Footer/Footer';
+
 import heroImg from '../../media/hero-imgs/hero.jpg';
 import spinner from '../../media/loader2.gif';
 import animateBlocks from './shadow';
@@ -150,6 +153,7 @@ const Home = ({ pageLoad, main: { pageLoaded } }) => {
             </div>
 
             <HomeSkills />
+            <Footer />
           </HomeMain>
         </div>
       </Container>

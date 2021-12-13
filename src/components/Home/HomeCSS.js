@@ -145,7 +145,7 @@ export const Container = styled.div`
     &__skill-icons {
       width: 80%;
       margin: 50px auto 0;
-      padding-bottom: 50px;
+      padding-bottom: 150px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
