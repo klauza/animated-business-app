@@ -12,18 +12,19 @@ export const Container = styled.div`
   /* filter: brightness(0.5); */
 
   /* height: 1000px; */
+  @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+  font-family: 'Russo One', sans-serif;
 
   .services-container {
-    @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
-    font-family: 'Russo One', sans-serif;
     max-width: 1280px;
     margin: 150px auto 0;
     padding: 0 10px 200px;
     /* border: 1px solid red; */
 
     .h2-what-i-offer {
+      margin-top: 10px;
       margin-bottom: 150px;
-      font-size: 1.5em;
+      font-size: 1.1em;
     }
 
     h2 {
