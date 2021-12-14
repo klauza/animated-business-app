@@ -4,39 +4,44 @@ const RegexModal = () => {
   return (
     <div className="container">
       <div className="row">
-      <div className="col s12">
-        <h4 className="center mt-5">Regular Expressions</h4>
+        <div className="col s12">
+          <h4 className="center mt-5">Clothing</h4>
 
-        <p className="mt-5">Regex is a sequence of characters that define a search pattern. Usually used by string searching algorithms to find a string. <strong>Once regex syntax is learned, can be used in any language: JavaScript, Java, VB, C #, C / C++, Python, Perl, Ruby, Delphi, R, Tcl, and many others</strong></p>
-        
-        
-        
-        <table className="table mt-5 mb-5">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="row">Examples of Regex usage</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">extracting information from any text</th>
-            </tr>
-            <tr>
-              <th scope="row">parsing/replacing strings</th>
-            </tr>
-            <tr>
-              <th scope="row">validation</th>
-            </tr>
-          </tbody>
-        </table>
+          <p className="mt-5">
+            Conditions can abruptly turn wet, windy or chilly in the backcountry
+            or an injury can result in an unplanned night out, so it’s necessary
+            to carry extra clothes beyond those required for your trip.
+          </p>
 
-        <p>I personally like this tool and I've created a project using JavaScript and Regex</p>
-        <p>Feel free to see it under <a href="https://pwd-maker-klauza.netlify.com/">this link</a></p>
-        
-      </div>
+          <table className="table mt-5 mb-5">
+            <thead className="thead-dark">
+              <tr>
+                <th scope="row">Examples something extra to bring with you</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">extra socks</th>
+              </tr>
+              <tr>
+                <th scope="row">extra gloves</th>
+              </tr>
+              <tr>
+                <th scope="row">vest</th>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            For winter outings, bring insulation for your upper body and legs.
+          </p>
+          <p>
+            Affiliate link <a href="https://www.amazon.com/">See here</a>
+          </p>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default RegexModal
+export default RegexModal;

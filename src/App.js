@@ -13,10 +13,15 @@ import Navbar from './components/Navigation/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import ProjectsMain from './components/Projects/ProjectsMain';
+import Services from './components/Services';
+import Contact from './components/Contact';
 import Github from './components/Github/Github';
 import LexiconMain from './components/Lexicon/LexiconMain';
 import NotFound from './components/NotFound';
 import NightMode from './components/NightMode';
+
+//footer
+import Footer from './components/Footer/Footer';
 
 import 'materialize-css/dist/css/materialize.min.css';
 
@@ -42,7 +47,9 @@ const App = () => {
                       <Route exact path="/" component={Home} />
                       <Route path="/about" component={About} />
                       <Route path="/projects" component={ProjectsMain} />
-                      <Route path="/github" component={Github} />
+                      <Route path="/services" component={Services} />
+                      <Route path="/contact" component={Contact} />
+                      {/* <Route path="/github" component={Github} /> */}
                       <Route path="/lexicon" component={LexiconMain} />
                       <Route component={NotFound} />
                     </Switch>
@@ -50,6 +57,7 @@ const App = () => {
                 </TransitionGroup>
               )}
             />
+            {/* <Footer /> */}
           </ThemeContextProvider>
         </div>
       </Router>
