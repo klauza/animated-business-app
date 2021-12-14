@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`
+  @import url('https://fonts.googleapis.com/css?family=Turret+Road:400,700&display=swap');
   height: 60px;
   width: 100%;
   background: #556bac;
@@ -38,7 +39,7 @@ export const Content = styled.div`
         width: auto;
         padding: 0 12px;
         color: white;
-        font-family: $ff-Nav;
+        font-family: 'Turret Road', cursive;
         // font-weight: 700;
         font-size: 1.05rem;
         display: inline-block;

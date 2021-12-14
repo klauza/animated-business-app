@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
       text-align: center;
       padding: 0;
       margin: 0;
-      color: mintcream;
+      color: #49494d;
       z-index: 3;
       font-family: 'Russo One', sans-serif;
       font-size: 2.5em;

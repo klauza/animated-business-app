@@ -21,23 +21,6 @@ import styled from 'styled-components';
 
 import { Container } from './HomeCSS';
 
-const HomeMain = styled.div`
-  background-color: ${(props) => props.bg};
-  span {
-    color: ${(props) => props.motiveTextColor};
-  }
-  .container-home__hero--para p::after {
-    border-bottom: 2px dashed ${(props) => props.motiveTextColor};
-  }
-  .container-home__experience span::before,
-  .container-home__experience span::after {
-    background-color: ${(props) => props.motiveTextColor};
-  }
-  .icon-container .desc {
-    color: ${(props) => props.motiveTextColor};
-  }
-`;
-
 const Home = ({ pageLoad, main: { pageLoaded } }) => {
   const [loading, setLoading] = useState(true);
 
@@ -108,53 +91,47 @@ const Home = ({ pageLoad, main: { pageLoaded } }) => {
   if (pageLoaded.home === true) {
     return (
       <Container background={heroBackground}>
-        <div className="home">
+        <div className="container-home">
           <HomeModals />
 
-          <HomeMain
-            className="container-home"
-            bg={theme.theme.night ? '#000' : 'rgba(59, 88, 152, 0.7)'}
-            motiveTextColor={motive.text}
-          >
-            <div className="container-home__hero">
-              <div className="container-home__hero--img">
-                <ReactImageAppear
-                  showLoader={false}
-                  placeholderStyle={{
-                    transition: 'all ease 350ms',
-                    backgroundColor: 'black',
-                  }}
-                  src={heroImg}
-                  animation="fadeIn"
-                  easing="ease-in"
-                  alt=""
-                />
-              </div>
-
-              <div className="container-home__hero--para">
-                <p style={{ color: 'white' }}>
-                  There is a long journey behind us, but even longer... ahead.
-                </p>
-              </div>
+          <div className="container-home__hero">
+            <div className="container-home__hero--img">
+              <ReactImageAppear
+                showLoader={false}
+                placeholderStyle={{
+                  transition: 'all ease 350ms',
+                  backgroundColor: 'black',
+                }}
+                src={heroImg}
+                animation="fadeIn"
+                easing="ease-in"
+                alt=""
+              />
             </div>
 
-            <div className="container-home__intro-text">
-              <span>
-                Welcome to my humble website about traveling. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Praesentium, quia
-                voluptates autem modi corporis repellat rerum sed delectus a
-                omnis. Adipisci, deserunt molestiae? Veniam suscipit consequatur
-                reprehenderit tempora nam consectetur!
-              </span>
+            <div className="container-home__hero--para">
+              <p style={{ color: 'white' }}>
+                There is a long journey behind us, but even longer... ahead.
+              </p>
             </div>
+          </div>
 
-            <div className="container-home__experience">
-              <span>MY ADVENTURE GEAR</span>
-            </div>
+          <div className="container-home__intro-text">
+            <span>
+              Welcome to my humble website about traveling. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Praesentium, quia
+              voluptates autem modi corporis repellat rerum sed delectus a
+              omnis. Adipisci, deserunt molestiae? Veniam suscipit consequatur
+              reprehenderit tempora nam consectetur!
+            </span>
+          </div>
 
-            <HomeSkills />
-            <Footer />
-          </HomeMain>
+          <div className="container-home__experience">
+            <span>MY ADVENTURE GEAR</span>
+          </div>
+
+          <HomeSkills />
+          <Footer />
         </div>
       </Container>
     );
