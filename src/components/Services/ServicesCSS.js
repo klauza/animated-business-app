@@ -50,9 +50,21 @@ export const Container = styled.div`
     display: grid;
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
+
+    .service-image {
+      &:hover {
+        img {
+          transition: all 500ms ease;
+          transform: rotate(10deg) scale(1.5);
+        }
+      }
+    }
+
     div {
       max-height: 400px;
+      overflow: hidden;
       img {
+        transition: all 500ms ease;
         object-fit: cover;
         width: 100%;
         height: 100%;

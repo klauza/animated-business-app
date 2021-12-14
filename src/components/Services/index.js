@@ -44,7 +44,7 @@ const Services = () => {
 
         <h2 style={{ marginBottom: '50px' }}>Types of services</h2>
         <div className="service-type-grid">
-          <div>
+          <div className="service-image">
             <img src={guide} alt="asd" />
           </div>
           <div className="service-desc">
@@ -74,13 +74,13 @@ const Services = () => {
               <button>Read more</button>
             </div>
           </div>
-          <div>
+          <div className="service-image">
             <img src={general} alt="asd" />
           </div>
         </div>
 
         <div className="service-type-grid">
-          <div>
+          <div className="service-image">
             <img src={spontan} alt="asd" />
           </div>
           <div className="service-desc">
