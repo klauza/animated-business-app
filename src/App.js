@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './animations.scss';
 import { Router, Switch, Route } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // redux

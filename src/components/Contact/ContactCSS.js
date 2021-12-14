@@ -7,12 +7,13 @@ export const Container = styled.div`
   right: 0;
   background: url(${(props) => props.background}) repeat;
 
+  @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+  font-family: 'Russo One', sans-serif;
+
   .contact-container {
-    @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
-    font-family: 'Russo One', sans-serif;
-    max-width: 1280px;
     margin: 150px auto 0;
     padding: 0 10px 200px;
+    max-width: 1280px;
 
     .contact-grid {
       display: grid;

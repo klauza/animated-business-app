@@ -3,6 +3,9 @@ import { NavLink, withRouter } from 'react-router-dom';
 import navLogo from '../../media/icon.png';
 import history from '../../history';
 
+// CSS
+import { Content } from './NavCSS';
+
 function Navbar() {
   const path = history.location.pathname;
 
@@ -21,7 +24,7 @@ function Navbar() {
   }, [history.location.pathname]);
 
   return (
-    <div className="nav-bar">
+    <Content>
       <div className="nav-container">
         <div className="my-nav-logo">
           <img src={navLogo} alt="" />
@@ -55,7 +58,7 @@ function Navbar() {
           </a>
         </div>
       </div>
-    </div>
+    </Content>
   );
 }
 

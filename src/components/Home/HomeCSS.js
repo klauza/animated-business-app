@@ -1,43 +1,39 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  .home {
-    /* background: white; */
-    /* width: 100%; */
+  @import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+  background: url(${(props) => props.background}) repeat;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+
+  /* background: white; */
+  /* width: 100%; */
+
+  /* .container-home { */
+  /* opacity: 0; */
+  /* animation: animatePage 300ms forwards; */
+
+  /* overflow: hidden; */
+  /* width: 100%; */
+
+  /* &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+  } */
+  .container-home__hero {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 80%, 50% 90%, 30% 80%, 0 80%);
   }
   .container-home {
-    /* opacity: 0; */
-    /* animation: animatePage 300ms forwards; */
-    // background: rgba(59, 88, 152, 0.7);
-    // background: black;
-    position: absolute;
-    top: 60px;
-    overflow: hidden;
-    width: 100%;
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.4;
-      background: url(${(props) => props.background}) repeat;
-    }
-
     &__hero {
       width: 100%;
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 80%,
-        70% 80%,
-        50% 90%,
-        30% 80%,
-        0 80%
-      );
 
       &--img {
         width: 100%;
@@ -63,7 +59,6 @@ export const Container = styled.div`
         padding: 20px 15px 0;
 
         p {
-          @import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
           font-family: 'Marck Script', cursive;
           color: white;
           font-size: 1.55rem;
@@ -124,7 +119,7 @@ export const Container = styled.div`
           display: block;
           width: 20px;
           height: 3px;
-          // background: black;
+          background: black;
           margin: 0 auto;
         }
         &::before {

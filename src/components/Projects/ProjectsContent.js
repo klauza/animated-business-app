@@ -13,31 +13,15 @@ import { heroBackground } from '../../media';
 // footer
 import Footer from '../Footer/Footer';
 
-const PortfolioMain = styled.div`
-  background-color: ${(props) =>
-    props.isNight ? 'rgb(117, 117, 117)' : 'rgb(90, 90, 90)'};
-  h2,
-  p {
-    /* color: ${(props) => props.motiveTextColor}; */
-  }
-  p:nth-of-type(2)::after {
-    background-color: ${(props) => props.motiveTextColor};
-  }
-  background: #000;
-  z-index: 5;
-  .separator {
-    /* z-index: -1; */
-    background: url(${(props) => props.background}) repeat;
-    filter: brightness(0.5);
-  }
-`;
+// CSS
+import { Wrapper } from './ProjectsCSS';
 
 export default function Content() {
   const { light, dark, theme } = useContext(ThemeContext);
   const motive = theme.theme.night ? dark : light;
 
   return (
-    <PortfolioMain
+    <Wrapper
       background={heroBackground}
       className="portfolio-page"
       isNight={theme.theme.night}
@@ -143,6 +127,6 @@ export default function Content() {
 
         </div>
 */}
-    </PortfolioMain>
+    </Wrapper>
   );
 }
