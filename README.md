@@ -1,10 +1,10 @@
 ## About
 
-This app uses react-transition-group to make a great user experience while transitioning between pages on top of React.
+This Frontend App is using react-transition-group to make a great user experience while transitioning between pages.
 
 <br/>
 
-[live page](https://festive-williams-ae019b.netlify.app/)
+[live page](https://animated-business-app.netlify.app/)
 
 <br/>
 
@@ -14,7 +14,10 @@ This app uses react-transition-group to make a great user experience while trans
 | -------------------------- | ------- |
 | **react**                  | 16.8.6  |
 | **react-transition-group** | 4.4.1   |
+| **fontawesome.com**        | 5.15    |
 
 <br/>
 
-**fontawesome.com - v5.15**
+## Todo?
+
+- **og:image** - needs to be changed
