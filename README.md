@@ -14,3 +14,7 @@ This app uses react-transition-group to make a great user experience while trans
 | -------------------------- | ------- |
 | **react**                  | 16.8.6  |
 | **react-transition-group** | 4.4.1   |
+
+<br/>
+
+**fontawesome.com - v5.15**

@@ -22,18 +22,46 @@ export const Container = styled.div`
       grid-template-areas:
         'icon1 text1 text1 . . img'
         'icon2 text2 text2 . . img';
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        grid-template-columns: 100px 200px;
+        grid-template-rows: 100px 100px 200px;
+        grid-template-areas:
+          'icon1 text1'
+          'icon2 text2'
+          'img img'
+          'img img';
+      }
     }
 
     .contact-text-1,
     .contact-text-2,
     .contact-icon-1,
     .contact-icon-2 {
+      box-shadow: 0px 3px 7px -2px rgba(79, 79, 101, 1);
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       /* padding-left: 15px; */
-      border: 1px solid red;
+      /* border: 1px solid red; */
+      span {
+        font-size: 18px;
+      }
+      i {
+        color: #f5f5f5;
+        font-size: 42px;
+      }
+    }
+    .contact-text-1,
+    .contact-text-2 {
+      background-color: #d4d4d4;
+    }
+
+    .contact-icon-1,
+    .contact-icon-2 {
+      background-color: #556bac;
     }
 
     .contact-icon-1 {
@@ -52,6 +80,7 @@ export const Container = styled.div`
       grid-area: img;
       overflow: hidden;
       transition: transform 300ms ease;
+      box-shadow: 0px 3px 7px -2px rgba(79, 79, 101, 1);
       img {
         object-fit: cover;
         transform: scaleX(-1);

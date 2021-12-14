@@ -204,7 +204,8 @@ export const Container = styled.div`
       grid-row: 1 / 6;
       // width: 100%;
       // height: 100%;
-      box-shadow: 0px 21px 15px -13px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 3px 7px -2px rgba(79, 79, 101, 1);
+      position: relative;
       div {
         width: 100%;
         height: 100%;
@@ -214,7 +215,7 @@ export const Container = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(60%);
+        filter: brightness(55%);
       }
     }
   }

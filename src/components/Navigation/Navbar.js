@@ -46,11 +46,12 @@ function Navbar() {
         </div>
 
         <div className="nav-icons">
-          <a href="https://www.linkedin.com/in/michal-klauza-b22318186/">
+          <a href="https://www.google.com/">
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/klauza">
-            <i className="fab fa-github"></i>
+          <a href="https://www.google.com/">
+            {/* <i className="fab fa-github"></i> */}
+            <i class="fab fa-flickr"></i>
           </a>
         </div>
       </div>
