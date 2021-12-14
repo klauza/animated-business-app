@@ -1,25 +1,26 @@
 .lexicon .lexicon-container .lexicon-container__grid ul .item-list-li {
-  .description-main{
+  .description-main {
     color: #000;
-    &__core{
+    &__core {
       padding: 10px;
     }
-    &__extended{
+    &__extended {
       padding: 10px;
-      .span-bold{ font-weight: 900; }
+      .span-bold {
+        font-weight: 900;
+      }
     }
   }
-  
-/*                    REACT                   */
-  .content-react{
 
+  /*                    REACT                   */
+  .content-react {
   }
 
-/*                    JavaScript                   */
+  /*                    JavaScript                   */
 
-/*                    Redux                   */
+  /*                    Redux                   */
 
-/*                    MongoDB                   */
+  /*                    MongoDB                   */
 
-/*                    nodejs                   */
+  /*                    nodejs                   */
 }

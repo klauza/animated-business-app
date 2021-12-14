@@ -1,0 +1,514 @@
+// ALL PAGES TRANSITION BETWEEN
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms linear 150ms; /* 150ms */
+}
+
+// HOME
+.fade-exit-active .container-home {
+  &__skill-icons {
+    // transition: transform 250ms ease;
+    // transform: translateY(-50px);
+  }
+}
+.fade-appear {
+  .container-home__hero--para {
+    p,
+    span {
+      transform: translateY(-100px);
+    }
+  }
+  .container-home__intro-text {
+    p,
+    span {
+      transform: translateY(-100px);
+    }
+  }
+}
+.fade-enter {
+  .container-home__hero--para {
+    p,
+    span {
+      transform: translateY(-100px);
+    }
+  }
+  .container-home__intro-text {
+    p,
+    span {
+      transform: translateY(-100px);
+    }
+  }
+}
+
+.fade-appear-active {
+  .container-home__hero--para {
+    p,
+    span {
+      transition: transform 450ms ease;
+      transform: translateY(0px);
+    }
+  }
+  .container-home__intro-text {
+    p,
+    span {
+      transition: transform 450ms ease;
+      transform: translateY(0px);
+    }
+  }
+}
+
+.fade-enter.fade-enter-active {
+  .container-home__hero--para {
+    p,
+    span {
+      transition: transform 450ms ease;
+      transform: translateY(0px);
+    }
+  }
+  .container-home__intro-text {
+    p,
+    span {
+      transition: transform 450ms ease;
+      transform: translateY(0px);
+    }
+  }
+}
+
+.fade-exit {
+  .container-home__hero--para {
+    p,
+    span {
+      transform: translateY(0px);
+    }
+  }
+  .container-home__intro-text {
+    p,
+    span {
+      transform: translateY(0px);
+    }
+  }
+}
+
+.fade-exit.fade-exit-active {
+  .container-home__hero--para {
+    p,
+    span {
+      transition: transform 1000ms ease;
+      transform: translateY(-100px);
+    }
+  }
+  .container-home__intro-text {
+    p,
+    span {
+      transition: transform 1000ms ease;
+      transform: translateY(-100px);
+    }
+  }
+}
+
+// ABOUT
+.fade-appear .about-contacts,
+.fade-enter .about-contacts {
+  div {
+    transform: translateY(-100px);
+  }
+}
+.fade-appear-active .about-contacts,
+.fade-enter.fade-enter-active .about-contacts {
+  div {
+    transition: transform 450ms ease;
+    transform: translateY(0px);
+  }
+}
+.fade-exit .about-contacts {
+  div {
+    transform: translateY(0px);
+  }
+}
+.fade-exit.fade-exit-active .about-contacts {
+  div {
+    transition: transform 1000ms ease;
+    transform: translateY(-100px);
+  }
+}
+
+// About - footer
+.fade-appear .footer,
+.fade-enter .footer {
+  transform: translateY(100px);
+}
+.fade-appear-active .footer,
+.fade-enter.fade-enter-active .footer {
+  transition: transform 450ms ease;
+  transform: translateY(0px);
+}
+.fade-exit .footer {
+  transform: translateY(0px);
+}
+.fade-exit.fade-exit-active .footer {
+  transition: transform 1000ms ease;
+  transform: translateY(100px);
+}
+
+// SERVICES
+.fade-appear.services-page,
+.fade-enter.services-page {
+  & > .services-container > h2 {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  & > .services-container > p {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+.fade-appear-active.services-page,
+.fade-enter.fade-enter-active.services-page {
+  & > .services-container > h2 {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  & > .services-container > p {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.fade-exit.services-page {
+  & > .services-container > h2 {
+    opacity: 1;
+  }
+  & > .services-container > p {
+    opacity: 1;
+  }
+}
+.fade-exit.fade-exit-active.services-page {
+  & > .services-container > h2 {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  & > .services-container > p {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+// PROJECTS
+.fade-appear.portfolio-page,
+.fade-enter.portfolio-page {
+  & > h2 {
+    transform: translateY(-100px);
+  }
+  & > .top-h2 > h2:nth-of-type(1) {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  & > .top-h2 > h2:nth-of-type(2) {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  & > .top-h2 > h2:nth-of-type(3) {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active.portfolio-page {
+  & > h2 {
+    transform: translateY(0px);
+    transition: transform 500ms ease;
+  }
+  & > .top-h2 > h2:nth-of-type(1) {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  & > .top-h2 > h2:nth-of-type(2) {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  & > .top-h2 > h2:nth-of-type(3) {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.fade-exit.portfolio-page {
+  & > h2 {
+    transform: translateY(0px);
+  }
+  & > .top-h2 > h2:nth-of-type(1) {
+    opacity: 1;
+  }
+  & > .top-h2 > h2:nth-of-type(2) {
+    opacity: 1;
+  }
+  & > .top-h2 > h2:nth-of-type(3) {
+    opacity: 1;
+  }
+}
+
+.fade-exit.fade-exit-active.portfolio-page {
+  & > h2 {
+    transition: transform 500ms ease;
+    transform: translateY(-100px);
+  }
+  & > .top-h2 > h2:nth-of-type(1) {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  & > .top-h2 > h2:nth-of-type(2) {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  & > .top-h2 > h2:nth-of-type(3) {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+// CONTACT
+.fade-appear.contact-page,
+.fade-enter.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      opacity: 0;
+    }
+    // pojedyncze
+    .contact-icon-1 {
+      transform: translateY(-100px);
+    }
+    .contact-icon-2 {
+      transform: translateX(-100px);
+    }
+    .contact-text-1 {
+      transform: translateX(100px);
+    }
+    .contact-text-2 {
+      transform: translateY(100px);
+    }
+    .contact-image {
+      transform: translateX(150px);
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+}
+.fade-appear-active.contact-page,
+.fade-enter.fade-enter-active.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      opacity: 1;
+      transition: transform 350ms ease 100ms, opacity 600ms ease;
+    }
+    // pojedyncze
+    .contact-icon-1 {
+      transform: translateY(0px);
+    }
+    .contact-icon-2 {
+      transform: translateX(0px);
+    }
+    .contact-text-1 {
+      transform: translateX(0px);
+    }
+    .contact-text-2 {
+      transform: translateY(0px);
+    }
+    .contact-image {
+      transform: translateX(0px);
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    opacity: 1;
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    transform: translateY(0px);
+  }
+}
+.fade-exit.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      opacity: 1;
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    opacity: 1;
+  }
+}
+.fade-exit.fade-exit-active.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      transition: transform 500ms ease, opacity 300ms ease;
+      opacity: 0;
+    }
+    // pojedyncze
+    .contact-icon-1 {
+      transform: translateY(-100px);
+    }
+    .contact-icon-2 {
+      transform: translateX(-100px);
+    }
+    .contact-text-1 {
+      transform: translateX(100px);
+    }
+    .contact-text-2 {
+      transform: translateY(100px);
+    }
+    .contact-image {
+      transform: translateX(150px);
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateY(150px);
+  }
+}
+
+// LEXICON
+// #header
+// #sub-header
+// #paragraph-header
+// &>.lexicon-container__sticky
+// &>.lexicon-container__item-list
+.fade-appear.lexicon,
+.fade-enter.lexicon {
+  #header,
+  #sub-header,
+  #paragraph-header {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  .lexicon-container__sticky {
+    opacity: 0;
+    transform: translate(-50px);
+    @media (max-width: 768px) {
+      transform: translate(-50px, 0);
+    }
+  }
+  .lexicon-container__item-list {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+.fade-appear-active.lexicon,
+.fade-enter.fade-enter-active.lexicon {
+  #header,
+  #sub-header,
+  #paragraph-header,
+  .lexicon-container__item-list {
+    transition: transform 300ms ease, opacity 300ms ease;
+    transform: translate(0px);
+    opacity: 1;
+  }
+  .lexicon-container__sticky {
+    transition: transform 300ms ease, opacity 300ms ease;
+    transform: translate(0px);
+    opacity: 1;
+    @media (max-width: 768px) {
+      transform: translate(0);
+    }
+  }
+  #sub-header {
+    transition-delay: 75ms;
+  }
+  #paragraph-header,
+  .lexicon-container__sticky,
+  .lexicon-container__item-list {
+    transition-delay: 150ms;
+  }
+}
+.fade-exit.lexicon {
+  #header,
+  #sub-header,
+  #paragraph-header,
+  .lexicon-container__item-list {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .lexicon-container__sticky {
+    transform: translate(0px);
+    opacity: 1;
+    @media (max-width: 768px) {
+      transform: translate(0px);
+    }
+  }
+}
+.fade-exit.fade-exit-active.lexicon {
+  #header,
+  #sub-header,
+  #paragraph-header {
+    transition: transform 300ms ease, opacity 300ms ease;
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  #sub-header {
+    transition-delay: 75ms;
+  }
+  #paragraph-header,
+  .lexicon-container__sticky,
+  .lexicon-container__item-list {
+    transition-delay: 150ms;
+  }
+
+  .lexicon-container__sticky {
+    transition: transform 300ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translate(-100px);
+    @media (max-width: 768px) {
+      transform: translate(-100px, 0);
+    }
+  }
+  .lexicon-container__item-list {
+    transition: transform 300ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
