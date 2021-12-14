@@ -165,6 +165,52 @@
   transform: translateY(100px);
 }
 
+// SERVICES
+.fade-appear.services-page,
+.fade-enter.services-page {
+  & > .services-container > h2 {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  & > .services-container > p {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+.fade-appear-active.services-page,
+.fade-enter.fade-enter-active.services-page {
+  & > .services-container > h2 {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  & > .services-container > p {
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.fade-exit.services-page {
+  & > .services-container > h2 {
+    opacity: 1;
+  }
+  & > .services-container > p {
+    opacity: 1;
+  }
+}
+.fade-exit.fade-exit-active.services-page {
+  & > .services-container > h2 {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  & > .services-container > p {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
 // PROJECTS
 .fade-appear.portfolio-page,
 .fade-enter.portfolio-page {

@@ -23,3 +23,7 @@ export { default as aboutBackground } from './about-bg.png';
 export { default as aboutImage } from './profile.jpg';
 // FOOTER
 export { default as drzewka } from './drzewka.png';
+// SERVICES
+export { default as guide } from './services/service-guide.jpg';
+export { default as spontan } from './services/service-spontaneous.jpeg';
+export { default as general } from './services/service-general.jpg';
