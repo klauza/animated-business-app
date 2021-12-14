@@ -6,8 +6,8 @@ export const Container = styled.div`
     /* width: 100%; */
   }
   .container-home {
-    opacity: 0;
-    animation: animatePage 300ms forwards;
+    /* opacity: 0; */
+    /* animation: animatePage 300ms forwards; */
     // background: rgba(59, 88, 152, 0.7);
     // background: black;
     position: absolute;

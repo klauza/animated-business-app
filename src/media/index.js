@@ -27,3 +27,5 @@ export { default as drzewka } from './drzewka.png';
 export { default as guide } from './services/service-guide.jpg';
 export { default as spontan } from './services/service-spontaneous.jpeg';
 export { default as general } from './services/service-general.jpg';
+// CONTACT&FAQ
+export { default as contactimg } from './contact-img.jpeg';

@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
-  font-family: 'Russo One', sans-serif;
   position: absolute;
   top: 60px;
   left: 0;
@@ -11,10 +9,13 @@ export const Container = styled.div`
   /* opacity: 0; */
 
   background: url(${(props) => props.background}) repeat;
+  /* filter: brightness(0.5); */
 
   /* height: 1000px; */
 
   .services-container {
+    @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+    font-family: 'Russo One', sans-serif;
     max-width: 1280px;
     margin: 150px auto 0;
     padding: 0 10px 200px;
@@ -104,7 +105,7 @@ export const Container = styled.div`
         overflow: hidden;
         z-index: 1;
         background-color: #556bac;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
         &:hover {
           background: #2980b9;
         }

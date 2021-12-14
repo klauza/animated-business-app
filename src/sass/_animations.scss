@@ -289,6 +289,129 @@
   }
 }
 
+// CONTACT
+.fade-appear.contact-page,
+.fade-enter.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      opacity: 0;
+    }
+    // pojedyncze
+    .contact-icon-1 {
+      transform: translateY(-100px);
+    }
+    .contact-icon-2 {
+      transform: translateX(-100px);
+    }
+    .contact-text-1 {
+      transform: translateX(100px);
+    }
+    .contact-text-2 {
+      transform: translateY(100px);
+    }
+    .contact-image {
+      transform: translateX(150px);
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+}
+.fade-appear-active.contact-page,
+.fade-enter.fade-enter-active.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      opacity: 1;
+      transition: transform 350ms ease 100ms, opacity 600ms ease;
+    }
+    // pojedyncze
+    .contact-icon-1 {
+      transform: translateY(0px);
+    }
+    .contact-icon-2 {
+      transform: translateX(0px);
+    }
+    .contact-text-1 {
+      transform: translateX(0px);
+    }
+    .contact-text-2 {
+      transform: translateY(0px);
+    }
+    .contact-image {
+      transform: translateX(0px);
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    opacity: 1;
+    transition: transform 350ms ease 100ms, opacity 600ms ease;
+    transform: translateY(0px);
+  }
+}
+.fade-exit.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      opacity: 1;
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    opacity: 1;
+  }
+}
+.fade-exit.fade-exit-active.contact-page {
+  & > .contact-container .contact-grid {
+    // wspólne
+    .contact-icon-1,
+    .contact-text-1,
+    .contact-icon-2,
+    .contact-text-2,
+    .contact-image {
+      transition: transform 500ms ease, opacity 300ms ease;
+      opacity: 0;
+    }
+    // pojedyncze
+    .contact-icon-1 {
+      transform: translateY(-100px);
+    }
+    .contact-icon-2 {
+      transform: translateX(-100px);
+    }
+    .contact-text-1 {
+      transform: translateX(100px);
+    }
+    .contact-text-2 {
+      transform: translateY(100px);
+    }
+    .contact-image {
+      transform: translateX(150px);
+    }
+  }
+  //FAQ
+  & > .contact-container .faq-grid {
+    transition: transform 500ms ease, opacity 300ms ease;
+    opacity: 0;
+    transform: translateY(150px);
+  }
+}
+
 // LEXICON
 // #header
 // #sub-header

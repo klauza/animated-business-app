@@ -31,17 +31,17 @@ function Navbar() {
           <NavLink exact={true} to="/" className="nav-links">
             Home
           </NavLink>
-          <NavLink to="/about" className="nav-links">
-            About
-          </NavLink>
           <NavLink to="/projects" className="nav-links">
             Projects
+          </NavLink>
+          <NavLink to="/about" className="nav-links">
+            About
           </NavLink>
           <NavLink to="/services" className="nav-links">
             Services
           </NavLink>
-          <NavLink to="/lexicon" className="nav-links">
-            Lexicon
+          <NavLink to="/contact" className="nav-links">
+            Contact
           </NavLink>
         </div>
 

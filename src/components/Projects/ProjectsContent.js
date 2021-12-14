@@ -26,9 +26,7 @@ const PortfolioMain = styled.div`
   background: #000;
   z-index: 5;
   .separator {
-    /* background-color: ${(props) =>
-      props.isNight ? 'rgb(90, 90, 90)' : 'rgb(117, 117, 117)'}; */
-    z-index: -1;
+    /* z-index: -1; */
     background: url(${(props) => props.background}) repeat;
     filter: brightness(0.5);
   }
