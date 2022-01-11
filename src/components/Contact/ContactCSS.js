@@ -85,7 +85,7 @@ export const Container = styled.div`
       img {
         object-fit: cover;
         transform: scaleX(-1);
-        object-position: 0px -15px;
+        /* object-position: 0px -15px; */
         width: 100%;
         height: 100%;
       }

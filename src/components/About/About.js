@@ -84,15 +84,17 @@ const About = ({ pageLoad, main: { pageLoaded } }) => {
   // if(pageLoaded.about === true){
   return (
     <AboutMain
-      // background={heroBackground}
-      // className="about-main-container"
-      // themeBackground={motive.background}
-      themeTextColor={motive.text}
-      isNight={theme.theme.night}
+    // background={heroBackground}
+    // className="about-main-container"
+    // themeBackground={motive.background}
+    // themeTextColor={motive.text}
+    // isNight={theme.theme.night}
     >
       <Container background={heroBackground}>
         <div className="about about-main-container">
-          <div className="about__top">My name is Lincoln.</div>
+          <div className="about__top">
+            <span>My name is Lincoln.</span>
+          </div>
           <div className="about__separator"> </div>
           {pageLoaded.about && (
             <Fragment>
@@ -105,13 +107,15 @@ const About = ({ pageLoad, main: { pageLoaded } }) => {
             </Fragment>
           )}
           <p className="about__bottom">
-            I began my traveling adventure back in 1974 exploring what world
-            actually is. Traveling was overwhelming that time, couldn't find a
-            good way to traverse through countries. I enjoy traveling and will
-            definitely explore more and more as time goes by. I have a vast
-            knowledge about many places thus can be hired as a guide. Have also
-            a competent skillset in photography in many kind. I also possess a
-            good working knowledge with photoshop.
+            <span>
+              I began my traveling adventure back in 1974 exploring what world
+              actually is. Traveling was overwhelming that time, couldn't find a
+              good way to traverse through countries. I enjoy traveling and will
+              definitely explore more and more as time goes by. I have a vast
+              knowledge about many places thus can be hired as a guide. Have
+              also a competent skillset in photography in many kind. I also
+              possess a good working knowledge with photoshop.
+            </span>
           </p>
           <div className="about__image">
             {/* {pageLoaded.about && <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" /> } */}

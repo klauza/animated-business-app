@@ -1,6 +1,6 @@
 ## About
 
-This Frontend App is using react-transition-group to make a great user experience while transitioning between pages.
+This Frontend React Webapp is using react-transition-group to make a great user experience while transitioning between pages.
 
 <br/>
 
@@ -24,6 +24,8 @@ This Frontend App is using react-transition-group to make a great user experienc
 
 <br/>
 
-## Todo?
+## Attributions
 
-- **og:image** - needs to be changed
+<a href='https://pngtree.com/so/backpack'>backpack png from pngtree.com/</a>
+
+[pexels.com](https://www.pexels.com/)
