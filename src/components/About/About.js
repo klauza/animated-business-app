@@ -6,6 +6,7 @@ import { pageLoad } from '../../actions/mainAction';
 // blue-ish bg
 import { heroBackground } from '../../media';
 
+import ReactImageAppear from 'react-image-appear';
 import image from '../../media/profile.jpg';
 
 import { ThemeContext } from '../../context/ThemeContext';
@@ -114,7 +115,20 @@ const About = ({ pageLoad, main: { pageLoaded } }) => {
           </p>
           <div className="about__image">
             {/* {pageLoaded.about && <ReactImageAppear showLoader={false} placeholderStyle={{ transition: "all ease 350ms", backgroundColor: 'black' }} src={image} animation="fadeIn" easing="ease-in" alt="" /> } */}
-            {pageLoaded.about ? <img src={image} alt="" /> : null}
+            {pageLoaded.about ? (
+              <ReactImageAppear
+                showLoader={false}
+                placeholderStyle={{
+                  transition: 'all ease 350ms',
+                  backgroundColor: 'black',
+                }}
+                className="card-background__image"
+                src={image}
+                animation="fadeIn"
+                easing="ease-in"
+                alt=""
+              />
+            ) : null}
           </div>
         </div>
 
