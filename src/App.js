@@ -16,13 +16,13 @@ import About from './components/About/About';
 import ProjectsMain from './components/Projects/ProjectsMain';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import Github from './components/Github/Github';
+// import Github from './components/Github/Github';
 import LexiconMain from './components/Lexicon/LexiconMain';
 import NotFound from './components/NotFound';
-import NightMode from './components/NightMode';
+// import NightMode from './components/NightMode';
 
 //footer
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 
 import 'materialize-css/dist/css/materialize.min.css';
 

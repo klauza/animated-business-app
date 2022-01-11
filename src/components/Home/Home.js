@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react'; //useContext
 import { connect } from 'react-redux';
 import { pageLoad } from '../../actions/mainAction';
 import ReactImageAppear from 'react-image-appear';
@@ -16,8 +16,8 @@ import HomeSkills from './HomeSkills';
 import HomeModals from './HomeModals';
 import M from 'materialize-css/dist/js/materialize.min.js'; // modals
 
-import { ThemeContext } from '../../context/ThemeContext';
-import styled from 'styled-components';
+// import { ThemeContext } from '../../context/ThemeContext';
+// import styled from 'styled-components';
 
 import { Container } from './HomeCSS';
 
@@ -36,8 +36,8 @@ const Home = ({ pageLoad, main: { pageLoaded } }) => {
     // eslint-disable-next-line
   }, [loading]);
 
-  const { light, dark, theme } = useContext(ThemeContext);
-  const motive = theme.theme.night ? dark : light;
+  // const { light, dark, theme } = useContext(ThemeContext);
+  // const motive = theme.theme.night ? dark : light;
 
   // Check if not loaded globally.
   if (!pageLoaded.home) {

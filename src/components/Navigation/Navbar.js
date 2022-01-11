@@ -1,27 +1,25 @@
-import React, { useMemo } from 'react';
+import React from // { useMemo }
+'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import navLogo from '../../media/icon.png';
-import history from '../../history';
+// import history from '../../history';
 
 // CSS
 import { Content } from './NavCSS';
 
 function Navbar() {
-  const path = history.location.pathname;
+  // const path = history.location.pathname;
 
-  useMemo(() => {
-    switch (path) {
-      case '/github':
-        console.log('hello github');
-        break;
-      case '/':
-        console.log('hello home');
-        break;
-
-      default:
-        break;
-    }
-  }, [history.location.pathname]);
+  // useMemo(() => {
+  // switch (path) {
+  //   case '/github':
+  //     break;
+  //   case '/':
+  //     break;
+  //   default:
+  //     break;
+  // }
+  // }, [history.location.pathname]);
 
   return (
     <Content>
@@ -54,7 +52,7 @@ function Navbar() {
           </a>
           <a href="https://www.google.com/">
             {/* <i className="fab fa-github"></i> */}
-            <i class="fab fa-flickr"></i>
+            <i className="fab fa-flickr"></i>
           </a>
         </div>
       </div>
