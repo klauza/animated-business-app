@@ -50,18 +50,22 @@ export const Container = styled.div`
       &--para {
         text-align: center;
         position: absolute;
-        top: 15%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
         max-width: 600px;
         background: rgba(0, 0, 0, 0.2);
-        padding: 20px 15px 0;
+        padding: 10px 15px 10px;
+        margin: 0;
 
         p {
           font-family: 'Marck Script', cursive;
           color: white;
           font-size: 1.55rem;
+          margin: 0;
+          padding: 0;
+          text-shadow: 1px 1px #000;
           /* &::after {
             content: '';
             display: block;
@@ -81,7 +85,7 @@ export const Container = styled.div`
           /* } */
         }
         @media (max-width: 660px) {
-          padding: 0 10px;
+          padding: 2.5px 5px;
           top: 10%;
           max-width: unset;
           width: 100%;
