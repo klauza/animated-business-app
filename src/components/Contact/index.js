@@ -16,20 +16,20 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-grid">
           <div className="contact-icon-1">
-            <i class="fas fa-mobile-alt"></i>
+            <i className="fas fa-mobile-alt"></i>
           </div>
           <div className="contact-text-1">
             <span>07490009142</span>
           </div>
           <div className="contact-icon-2">
-            <i class="far fa-envelope"></i>
+            <i className="far fa-envelope"></i>
           </div>
           <div className="contact-text-2">
             <span>the.lincoln@gmail.com</span>
           </div>
 
           <div className="contact-image">
-            <img src={contactimg} />
+            <img src={contactimg} alt="contact_image" />
           </div>
         </div>
 

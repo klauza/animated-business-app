@@ -1,10 +1,16 @@
 ## About
 
-This Frontend App is using react-transition-group to make a great user experience while transitioning between pages.
+This Frontend React Webapp is using react-transition-group to make a great user experience while transitioning between pages.
 
 <br/>
 
-[live page](https://animated-business-app.netlify.app/)
+[website link](https://animated-business-app.netlify.app/)
+
+### Screenshots
+
+<img src="https://user-images.githubusercontent.com/43997053/148935249-0f12d3d9-6128-4d16-82be-4477900c226f.PNG" width="500">
+
+<img src="https://user-images.githubusercontent.com/43997053/148935352-3ff257d8-4cff-42d3-b176-9646c3075902.PNG" width="500">
 
 <br/>
 
@@ -18,6 +24,8 @@ This Frontend App is using react-transition-group to make a great user experienc
 
 <br/>
 
-## Todo?
+## Attributions
 
-- **og:image** - needs to be changed
+<a href='https://pngtree.com/so/backpack'>backpack png from pngtree.com/</a>
+
+[pexels.com](https://www.pexels.com/)

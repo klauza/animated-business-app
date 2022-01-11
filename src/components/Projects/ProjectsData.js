@@ -22,7 +22,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   // {
   //   id: 5,
@@ -110,7 +110,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   {
     id: 10,
@@ -136,7 +136,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
   {
     id: 11,
@@ -149,7 +149,7 @@ const portfData = [
     live_page: 'https://www.google.com/',
     github_page: 'https://www.google.com/',
     description:
-      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis, nunc quam commodo felis, a aliquam sem diam at metus.',
+      'Phasellus et aliquet erat. Fusce ornare elit quis erat interdum, et pellentesque quam congue. Duis laoreet, libero id hendrerit lobortis.',
   },
 ];
 export { portfData };

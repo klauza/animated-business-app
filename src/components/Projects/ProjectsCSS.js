@@ -395,6 +395,7 @@ export const Wrapper = styled.div`
           }
         }
         .card-description__hover--text {
+          font-size: 10px;
           padding: 10px 7px 0;
           height: 100px;
         }

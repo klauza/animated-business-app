@@ -223,7 +223,7 @@ export const Container = styled.div`
     .about {
       width: 100%;
       margin: 0 auto;
-      padding: 0 0 50px 0;
+      padding: 0 0 175px 0;
 
       grid-template-columns: 1fr;
       grid-template-rows: auto;
@@ -232,7 +232,7 @@ export const Container = styled.div`
         grid-row: 2;
         text-align: center;
 
-        margin: 50px 25px;
+        margin: 25px 25px 0px;
         font-size: 1.4em;
       }
 
