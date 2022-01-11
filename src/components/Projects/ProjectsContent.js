@@ -4,7 +4,7 @@ import ReactImageAppear from 'react-image-appear';
 import { portfData } from './ProjectsData';
 
 import { ThemeContext } from '../../context/ThemeContext';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 // import { Container } from './ProjectsCSS';
 
 // media

@@ -1,5 +1,5 @@
 import React from 'react';
-import webpackImg from '../../media/hero-imgs/webpack.png';
+// import webpackImg from '../../media/hero-imgs/webpack.png';
 
 const HomeSkills = () => {
   return (
