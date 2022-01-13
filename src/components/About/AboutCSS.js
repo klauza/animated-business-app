@@ -215,7 +215,7 @@ export const Container = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(55%);
+        filter: brightness(80%);
       }
     }
   }
@@ -285,7 +285,7 @@ export const Container = styled.div`
         margin: 0 auto;
         height: 100%;
         object-fit: cover;
-        filter: brightness(60%);
+        filter: brightness(80%);
       }
     }
   }

@@ -110,7 +110,18 @@ export const Container = styled.div`
           left: 0px;
           z-index: -1;
         }
+        @media (max-width: 570px) {
+          font-size: 10vw;
+        }
       }
+
+      @media (max-width: 570px) {
+        margin-top: 50px;
+      }
+    }
+
+    @media (max-width: 570px) {
+      margin: 2em auto 0;
     }
   }
 `;
