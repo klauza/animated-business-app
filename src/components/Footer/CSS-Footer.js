@@ -24,5 +24,6 @@ export const Wrapper = styled.div`
     left: 50%;
     transform: translateX(-50%);
     font-size: 10px;
+    text-align: center;
   }
 `;

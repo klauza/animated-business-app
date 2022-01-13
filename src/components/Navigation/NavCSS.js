@@ -86,6 +86,9 @@ export const Content = styled.div`
 
       .nav-links-container {
         grid-column: span 1;
+        /* .nav-links {
+          padding: 0;
+        } */
       }
     }
   }
@@ -115,6 +118,7 @@ export const Content = styled.div`
           line-height: 60px;
           text-decoration: none;
           font-size: 0.8em;
+          padding: 0;
         }
         .active {
           color: rgb(139, 157, 195);

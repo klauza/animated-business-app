@@ -49,6 +49,10 @@ export const Wrapper = styled.div`
     }
     @media (max-width: 768px) {
       flex-direction: column;
+
+      .top-h2 {
+        width: 100%;
+      }
       h2 {
         padding: 15px 0;
       }
