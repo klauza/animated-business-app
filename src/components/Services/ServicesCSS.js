@@ -68,6 +68,11 @@ export const Container = styled.div`
           transform: rotate(10deg) scale(1.5);
         }
       }
+      @media (max-width: 570px) {
+        img {
+          object-position: 0 50%;
+        }
+      }
     }
 
     div {
@@ -85,6 +90,9 @@ export const Container = styled.div`
       h3 {
         padding: 0;
         margin: 0;
+        @media (max-width: 570px) {
+          font-size: 6.5vw;
+        }
       }
       display: flex;
       flex-direction: column;
