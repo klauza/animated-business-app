@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
-    "css-loader": "^3.5.3",
+    "css-loader": "^6.7.3",
     "history": "^4.10.1",
     "materialize-css": "^1.0.0",
     "react": "^16.13.1",
@@ -14,12 +14,12 @@
     "react-image-appear": "^1.2.23",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "style-loader": "^1.2.1",
     "styled-components": "^5.1.0"
   },
